@@ -1,0 +1,140 @@
+/* inicio footer */
+
+.footer-container {
+    background-color: #505050;
+    height: 258px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 31px;
+
+}
+
+
+
+
+ul  {
+    list-style: none;
+    
+}
+
+.footer-menu-store {
+    display: none;
+}
+
+
+
+.footer-menu-account div {
+    border-bottom: 3px solid white;
+    width: 55px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.footer-menu-account li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-account {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.redes-sociales {
+    margin-top: 15px;
+    height: 50px;
+}
+
+.footer-container + p {
+    padding: 8px 0;
+    background-color: #252525;
+    font-size: 14px;
+    color: #EAEAEA;
+    font-weight: 300;
+}
+
+.footer-redes-container .logo-container {
+    display: none;
+}
+
+
+/* fin footer */
+
+
+@media (min-width: 768px) {
+    /* inicio footer   */
+
+   .footer-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 69px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-bottom: 50px;
+
+}
+
+.footer-menu-account {
+    margin-right: 48px;
+    text-align: start;
+
+}
+
+
+
+.footer-menu-store {
+    display: block;
+    flex-grow: 1;
+    text-align: start;
+    
+}
+
+.footer-menu-account div {
+    margin: 0;
+}
+
+.footer-menu-store div {
+    border-bottom: 3px solid white;
+    width: 55px;
+    border-radius: 3px;
+ 
+}
+
+.footer-store {
+    margin-top: 10px;
+    font-weight: bold;
+    
+}
+
+
+.footer-menu-store li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+
+.footer-redes-container .logo-container {
+    display: block;
+}
+
+.footer-redes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.footer-container + p {
+    padding-left: 64px;
+    text-align: start;
+}
+
+/* fin footer */
+
+}
+
+

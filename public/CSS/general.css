@@ -1,3 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
+}
+
+.home-container {
+    font-family: 'Work Sans';
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    max-width: 375px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    
+}
+
+
+
 ul {
     list-style: none;
 }
@@ -7,6 +27,37 @@ a {
     outline: none;
 }
 
-a {
+main a {
     color: #252525;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+
+@media (min-width: 768px) {
+
+    /* cambiando estilos del header */
+
+    .home-container {
+        max-width: 1025px;
+        overflow-y: scroll;
+    }
+
+
+    /* din estilos header */
+
+
+   
+}
+
+@media (min-width: 1353px) {
+
+    /*  edito body para que  no cresca mas de 1440 pporque a mayor resolucion se estira todo y no sirve */
+
+    .home-container {
+        max-width: 1440px;
+    } 
+    
 }

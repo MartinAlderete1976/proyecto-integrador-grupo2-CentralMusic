@@ -1,9 +1,11 @@
 
+@import url('general.css');
+
 .forms{
     box-sizing: border-box;
     margin: 1rem;
     padding: 1rem;
-    font-family: 'Work Sans, Sans Serif';
+    font-family: 'Work Sans';
     height: 100vh;  
 }
 
@@ -16,7 +18,7 @@
     border-radius: 4%;
 }
 .login-container h1{ 
-    font-family:'Work Sans, Sans Serif';
+    font-family:'Work Sans';
     color: white;
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,384 @@
+
+
+/* DANDO ESTILOS A LA SECCION NEW PRODUCTS Y POPULAR FINDS*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 200px;
+    
+     
+     
+ }
+ 
+ 
+ .new-products {
+     width: 100%;
+ }
+ 
+ .popular-finds {
+     background-color: #EAEAEA;
+     width: 100%;
+     padding-bottom: 60px;
+ }
+ 
+ .other-products {
+     width: 100%;
+ }
+ 
+ main h3 {
+     margin-top: 27px ;
+     margin-bottom: 20px;
+     width: 100%;
+     font-size: 24px;
+ }
+ 
+ main article {
+     height: 400px;
+     margin-bottom: 20px;
+ }
+ 
+ 
+ .new-products-separador {
+     width: 80px;
+     border: 3px solid #ab0433;
+     border-radius: 10px;
+ }
+ 
+ .popular-finds-separador {
+     width: 80px;
+     border: 3px solid #ab0433;
+     border-radius: 10px;
+ }
+ 
+ .gear-hands-separador {
+     width: 80px;
+     border: 3px solid #ab0433;
+     border-radius: 10px;
+     
+ }
+ 
+ 
+ 
+ .new-products .img-container img {
+     transform: translateY(-26px);
+ }
+ 
+ 
+ .new-products .img-container {
+     width: 100%;
+     height: 260px;
+     border-top-left-radius: 14px;
+     border-top-right-radius: 14px;
+     background: radial-gradient(98.56% 98.92% at 1.22% 1.08%, #FBFBFB 0%, #D3D3D3 100%)
+ 
+ }
+ 
+ .popular-finds  .img-container {
+     width: 100%;
+     height: 260px;
+     border-top-left-radius: 14px;
+     border-top-right-radius: 14px;
+ 
+ }
+ 
+ main img {
+     width: 100%;
+     height: 100%;
+     filter: drop-shadow(0px 2px 4px rgba(28, 5, 77, 0.1)) drop-shadow(0px 12px 32px rgba(0, 0, 0, 0.05));
+     
+ 
+     
+     
+     
+ }
+ 
+ 
+ 
+ .products {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 30px;
+     
+ }
+ 
+ .product-container {
+     width: 328px;
+     height: 100%;
+     border: 1px solid rgba(146, 146, 146, 0.301);
+     border-radius: 15px;
+     background-color: #FFFFFF;
+ 
+     
+ }
+ 
+ .guitar-precio {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .description-container {
+     padding: 15px;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     text-align: start;
+     height: 139px;
+ }
+ 
+ .description-container h4 {
+     text-align: start;
+     width: 214px;
+     color: #252525;
+ }
+ 
+ .description-container h4 + p {
+     font-weight: bold;
+ }
+ 
+ .description {
+     margin-top: 5px;
+     font-size: 14px;
+     color: #767676;
+     font-weight: 500;
+     flex-grow: 1;
+ }
+ 
+ .description + p {
+     margin-top: 22px;
+     font-size: 12px;
+     color: #505050;
+ }
+ /* FIN DE STILOS  A NEW PRODUCTS Y POPULAR FINDS*/
+ 
+ /* -----------------------------------------------------------------------------------------------------------------------------*/
+ 
+ /* DANDO ESTILOS A LA SECCION GEAR HANDS */
+ 
+ .other-products article {
+     height: 450px;
+ }
+ 
+ .other-products .product-container {
+     padding: 0;
+     border: none;
+     background-color: #EAEAEA;
+ }
+ 
+ 
+ .other-products .img-container {
+     height: 311px;
+     border-top-left-radius: 14px;
+     border-top-right-radius: 14px;
+ 
+ }
+ 
+ 
+ .other-products #pedales {
+     
+     background: url('../../images/Home/Gear Hands/pedales.jpg'), linear-gradient(134.57deg, #FFFFFF 0%, #D1D1D1 100%);
+     background-position: 50%;
+     background-size: cover;
+     
+ }
+ 
+ 
+ .other-products #aprender {
+     background: url('../../images/Home/Gear Hands/aprender.jpg');
+     background-position: 50%;
+     background-size: cover;
+ }
+ 
+ .other-products #como-sonar {
+     background: url('../../images/Home/Gear Hands/como-sonar.jpg');
+     background-position: 50%;
+     background-size: cover;
+ }
+ 
+ .other-products #tono {
+     background: url('../../images/Home/Gear Hands/jams.avif');
+     background-position: 50%;
+     background-size: cover;
+     
+ }
+ 
+ .other-products #setup {
+     background: url('../../images/Home/Gear Hands/lespaul.jpg');
+     background-position: 50%;
+     background-size: cover;
+ }
+ 
+ .learn-container .description-container {
+     display: flex;
+     height: 130px;
+     text-align: start;
+     border-bottom-left-radius: 15px;
+     border-bottom-right-radius: 15px;
+     background-color: #EAEAEA;
+     justify-content: center;
+ }
+ 
+ .learn-container .description-container h4 {
+     
+     font-size: 20px;
+ }
+ 
+ .learn-container p {
+     color: #767676;
+ }
+ 
+ 
+ .other-products article {
+ 
+     height: 100%;
+     border: none;
+     border-radius: 15px;
+     
+ }
+ 
+ .other-products article:nth-child(4) {
+     display: none;
+ }
+ 
+ /* fin estilos seccion Gear Hands */
+
+
+ @media (min-width: 768px) {
+    /* comienzo de estilos de la seciones main */
+
+    main {
+        margin-top: 166px;
+    }
+
+    main h3 {
+        font-size: 40px;
+        
+    }
+
+    main article {
+        margin-bottom: 40px;
+        
+    }
+
+   
+
+    .new-products-separador {
+        width: 260px;
+    }
+
+    .popular-finds-separador {
+        width: 88px;
+    }
+
+    .gear-hands-separador {
+        width: 88px;
+    
+    }
+
+
+    .new-products, .popular-finds, .other-products {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 22px;
+        
+    }
+
+    .product-container {
+        width: 408px;
+        
+        height: 417px;
+    }
+
+   .guitar-precio {
+       font-size: 18px
+   }
+
+   .description {
+       font-size: 16px;
+   }
+
+   /* fin main */
+ }
+
+ @media (min-width: 1025px)  {
+    .other-products article {
+        width: 400px;
+        height: 609px;
+    }
+
+    .other-products article:nth-child(3) {
+        margin-right: 0;
+    }
+ 
+    .learn-container {
+        width: 100%;
+        height: 100%;
+    }
+ 
+    .learn-container .img-container {
+        height: 487px;
+    }
+ }
+
+ @media (min-width: 1353px) {
+    .new-products-separador {
+        width: 88px;
+    
+    }
+
+    .popular-finds-separador {
+        width: 88px;
+        
+    }
+
+    .gear-hands-separador {
+        width: 88px;
+        order: -5;
+    }
+
+    .product-container {
+        width: 400px;
+    }
+
+    .new-products article:nth-child(4) {
+        display: none;
+
+    }
+
+    .popular-finds article:nth-child(3){
+        display: none;
+    }
+
+    .other-products article:nth-child(4) {
+        display: block;
+    }
+
+    
+    /* cambio ordenes de las cajas para variar un poco el contenido de la seeccion gear hands */
+
+    .other-products h3{
+        order: -4;
+    }
+    
+    .other-products article:nth-child(3){
+        order: -2;
+        width: 616px;
+    }
+
+    .other-products article:nth-child(5) {
+        order: -3;
+        width: 616px;
+    }
+
+    .other-products article:nth-child(4) {
+        order: -1;
+    }
+
+    .other-products .product-container {
+        width: 100%;
+    }
+ }
