@@ -1,6 +1,5 @@
 @import url('general.css');
-@import url('login.css');
-@import url('REGISTRO.CSS');
+
 
 * {
     padding: 0;
@@ -398,6 +397,10 @@ main img {
 
 ul {
     list-style: none;
+    color: #FFFFFF;
+}
+
+footer ul a {
     color: #FFFFFF;
 }
 
