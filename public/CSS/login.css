@@ -1,0 +1,82 @@
+body{
+    box-sizing: border-box;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Work Sans, Sans Serif';
+    height: 100vh;  
+}
+
+
+.login-container{
+    width: 300px;
+    height: 500px;
+    background-color: hsl(0, 0%, 15%);
+    text-align: center;
+    border-radius: 4%;
+}
+.login-container h1{ 
+    font-family:'Work Sans, Sans Serif';
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+body.forms section.form-container {
+    border-radius: 8px;
+    width: 100%;
+    
+}
+.input_check-container {
+    box-sizing: border-box;
+    width: 30px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+}
+body.forms form .input-container,
+body.forms form .btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+button.btn {
+    border: none;
+    border-radius: 1rem;
+    height: 2.5rem;
+    text-transform: uppercase;
+    width: 8rem;
+    cursor: pointer;
+    margin: 0.2rem auto 0;
+}
+
+.btn-submit {
+    background:  linear-gradient(45deg, rgba(255,255,255,1) 0%,  #fa7a03 50%);
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+
+section.login .input_check-container {
+    margin-bottom: 1rem;
+}
+section.login {
+    max-width: 375px;
+}
+
+.input-style{
+    border-radius: 20%;
+}
+
+.error-message{
+    color: white;
+}
+
+.nombreLogin{
+    color: white;
+}
+
+.noTengoCuenta{
+    color: white;
+}
