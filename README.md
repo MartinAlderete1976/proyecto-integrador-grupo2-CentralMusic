@@ -29,14 +29,26 @@ Elegimos este proyecto para que más personas puedan aprovechar el poder de las 
 
 Nos proponemos crear un sitio que tenga diferentes categorías que agrupen las clases de guitarras, en conjunto con un buscador que permita encontrar lo que cada usuario está buscando.
 
-.Punto de referencia
-.FAMUSIC : (https://www.famusic.com.ar/)
+.Puntos de referencias:
+
+.FAMUSIC : (https://www.famusic.com.ar/) Por el diseño y facilidad de ver los productos.
 https://www.famusic.com.ar
 
-.Baires Rocks - Instrumenos Musicales y Audio Profesional](https://www.baires.rocks/)
+.Baires Rocks - Instrumenos Musicales y Audio Profesional](https://www.baires.rocks/) Por el impacto visual de la pagina y la información que brinda.
 https://www.baires.rocks
-.Fusion Musical](https://fusionmusical.com.ar/)
+
+.Fusion Musical](https://fusionmusical.com.ar/) Porque resalta con colores lo mas importante .
 https://fusionmusical.com.ar
-.Inicio - La Casa del Músico
+
+.Inicio - La Casa del Músico   Su diseño impacta, los colores y las imágenes lleva al cliente como a perderse si no es alguien que sabe lo que busca.
 https://lacasadelmusico.com.ar
+
+.Musical Monroe -(https://musicalmonroe.com.ar/) Su diseño sencillo lleva al cliente a buscar lo especifico sin marearlo con imagenes.
+https://musicalmonroe.com.ar
+
+
+
+
+
+Nuestro tablero de trabajo
 https://trello.com/b/OCWNxbWD/proyecto-picado-grupo-2-c13
