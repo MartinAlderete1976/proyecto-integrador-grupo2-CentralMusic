@@ -1,0 +1,239 @@
+
+
+.header-container {
+    background: url('../../images/guitarra.jpg'), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #021E49 73.96%);
+    background-position: 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply, normal;
+    height: 507px;
+    padding: 44px 24px;
+    
+}
+
+
+/* DANDO ESTILOS A LA BARRA DE NAVEGACION LOGO Y MENU */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.menu-header {
+    display: none;
+}
+
+.icons-container {
+    display: none;
+}
+
+.menu-burger {
+    width: 20px;
+    height: 20px;
+    color: #FFFFFF;
+    border-radius: 1px;
+}
+
+/* FIN DE ESTILOS DE LA BARRA DE NAVEGACION LOGO Y MENU*/
+
+/* DANDO STYLOS AL HEADER */
+
+.header-frase {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    width: 253px;
+    height: 334px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+   
+   
+   
+
+.lesson-container {
+    background: url('../../images/guitarlesson2.avif') #ab0433;
+    background-blend-mode: darken, normal;
+    background-position: 70%;
+    border-radius: 10px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 168px;
+    left: 24px;
+    right: 23px;
+    top: 422px;
+    color: #FFFFFF;
+    align-items: center;
+
+    
+}
+
+.lesson-container h2 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 120%;
+    width: 209px;
+    
+}
+
+.lesson-container p {
+    margin-top: 2px;
+    font-size: 10px;
+    width: 209px;
+    
+}
+
+.btn-container {
+    margin-top: 15px;
+   
+}
+
+.btn-style {
+    padding: 8px;
+    background-color: #FF753A;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #FF753A;
+    border-radius: 16px;
+}
+
+
+/* FIN DE ESTILOS AL HEADER */
+
+
+@media (min-width: 768px) {
+    .header-container {
+        background: url('../../images/Rectangle\ 79.png');
+        height: 813px;
+        background-size: cover;
+        background-position: 50%;
+        padding: 37px 65px;
+        
+        
+    }
+ 
+    .logo-container img {
+        height: 40px;
+    }
+ 
+     
+ 
+ 
+    .header-frase {
+         text-align: left;
+         font-size: 56px;
+         width: 561px;
+         padding: 0;
+         height: 561px;
+         line-height: 120%;
+         letter-spacing: 0.02em
+         
+     }
+ 
+    .lesson-container {
+         top: 664px;
+         left: 65px;
+         right: 65px;
+         height: 280px;
+         justify-content: center;
+         align-items: center;
+         background-size: cover;
+         
+     }
+ 
+     .lesson-container h2 {
+         width: 616px;
+         font-size: 46px;
+     }
+ 
+     .lesson-container p {
+         width: 616px;
+         font-size: 24px;
+     }
+ 
+     .btn-style {
+         width: 125px;
+         height: 34px;
+         font-size: 16px;
+         border-radius: 32px;
+ 
+     }
+}
+
+
+@media (min-width: 1353px) {
+    .barra-navegacion {
+        justify-content: flex-start;
+    }
+
+    .header-menu-container {
+        display: block;
+        height: 46px;
+        display: flex;
+        
+    }
+
+    .logo-container {
+        display: flex;
+        flex-grow: 0.9;
+    }
+
+    .logo-container li {
+        display: inline-block;
+        margin-right: 24px;
+    }
+
+    .logo-container  a {
+        font-size: 18px;
+        color: #FCFCFC;
+    }
+
+   
+
+    .menu-burger img {
+        display: none;
+    }
+
+    .icons-container {
+        display: flex;
+        flex-wrap: nowrap;
+
+    }
+
+    .icons-container a {
+        margin-right: 16px;
+    }
+
+    .menu-header {
+        display: block;
+        align-self: center;
+        margin-left: 24px;
+        
+    }
+
+
+
+    .header-frase {
+        width: 600px;
+    }
+
+    .header-container {
+        padding: 37px 88px;
+    }
+
+
+    .lesson-container {
+        left: 88px;
+        right: 88px;
+    }
+}

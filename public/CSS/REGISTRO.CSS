@@ -1,8 +1,10 @@
-*{
+@import url('general.css');
+
+.body-register *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Work Sans, Sans Serif';
+    font-family:'Work Sans';
     
     
 }
@@ -16,7 +18,7 @@
     margin: auto;
     margin-top: 100xp;
     border-radius: 8px;
-    font-family:'Work Sans, Sans Serif'  ;
+    font-family:'Work Sans'  ;
 }
 
 .form h2 {
@@ -31,7 +33,7 @@
     border-radius: 4px;
     margin-bottom: 16px;
     border: 1px solid #1f53c5;
-    font-family: 'Work Sans, Sans Serif';
+    font-family: 'Work Sans';
     font-size: 18px;
 }
 .form p{
