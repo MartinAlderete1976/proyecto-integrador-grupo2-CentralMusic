@@ -1,0 +1,250 @@
+@import url('generalDetailsProduct.css');
+
+.home-container {
+    background-color: #EAEAEA;
+}
+
+
+
+.header-detailsProduct {
+    height: 250px;
+    padding: 44px 24px;
+    background: linear-gradient(180deg, #F40000 55.21%, rgba(196, 196, 196, 0) 100%);
+    
+}
+
+.details-main {
+    position: relative;
+    top: -115px;
+    margin-top: 0;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    height: 1765px;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 120%
+}
+
+.product-view {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background-color: #e8e8e8;
+    height: 570px;
+}
+
+.product-view-container {
+    padding: 15px;
+    
+}
+
+.product-view-container h1 {
+   text-align: start;
+   margin-bottom: 15px;
+}
+
+.product-view-container .img-container {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background: radial-gradient(98.56% 98.92% at 1.22% 1.08%, #FBFBFB 0%, #D3D3D3 100%)
+}
+
+.details-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-description p {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.details-description p:nth-child(1) {
+    font-weight: 600;
+}
+
+
+.features-product {
+    margin-top: 70px;
+    background-color: #FFFFFF;
+}
+
+ .new-products-separador {
+    margin: 0 auto;
+}
+
+.bodyDetailsProduct h2 {
+    padding: 20px 10px;
+    margin: 30px 0;
+}
+
+.features-details {
+    padding: 0 20px;
+    text-align: start;
+}
+
+.products-interest {
+    margin-top: 70px;
+   
+}
+
+.products-interest .product-interest-container .card-interest article:nth-child(2) {
+    display: none;
+}
+
+.products-interest .product-interest-container .card-interest article:nth-child(3) {
+    display: none;
+}
+
+.products-interest .product-container {
+    margin: 0 auto;
+    width: 328px;
+}
+
+
+
+.details-product-footer {
+    position: relative;
+    top: -117px;
+}
+
+
+@media (min-width: 768px) {
+    .details-main article {
+        width: 100%;
+    }
+
+    .product-view {
+        padding: 0 30px;
+        width: 100%;
+    }
+
+    .product-view  h1 {
+        font-size: 30px;
+        width: 100%;
+        padding: 20px;
+        text-align: start;
+        
+    }
+
+    .details-description p {
+        font-size: 24px;
+        margin-bottom: 43px;
+    }
+
+    .details-description p:nth-child(1) {
+        font-size: 32px;
+    }
+
+    .details-description {
+        flex-grow: 1;
+        padding-left: 20px;
+    }
+
+    .product-view-container {
+       display: flex;
+       
+    }
+
+    .product-view-container .img-container {
+        width: 384px;
+        height: 355px;
+    }
+
+
+    .btns-container {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    
+    .btns-container .btn-container .btn-style {
+        height: 50px;
+        
+        
+        
+    }
+
+
+    .features-product { 
+        padding: 0 43px;
+        width: 754px;
+    }
+
+    .features-product h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .features-details {
+        font-size: 24px;
+    }
+    
+    .features-details p {
+        margin-bottom: 10px;
+    }
+
+    .products-interest h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .card-interest {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .products-interest .product-interest-container .card-interest article:nth-child(2) {
+        display: block;
+    }
+    
+    .products-interest .product-interest-container .card-interest article:nth-child(3) {
+        display: none;
+    }
+    
+    
+}
+
+@media (min-width: 1353px) {
+    .product-view {
+        padding: 0 90px;
+
+        
+    }
+
+    .btns-container .btn-container .btn-style {
+        height: 50px;
+        width: 200px;
+        
+        
+        
+    }
+
+    .features-product {
+        width: 100%;
+        padding: 0 80px;
+    }
+
+
+    .products-interest {
+        width: 100%;
+    }
+
+    .products-interest .product-interest-container .card-interest article:nth-child(3) {
+        display: block;
+    }
+
+    .card-interest {
+        gap: 30px;
+    }
+
+    .card-interest article {
+        width: 328px;
+    }
+}

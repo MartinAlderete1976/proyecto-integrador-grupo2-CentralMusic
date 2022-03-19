@@ -1,0 +1,11 @@
+.bodyDetailsProduct h1 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.bodyDetailsProduct {
+    font-family: 'Work Sans';
+    height: 1800px;
+    display: block;
+}
+

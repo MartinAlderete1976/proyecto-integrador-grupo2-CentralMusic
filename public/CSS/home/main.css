@@ -364,10 +364,6 @@ main {
         order: -4;
     }
     
-    .other-products article:nth-child(3){
-        order: -2;
-        width: 616px;
-    }
 
     .other-products article:nth-child(5) {
         order: -3;
@@ -375,7 +371,8 @@ main {
     }
 
     .other-products article:nth-child(4) {
-        order: -1;
+        order: -2;
+        width: 616px;
     }
 
     .other-products .product-container {

@@ -26,6 +26,11 @@ app.get('/register', (req, res) => {
     res.sendFile(register);
 });
 
+app.get('/details', (req, res) => {
+    let detailsProduct = path.join(__dirname, '/views/detailsProduct.html');
+    res.sendFile(detailsProduct);
+});
+
 
 
 
