@@ -3,3 +3,5 @@
 @import url('general.css');
 @import url('./home/home.css');
 @import url('./detailsProduct/detailsProduct.css');
+@import url('./home/login.css');
+@import url('./home/registro.css');
