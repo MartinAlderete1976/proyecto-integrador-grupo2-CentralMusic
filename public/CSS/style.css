@@ -1,7 +1,10 @@
-
+/* estilos */
 
 @import url('general.css');
+/* home */
 @import url('./home/home.css');
+/* detalle de producto*/
 @import url('./detailsProduct/detailsProduct.css');
+/* formularios */
 @import url('./home/login.css');
 @import url('./home/registro.css');
