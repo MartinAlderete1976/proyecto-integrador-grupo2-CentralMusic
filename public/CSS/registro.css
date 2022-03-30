@@ -4,8 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Work Sans';
-    
-    
+    height: 100vh;    
 }
 
 .form {
@@ -18,6 +17,18 @@
     margin-top: 100xp;
     border-radius: 8px;
     font-family:'Work Sans'  ;
+}
+.form input{
+    width: 100%;
+    background-color: #fa7a03;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 30px;
+    
+
 }
 
 .form h2 {
