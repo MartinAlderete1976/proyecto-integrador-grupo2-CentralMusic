@@ -9,7 +9,6 @@
 }
 .input-container{
     width: 100%;
-    background-color: #fa7a03;
     border: none;
     padding: 12px;
     color: white;
@@ -18,12 +17,22 @@
     border-radius: 30px;
     
 }
+.input-style{
+    background:  white;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    transition: all 0.5s ease;
+    height: 2.5rem;
+    border-radius: 30px;
+    padding: 12px;
+}
 .login-container{
     width: 300px;
     height: 500px;
     background-color: hsl(0, 0%, 15%);
     text-align: center;
     border-radius: 4%;
+    margin: 0 auto;
 }
 
 
@@ -58,8 +67,8 @@ button.btn {
 }
 
 .btn-submit {
-    background:  linear-gradient(45deg, rgba(255,255,255,1) 0%,  #fa7a03 50%);
-    color: rgb(75, 75, 75);
+    background:  #fa7a03;
+    color:white;
     font-weight: bold;
     transition: all 0.5s ease;
 }
@@ -72,9 +81,8 @@ section.login {
     max-width: 375px;
 }
 
-.input-style{
-    border-radius: 6%;
-}
+
+
 
 .error-message{
     color: white;
