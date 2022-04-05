@@ -1,12 +1,23 @@
 
 .forms{
     box-sizing: border-box;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
     font-family: 'Work Sans';
     height: 100vh;  
+    
 }
-
+.input-container{
+    width: 100%;
+    background-color: #fa7a03;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 30px;
+    
+}
 .login-container{
     width: 300px;
     height: 500px;
@@ -14,12 +25,8 @@
     text-align: center;
     border-radius: 4%;
 }
-.login-container h1{ 
-    font-family:'Work Sans';
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
+
+
 body.forms section.form-container {
     border-radius: 8px;
     width: 100%;
@@ -66,7 +73,7 @@ section.login {
 }
 
 .input-style{
-    border-radius: 20%;
+    border-radius: 6%;
 }
 
 .error-message{
