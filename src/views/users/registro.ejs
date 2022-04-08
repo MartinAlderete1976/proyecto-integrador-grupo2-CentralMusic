@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head')  %> 
+<body class ="body-register home-container">
+    <%-include('../partials/header')  %> 
+     <section class="form">
+        <img src="images/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
+        <h2 class="nombreRegistro">REGISTRO</h2>
+        <form action="" method="">
+        <input type="email" class="input-style" name="email" placeholder="Ingrese su email">
+        <span class="error-message">Debe ingresar su email</span>
+        <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña">
+                <span class="error-message">Debe ingresar su contraseña</span>
+        <input type="password" class="input-style" name="pass2" placeholder="Re-ingrese su contraseña">
+                <span class="error-message">Debe re-ingresar su contraseña</span>
+        <p>Estoy de Acuerdo con <a href="#">Terminos y Condiciones</a></p>
+        <div class="btn-container">
+            <span class="error-message">Hubo un error en el registro</span>
+            </div>
+        <input class="botons" type="submit" value="Registrarme"> 
+        <p><a href="#">Ya tengo Cuenta</a></p>
+
+    </section>
+    <%-include('../partials/footer')  %> 
+
+</body>
+</html>
