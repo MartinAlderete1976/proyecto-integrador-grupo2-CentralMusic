@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
     res.render(home);
 });
 
+app.get('/carrito', (req, res) => {
+    let carrito = path.join(__dirname, '/views/products/carrito.ejs');
+    res.render(carrito);
+});
+
 
 app.get('/login', (req, res) => {
     let login = path.join(__dirname, '/views/users/login.ejs');
