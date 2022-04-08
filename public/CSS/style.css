@@ -5,9 +5,11 @@
 @import url('./home/home.css');
 /* detalle de producto*/
 @import url('./detailsProduct/detailsProduct.css');
+
+@import url('./admin/addProduct.css');
 /* formularios */
-@import url('login.css');
-@import url('registro.css');
+@import url('./login.css');
+@import url('./registro.css');
 /* Carrito */
 @import url('./carrito2.css');
 @import url('./home/header.css');
