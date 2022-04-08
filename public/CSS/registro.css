@@ -1,78 +1,107 @@
-
-.body-register *{
-    margin: 0;
-    padding: 0;
+body {
+font-family: 'Work Sans';
+margin: 0;
+background: url(/images/lespaul.jpg);
+background-size: cover;
+background-attachment: fixed; 
+}
+* {
     box-sizing: border-box;
-    font-family:'Work Sans';
-    height: 100vh;    
 }
-
-.form {
-    width: 400px;
-    height: 500px;
-    background-color: hsl(0, 0%, 15%);
-    color: white;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100xp;
-    border-radius: 8px;
-    font-family:'Work Sans'  ;
-}
-.form input{
+.contenedor {
     width: 100%;
-    background-color:white;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    border-radius: 30px;
-    
-
+    background-color: white;
+    padding: 15px;
 }
-
-.form h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+.formulario {
+    background-color: white;
+    margin-top: 150px;
+    padding: 3px;
 }
-
-.control {
-    width: 100%;
-    background-color: hsl(0, 0%, 15%);
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'Work Sans';
-    font-size: 18px;
-}
-.form p{
-    height: 40px;
+h1{
     text-align: center;
-    font-size: 16px;
-    line-height: 20px;
-    color: white;
+    color: #1a2537;
+    font-size: 40px;
 }
-
-.form a {
-    color: white;
-    text-decoration: none;
-}
-.form a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-.form .botons {
-    width: 100%;
-    background-color: #fa7a03;
+input[type="tex"],
+input[type="pasword"] {
+    font-size: 20px;
+    width: 82%;
+    background-color: white;
+    padding: 10px;
     border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 18px;
-    border-radius: 30px;
+   
+}
+.span.error-message {
+    text-align: center;
+}
+.input-contenedor {
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    background-color: white;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+.button{
+ border: none;
+ width: 100%;
+ color: white;
+ font-size: 20px;
+ background-color: #fa7a03; 
+ padding: 15px 20px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+.button:hover{
+    background-color:#fa7a03;
 }
 
+.smedia-text{
+    padding: 0.7rem 0;
+    margin: 1rem;
+}
 
+.social-media{
+    display: flex;
+    justify-content: center;
 
+}
+
+.social-icon {
+    height: 46px;
+    width: 46px;
+    border: 1px solid #333;
+    margin: 0 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    transition: all 1s;
+}
+.icon-container {
+    display: flex;
+}
+
+.register-container{
+    padding-top: 10px;
+}
+.no-acc{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+@media(min-width:768px){
+
+.formulario{
+     margin: auto;
+     width: 500px;
+     margin-top: 150px;
+     border-radius: 2%;
+}
+ }

@@ -1,97 +1,65 @@
-
-.forms{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
     font-family: 'Work Sans';
-    height: 100vh;  
+    margin: 0;
+    background: url(/images/lespaul.jpg);
+    background-size: cover;
+    background-attachment: fixed; 
+  }
+ * {
+        box-sizing: border-box;
+    }
+.contenedor {
+        width: 100%;
+        padding: 15px;
+    }
+.formulario {
+        background: #fff;
+        margin-top: 150px;
+        padding: 3px;
+    }
+h1{
+        text-align: center;
+        color: #1a2537;
+        font-size: 40px;
+    }
+input[type="tex"],
+input[type="pasword"] {
+        font-size: 20px;
+        width: 82%;
+        padding: 10px;
+        border: none;
+    }
+.input-contenedor {
+        margin-bottom: 15px;
+        border: 1px solid #aaa;
+    }
+.icon{
+        min-width: 50px;
+        text-align: center;
+        color: #999;
+    }
+.button{
+     border: none;
+     width: 100%;
+     color: white;
+     font-size: 20px;
+     padding: 15px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+    }
+.button:hover{
+        background-color: #fa7a03;
+    }
+p{
+        text-align: center;
+    }
     
-}
-.input-container{
-    width: 100%;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    border-radius: 30px;
+@media(min-width:768px){
     
-}
-.input-style{
-    background:  white;
-    color: rgb(75, 75, 75);
-    font-weight: bold;
-    transition: all 0.5s ease;
-    height: 2.5rem;
-    border-radius: 30px;
-    padding: 12px;
-}
-.login-container{
-    width: 300px;
-    height: 500px;
-    background-color: hsl(0, 0%, 15%);
-    text-align: center;
-    border-radius: 4%;
-    margin: 0 auto;
-}
-
-
-body.forms section.form-container {
-    border-radius: 8px;
-    width: 100%;
-    
-}
-.input_check-container {
-    box-sizing: border-box;
-    width: 30px;
-    height: 40px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    
-}
-body.forms form .input-container,
-body.forms form .btn-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-button.btn {
-    border: none;
-    border-radius: 1rem;
-    height: 2.5rem;
-    text-transform: uppercase;
-    width: 8rem;
-    cursor: pointer;
-    margin: 0.2rem auto 0;
-}
-
-.btn-submit {
-    background:  #fa7a03;
-    color:white;
-    font-weight: bold;
-    transition: all 0.5s ease;
-}
-
-
-section.login .input_check-container {
-    margin-bottom: 1rem;
-}
-section.login {
-    max-width: 375px;
-}
-
-
-
-
-.error-message{
-    color: white;
-}
-
-.nombreLogin{
-    color: white;
-}
-
-.noTengoCuenta{
-    color: white;
-}
+.formulario{
+         margin: auto;
+         width: 500px;
+         margin-top: 150px;
+         border-radius: 2%;
+ }
+ }
