@@ -50,7 +50,7 @@ input[type="pasword"] {
 .button:hover{
         background-color: #fa7a03;
     }
-p{
+.login-container p{
         text-align: center;
     }
     

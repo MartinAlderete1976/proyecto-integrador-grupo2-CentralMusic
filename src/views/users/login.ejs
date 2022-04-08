@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head')  %> 
+<body class="forms home-container">
+    <%-include('../partials/header')  %> 
+    <div class="login-container">
+        <div class="login.box">
+            <img src="images/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
+        </div>
+   <section class="form-container login">
+      <h2 class="nombreLogin">LOGIN</h2>
+    <form action="" method="">
+        <div class="input-container">
+            <span class="error-message">Email</span>
+            <input type="email" class="input-style" name="email" placeholder="Ingrese su email" required>
+            
+        </div>
+        <div class="input-container">
+            <span class="error-message">Contraseña</span>
+            <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña" required>
+            <h1>Olvido su contraseña?</h1>
+        </div>
+        <div class="input_check-container">
+            <label for="recordar">Recordarme</label>
+            <input type="checkbox" name="remember" id="recordar">
+            <span class="error-message">Credenciales inválidas</span>
+        </div>
+        <div class="btn-container">
+         <button type="submit" class="btn btn-submit">Ingresar</button>
+        </div>
+        <span><a href="/register" class="noTengoCuenta">No tengo cuenta</a></span>
+    </div>
+     </section>
+     <%-include('../partials/footer')  %> 
+</body>
+</html>
