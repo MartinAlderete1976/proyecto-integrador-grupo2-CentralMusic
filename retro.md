@@ -26,17 +26,15 @@ SPRINT 1
 https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
 
 
-# Retrospectiva
-
-SPRINT 2 
+Retrospectiva
+SPRINT 2
 
 ## Empezar a hacer:
 - Estar mas atento al trello.
 - Practicar mas git.
 
-
 ## Hacer más:
-- Reuniones 
+- Reuniones
 - Practicas de codigos
 
 ## Seguir haciendo:
@@ -49,7 +47,4 @@ SPRINT 2
 ## Dejar de hacer:
 - Reuniones largas.
 
-
 https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
-
-

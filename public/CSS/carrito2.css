@@ -1,0 +1,106 @@
+
+
+body{
+    box-sizing: content-box;
+}
+
+.carrito2{
+    display: block;
+    background-color: #FFFFFF;
+   padding: 1em;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+h2{
+    padding: 0.5em;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    margin: auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.product img{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    object-fit: contain;
+    height: auto;
+    padding: 1em;
+    
+}
+
+.section1{
+    display: flex;
+     width: 90%;
+     height: 30%;
+     justify-content: center;
+     align-content: center;
+     justify-content: space-around;
+     align-items: center;
+   }
+   
+.price{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+    text-align: center;
+    height: 20px;   
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.price::before{
+    content: "$";
+}
+input{
+    display:flex;
+    width:3em;
+    height: 2em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 28px;
+    margin-bottom: auto;
+    margin-left: 0.5em;
+}
+
+.section2{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+margin: auto;
+justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.section2 a{
+    text-align: end;
+        align-items: center;
+}
+
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.btn button{
+    width: 10em;
+    height: 4em;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    cursor: pointer;
+}

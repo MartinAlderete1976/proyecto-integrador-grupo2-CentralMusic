@@ -18,11 +18,13 @@ background-attachment: fixed;
     margin-top: 150px;
     padding: 3px;
 }
+
 h1{
     text-align: center;
     color: #1a2537;
     font-size: 40px;
 }
+
 input[type="tex"],
 input[type="pasword"] {
     font-size: 20px;
