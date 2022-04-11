@@ -44,6 +44,11 @@ app.get('/details', (req, res) => {
 app.get('/admin', (req, res) => {
     let addProduct = path.join(__dirname, '/views/admin/products/addProduct.ejs');
     res.render(addProduct);
+});
+
+app.get('/admin/productos/list', (req, res) => {
+    let listProduct = path.join(__dirname, '/views/admin/products/listProducts.ejs');
+    res.render(listProduct);
 })
 
 

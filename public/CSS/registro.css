@@ -1,11 +1,11 @@
-body {
+.registro body {
 font-family: 'Work Sans';
 margin: 0;
 background: url(/images/lespaul.jpg);
 background-size: cover;
 background-attachment: fixed; 
 }
-* {
+.registro * {
     box-sizing: border-box;
 }
 .contenedor {
@@ -19,14 +19,14 @@ background-attachment: fixed;
     padding: 3px;
 }
 
-h1{
+.regsitro h1{
     text-align: center;
     color: #1a2537;
     font-size: 40px;
 }
 
-input[type="tex"],
-input[type="pasword"] {
+.registro input[type="tex"],
+.registro input[type="pasword"] {
     font-size: 20px;
     width: 82%;
     background-color: white;
