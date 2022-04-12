@@ -9,45 +9,23 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="logo">
-    <img src="images/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
-   </div>
-    <form class="formulario">
-        <h1>REGISTRO</h1>
-
-     <div class="contenedor">
-       <div class="input-contenedor">
-         <i class="fas fa-user icon"></i>
-         <input type="text" placeholder="Nombre y Apellido">
-         <span class="error-message">Debe ingresar datos completos</span>
-        </div>
-     <div class="contenedor">
-        <div class="input-contenedor">
-          <i class="fas fa-envelope icon"></i>
-          <input type="text" placeholder="correo electronico">
-          <span class="error-message">Ingrese correo</span> 
-        </div>
-       <div class="contenedor">
-         <div class="input-contenedor">
-           <i class="fas fa-key icon"></i>
-           <input type="password" placeholder="Contraseña">
-           <span class="error-message">Ingresar su contraseña</span>
-          </div>
-       <div class="contenedor">
-         <div class="input-contenedor">
-            <i class="fas fa-key icon"></i>
-            <input type="password" placeholder=" Repetir Contraseña">
-            <span class="error-message">Debe re-ingresar su contraseña</span>
-           </div>
-           </div>
-      <input type="submit" class="btn solid" value="Crear cuenta" />
-        <p>Estoy de Acuerdo con <a href="#">Terminos y Condiciones</a></p>
-        
-     </div>
+  <section class="form">
+     <img src="LOGO.jpg" alt="logo-fa-music" style="max-width: 100%;">
+     <h2 class="nombreRegistro">REGISTRO</h2>
+     <form action="" method="">
+     <input type="email" class="input-style" name="email" placeholder="Ingrese su email">
+     <span class="error-message">Debe ingresar su email</span>
+     <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña">
+             <span class="error-message">Debe ingresar su contraseña</span>
+     <input type="password" class="input-style" name="pass2" placeholder="Re-ingrese su contraseña">
+             <span class="error-message">Debe re-ingresar su contraseña</span>
+     <p>Estoy de Acuerdo con <a href="#">Terminos y Condiciones</a></p>
+         <span class="error-message">Hubo un error en el registro</span>
+         </div>
      <input class="botons" type="submit" value="Registrarme"> 
-     <span class="error-message">Hubo un error en el registro</span>
-    </form>
-    <p><a href="#">Ya tengo Cuenta</a></p>
+     <p><a href="#">Ya tengo Cuenta</a></p>
+
+ </section>
 
 </body>
 </html>

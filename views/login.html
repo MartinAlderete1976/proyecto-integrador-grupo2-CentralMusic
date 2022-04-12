@@ -7,54 +7,35 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
-</head>
-<body>
-    <div class="logo">
-     <img src="images/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
-    </div>
-    <form class="formulario">
-        <h1>LOGIN</h1>
-
-         <div class="contenedor">
-           <div class="input-contenedor">
-             <i class="fas fa-envelope icon"></i>
-             <input type="text" placeholder="correo electronico">
-             <p>Ingrese su correo electronico</p>
-            </div>
-            <div class="input-contenedor">
-                <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña">
-                <p>Ingrese Contraseña</p>
-             </div>
-             
-            </div>
-            <input type="submit" class="btn solid" value="Iniciar sesion" />
-            <div class="input_check-container">
-                <label for="recordar">Recordarme</label>
-                <input type="checkbox" name="remember" id="recordar">     
-            </div>
-            <p class="smedia-text">Ingresar con</p>
-            
-            <div class="icon-container">
-             <div class="social-media">
-               <a href="#" class="social-icon">
-               <i class="fab fa-facebook"></i>
-               </a>
-             </div>
-              <div class="social-media">
-               <a href="#" class="social-icon">
-               <i class="fab fa-twitter"></i>
-               </a>
-              </div>
-              <div class="social-media">
-                <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-               </a>
-               </div>  
-            </div>
-         <span><a href="register.html" class="noTengoCuenta">No tengo cuenta</a></span>
-     </div>
-    
-    </form>
-</body>
-</html>
+  </head>
+  <body class="forms">
+      <div class="login-container">
+          <div class="login.box">
+              <img src="LOGO.png" alt="logo-fa-music" style="max-width: 100%;">
+          </div>
+     <section class="form-container login">
+        <h2 class="nombreLogin">LOGIN</h2>
+      <form action="" method="">
+          <div class="input-container">
+              <span class="error-message">Email</span>
+              <input type="email" class="input-style" name="email" placeholder="Ingrese su email" required>
+              
+          </div>
+          <div class="input-container">
+              <span class="error-message">Contraseña</span>
+              <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña" required>
+              <h1>Olvido su contraseña?</h1>
+          </div>
+          <div class="input_check-container">
+              <label for="recordar">Recordarme</label>
+              <input type="checkbox" name="remember" id="recordar">
+              <span class="error-message">Credenciales inválidas</span>
+          </div>
+          <div class="btn-container">
+           <button type="submit" class="btn btn-submit">Ingresar</button>
+          </div>
+          <span><a href="register.html" class="noTengoCuenta">No tengo cuenta</a></span>
+      </div>
+       </section>
+  </body>
+  </html>

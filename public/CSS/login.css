@@ -1,50 +1,88 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans, Sans Serif';
+    height: 100vh;  
+}
 
-.contenedor {
-        width: 100%;
-        padding: 15px;
-    }
-.formulario {
-        background: #fff;
-        margin-top: 150px;
-        padding: 3px;
-    }
-h1{
-        text-align: center;
-        color: #1a2537;
-        font-size: 40px;
-    }
-/* input[type="text"],
-input[type="pasword"] {
-        font-size: 20px;
-        width: 82%;
-        padding: 10px;
-        border: none;
-    } */
-.input-contenedor {
-        margin-bottom: 15px;
-        border: 1px solid #aaa;
-    }
-.icon{
-        min-width: 50px;
-        text-align: center;
-        color: #999;
-    }
-.button{
-     border: none;
-     width: 100%;
-     color: white;
-     font-size: 20px;
-     padding: 15px 20px;
-     border-radius: 5px;
-     cursor: pointer;
-    }
-.button:hover{
-        background-color: #fa7a03;
-    }
-.login-container p{
-        text-align: center;
-    }
+
+.login-container{
+    width: 100%;
+    background-color: hsl(0, 0%, 15%);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'Work Sans, Sans Serif';
+    font-size: 18px;
+}
+.login-container h1{ 
+    font-family:'Work Sans, Sans Serif';
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+body.forms section.form-container {
+    border-radius: 8px;
+    width: 100%;
     
+}
+.input_check-container {
+    box-sizing: border-box;
+    width: 30px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+}
+body.forms form .input-container,
+body.forms form .btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+button.btn {
+    border: none;
+    border-radius: 1rem;
+    height: 2.5rem;
+    text-transform: uppercase;
+    width: 8rem;
+    cursor: pointer;
+    margin: 0.2rem auto 0;
+}
+
+.btn-submit {
+    background:  linear-gradient(45deg, rgba(255,255,255,1) 0%,  #fa7a03 50%);
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+
+section.login .input_check-container {
+    margin-bottom: 1rem;
+}
+section.login {
+    max-width: 375px;
+}
+
+.input-style{
+    border-radius: 20%;
+}
+
+.error-message{
+    color: white;
+}
+
+.nombreLogin{
+    color: white;
+}
+
+.noTengoCuenta{
+    color: white;
+}
 @media(min-width:768px){
     
 .formulario{
