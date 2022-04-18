@@ -1,7 +1,7 @@
 
 
 .header-container {
-    background: url('../../images/guitarra.jpg'), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #021E49 73.96%);
+    background: url('../../images/Home/guitarra.jpg'), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #021E49 73.96%);
     background-position: 45%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@
    
 
 .lesson-container {
-    background: url('../../images/guitarlesson2.avif') #ab0433;
+    background: url('../../images/Home/guitarlesson2.avif') #ab0433;
     background-blend-mode: darken, normal;
     background-position: 70%;
     border-radius: 10px;
@@ -105,6 +105,7 @@
     font-weight: 600;
     border: 1px solid #FF753A;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 
@@ -113,7 +114,7 @@
 
 @media (min-width: 768px) {
     .header-container {
-        background: url('../../images/Rectangle\ 79.png');
+        background: url('../../images/Home/Rectangle 79.png');
         height: 813px;
         background-size: cover;
         background-position: 50%;

@@ -17,7 +17,6 @@
     top: 1px;
     margin-top: 0;
     border: 1px solid rgb(224, 224, 224);
-    border-radius: 10px;
     background-color: #FFFFFF;
     height: 2000px;
     margin: 0 auto;
@@ -119,9 +118,7 @@
     }
 
 
-    .details-main article {
-        width: 100%;
-    }
+    
 
     .product-view {
         padding: 0 30px;
@@ -183,7 +180,7 @@
 
     .features-product { 
         padding: 0 43px;
-        width: 754px;
+        
     }
 
     .features-product h2 {

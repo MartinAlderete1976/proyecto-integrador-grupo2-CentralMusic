@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 body{
+=======
+
+.carrito2 body{
+>>>>>>> 97858e1c4393d6b30cc8d35acb2f55a0b4c496de
     box-sizing: content-box;
 }
 
@@ -12,7 +17,7 @@ body{
     margin-top: 10%;
     margin-bottom: 10%;
 }
-h2{
+.carrito2 h2{
     padding: 0.5em;
 }
 .product{
@@ -64,7 +69,8 @@ h2{
 .price::before{
     content: "$";
 }
-input{
+
+.carrito2 input{
     display:flex;
     width:3em;
     height: 2em;

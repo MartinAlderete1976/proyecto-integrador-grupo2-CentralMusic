@@ -26,3 +26,30 @@ SPRINT 1
 https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
 
 
+# Retrospectiva
+
+SPRINT 2 
+
+## Empezar a hacer:
+- Estar mas atento al trello.
+- Practicar mas git.
+
+
+## Hacer más:
+- Reuniones 
+- Practicas de codigos
+
+## Seguir haciendo:
+- Cumplir plazos.
+- Buscar informacion que agilicen el proyecto.
+
+## Hacer menos:
+- La plancha, confiandonos que llegamos a terminar el sprint
+
+## Dejar de hacer:
+- Reuniones largas.
+
+
+https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
+
+
