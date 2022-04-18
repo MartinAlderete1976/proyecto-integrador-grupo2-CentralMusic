@@ -1,24 +1,35 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const methodOverride = require('method-override'); // requiero methodOverride para poder usar los metodos PUT y DELETE
 const PORT = 3000;
+
+
+
+// enrutadores
+const indexRouter = require('./routes/indexRouter');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require('./routes/usersRouter');
+const adminRouter = require('./routes/adminRouter')
 
 
 // archivos estaticos de uso publico
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(methodOverride('_method'));  // override with POST having ?_method=DELETE
 
 /* Temple engine config */
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
-// routes 
+// middlewares routes 
+app.use('/', indexRouter); // gestiona Home
+app.use('/productos', productsRouter); // gestiona listado, detalle
+app.use('/usuarios', usersRouter); // gestiona login, perfil, registro
+app.use('/admin', adminRouter); // gestiona CRUD de productos 
 
-app.get('/', (req, res) => {
-    let home = path.join(__dirname, '/views/home/index.ejs');
-    res.render(home);
-});
+/*
+
 
 app.get('/carrito', (req, res) => {
     let carrito = path.join(__dirname, '/views/products/carrito.ejs');
@@ -46,11 +57,11 @@ app.get('/admin', (req, res) => {
     res.render(addProduct);
 });
 
-app.get('/admin/productos/list', (req, res) => {
-    let listProduct = path.join(__dirname, '/views/admin/products/listProducts.ejs');
-    res.render(listProduct);
+app.get('/admin/productos', (req, res) => {
+    let listProducts = path.join(__dirname, '/views/admin/products/listProducts.ejs');
+    res.render(listProducts);
 })
-
+*/
 
 
 app.listen(PORT, () => console.log(`Servidor levantado en el puerto ${PORT}`));
