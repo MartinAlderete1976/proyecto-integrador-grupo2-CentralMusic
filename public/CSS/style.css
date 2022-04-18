@@ -7,6 +7,7 @@
 @import url('./detailsProduct/detailsProduct.css');
 
 @import url('./admin/addProduct.css');
+@import url('./admin/listProduct.css');
 /* formularios */
 @import url('./login.css');
 @import url('./registro.css');

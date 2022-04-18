@@ -1,0 +1,46 @@
+[
+    {
+        "id": 5,
+        "name": "Cuerdas Ernie Ball",
+        "marca": "Ernie Ball",
+        "model": "Slinky Nickel Wound",
+        "category": "accesories",
+        "price": 100,
+        "image": "cuerdas.svg",
+        "description": "Cuerdas calibre 0.10 para guitarra electrica"
+        
+    },
+    {
+        "id": 6,
+        "name": "Plug Green",
+        "marca": "Ross",
+        "model": "Profesional",
+        "category": "accesories",
+        "price": 100,
+        "image": "pluggreen.svg",
+        "description": "Cable Plug 6 metros profesional para instrumentos electricos"
+        
+    },
+    {
+        "id": 7,
+        "name": "Plug Golden",
+        "marca": "Roxtone",
+        "model": "Profesional",
+        "category": "accesories",
+        "price": 100,
+        "image": "pluggolden.svg",
+        "description": "Cable plug 10 metros profesional para instrumentos electricos"
+        
+    },
+    {
+        "id": 8,
+        "name": "Pedal Polytune Afinador",
+        "marca": "TC Electronic",
+        "model": "Polytune Mini",
+        "category": "accesories",
+        "price": 300,
+        "image": "afinador.svg",
+        "description": "Afinador Cromatico con pantalla"
+        
+    }
+]

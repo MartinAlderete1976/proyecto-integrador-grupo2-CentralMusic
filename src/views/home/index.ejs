@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../partials/head')  %> 
+<%-include('../partials/head', {title: "Home"})  %> 
 <body class="home-container">
     <header class="header-container">
         <nav class="barra-navegacion">
             <div class="logo-container">
                 <a href="/">
-                    <img src="images/Central Music Logo.svg" alt="logo">
+                    <img src="images/Home/Central Music Logo.svg" alt="logo">
                 </a>
                 <ul class="menu-header">
-                    <li><a href="">Guitars</a></li>
-                    <li><a href="">Accesories</a></li>
+                    <li><a href="/productos/guitars">Guitars</a></li>
+                    <li><a href="/productos/accesories">Accesories</a></li>
                     <li><a href="">Storage</a></li>
                     <li><a href="">Lessons</a></li>
                     <li><a href="">Repairs</a></li>
                 </ul>
             </div>
             <div class="menu-burger">
-                <img src="images/burger.svg" alt="burger">
+                <img src="images/Home/burger.svg" alt="burger">
                 <div class="icons-container">
                     <a href="/carrito">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,28 +47,32 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="main-index">
         <section class="new-products products">
-            <div class="new-products-separador"></div>
-            <h3>New Products</h3>
-            <article>
-                <a href="/details">
-                    <div class="product-container">
-                        <div class="img-container">
-                            <img src="images/Home/New products/lespaul.svg" alt="producto-guitarra">
-                        </div>
-                        <div class="description-container">
-                            <div class="guitar-precio">
-                                <h4>Gibson Les Paul</h4>
-                                <p>$2,995</p>
+            <div class="new-products-separador"></div> 
+            <h3>New Products</h3> 
+            <% guitars.forEach(guitar => { %>
+                    <article>
+                        <a href="/productos/detail/<%- guitar.id %> ">
+                            <div class="product-container">
+                                <div class="img-container">
+                                    <img src="images/products/<%- guitar.image %> " alt="producto-guitarra">
+                                </div>
+                                <div class="description-container">
+                                    <div class="guitar-precio">
+                                        <h4><%- guitar.name %> </h4>
+                                        <p>$<%- guitar.price %> </p>
+                                    </div>
+                                    <p class="description"><%- guitar.description %> </p>
+                                    <p><b>0</b> Colores available</p>
+                                </div>
                             </div>
-                            <p class="description">Product description here</p>
-                            <p><b>0</b> Colores available</p>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            <article>
+                        </a>
+                    </article>
+            <% }) %>
+        </section>   
+            <!-- 
+                 <article>
                 <a href="">
                     <div class="product-container">
                         <div class="img-container">
@@ -119,28 +123,34 @@
                     </div>
                 </a>
             </article>
-        </section>
+            -->
+           
+        
         <section class="popular-finds products">
             <div class="popular-finds-separador"></div>
             <h3>Popular Finds</h3>
-            <article>
-                <a href="/">
-                    <div class="product-container">
-                        <div class="img-container">
-                            <img src="images/Home/Popular finds/pluggreen.svg" alt="accesorios">
-                        </div>
-                        <div class="description-container">
-                            <div class="guitar-precio">
-                                <h4>Plug</h4>
-                                <p>$2,995</p>
+            <% accesories.forEach(accesory => { %>
+                <article>
+                    <a href="/productos/detail/<%- accesory.id %> ">
+                        <div class="product-container">
+                            <div class="img-container">
+                                <img src="images/products/<%- accesory.image %> " alt="accesorios">
                             </div>
-                            <p class="description">Product description here</p>
-                            <p><b>0</b> Colores available</p>
+                            <div class="description-container">
+                                <div class="guitar-precio">
+                                    <h4><%- accesory.name %> </h4>
+                                    <p>$<%- accesory.price %> </p>
+                                </div>
+                                <p class="description"><%- accesory.description %> </p>
+                                <p><b>0</b> Colores available</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </article>
-            <article>
+                    </a>
+                </article>
+            <% }) %>
+        </section>    
+            <!-- 
+                <article>
                 <a href="/">
                     <div class="product-container">
                         <div class="img-container">
@@ -191,7 +201,9 @@
                     </div>
                 </a>
             </article>
-        </section>
+            -->
+            
+        
         <section class="other-products products">
             <div class="gear-hands-separador"></div>
             <h3>Gear Hands</h3>

@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<%-include('../partials/head')  %> 
+<body class="listProduct home-container admin-container">
+<%-include('../partials/header')  %> 
+<main class="tabla">
+    <h2>Listado de productos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Stock</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Gibson</td>
+                <td>Les Paul</td>
+                <td>$2995</td>
+                <td>Guitar</td>
+                <td>true</td>
+                <td>
+                    <a href="" class="btn-edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <form action="">
+                        <button class="btn-danger">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Fender </td>
+                <td>Statocaster</td>
+                <td>$3000</td>
+                <td>Guitar</td>
+                <td>true</td>
+                <td>
+                    <a href=""class="btn-edit" >
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <form action="">
+                        <button class="btn-danger">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Fender</td>
+                <td>Telecaster</td>
+                <td>$2000</td>
+                <td>Guitar</td>
+                <td>true</td>
+                <td>
+                    <a href="" class="btn-edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <form action="">
+                        <button class="btn-danger">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+        
+    </table>
+</main>
     
+ 
+    
+    <%-include('../partials/footer')  %> 
 </body>
 </html>

@@ -1,6 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
+.registro body {
+font-family: 'Work Sans';
+margin: 0;
+background: url(/images/lespaul.jpg);
+background-size: cover;
+background-attachment: fixed; 
+}
+.registro * {
     box-sizing: border-box;
     font-family:'Work Sans, Sans Serif';
     
@@ -34,34 +39,21 @@
     font-family: 'Work Sans, Sans Serif';
     font-size: 18px;
 }
-.form p{
-    height: 20px;
+.formulario {
+    background-color: white;
+    margin-top: 150px;
+    padding: 3px;
+}
+
+.regsitro h1{
     text-align: center;
     font-size: 16px;
     line-height: 20px;
     color: white;
 }
 
-.form a {
-    color: white;
-    text-decoration: none;
-}
-.form a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-.form .botons {
-    width: 100%;
-    background-color: #fa7a03;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 18px;
-    border-radius: 4px;
-}
-.input-style{
+.registro input[type="tex"],
+.registro input[type="pasword"] {
     font-size: 20px;
     width: 82%;
     background-color: white;

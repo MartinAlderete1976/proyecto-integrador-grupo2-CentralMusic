@@ -1,6 +1,6 @@
 
 
-body{
+.carrito2 body{
     box-sizing: content-box;
 }
 
@@ -14,7 +14,7 @@ body{
     margin-top: 10%;
     margin-bottom: 10%;
 }
-h2{
+.carrito2 h2{
     padding: 0.5em;
 }
 .product{
@@ -64,7 +64,8 @@ h2{
 .price::before{
     content: "$";
 }
-input{
+
+.carrito2 input{
     display:flex;
     width:3em;
     height: 2em;
