@@ -8,6 +8,8 @@ router.get('/guitars', productsController.guitars);
 router.get('/accesories', productsController.accesories);
 // detalle de producto
 router.get('/detail/:id', productsController.detail);
+// ruta carrito
+router.get('/carrito', productsController.carrito);
 
 
 
