@@ -61,43 +61,6 @@ background-attachment: fixed;
     background-color:#fa7a03;
 }
 
-.smedia-text{
-    padding: 0.7rem 0;
-    margin: 1rem;
-}
-
-.social-media{
-    display: flex;
-    justify-content: center;
-
-}
-
-.social-icon {
-    height: 46px;
-    width: 46px;
-    border: 1px solid #333;
-    margin: 0 0.45rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.3rem;
-    border-radius: 50%;
-    transition: all 1s;
-}
-.icon-container {
-    display: flex;
-}
-
-.register-container{
-    padding-top: 10px;
-}
-.no-acc{
-    font-weight: bold;
-    font-size: 17px;
-}
-
 @media(min-width:768px){
 
 .formulario{
