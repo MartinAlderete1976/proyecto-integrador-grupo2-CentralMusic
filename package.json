@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "ejs": "^3.1.6",
+=======
+    "ejs": "^3.0.2",
+>>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
     "express": "^4.17.3",
     "method-override": "^3.0.0",
     "multer": "^1.4.4"

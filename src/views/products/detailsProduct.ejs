@@ -73,7 +73,11 @@
                                 <p><b>Orientacion de la mano:</b> <%= product.hand  %> </p>
                                 <p><b>Color:</b> <%= product.color  %> <br>
                                 <p><b>Tipo de madera del cuerpo:</b> <%= product.wood  %> </p>
+<<<<<<< HEAD
                                 <p><b> Material del diapason:</b> <%= product.fretboard  %> </p>
+=======
+                                <p><b> Material del diapason:</b> <%= product.freatboard  %> </p>
+>>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
                                 <p><b>Acabado del cuerpo:</b> <%= product.bodyFinish  %> </p>
                             <% } else { %>
                            
@@ -91,7 +95,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="products-interest">
+                <section class="products-interest new-products products popular-finds products ">
                     <div class="product-interest-container">
                         <div class="new-products-separador"></div>
                         <h2>Productos que te podrian interesar</h2>
@@ -102,6 +106,7 @@
                                         <div class="product-container">
                                             <div class="img-container">
                                                 <img src="../../images/products/<%= product.image  %> " alt="accesorios">
+<<<<<<< HEAD
                                             </div>
                                             <div class="description-container">
                                                 <div class="guitar-precio">
@@ -127,10 +132,19 @@
                                             <div class="guitar-precio">
                                                 <h4>Pedal Polytune Afinador</h4>
                                                 <p>$2,995</p>
+=======
                                             </div>
-                                            <p class="description">Product description here</p>
-                                            <p><b>0</b> Colores available</p>
+                                            <div class="description-container">
+                                                <div class="guitar-precio">
+                                                    <h4><%= product.name %> </h4>
+                                                    <p><%= product.price  %> </p>
+                                                </div>
+                                                <p class="description"><%= product.description %> </p>
+                                                <p><b>0</b> Colores available</p>
+>>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
+                                            </div>
                                         </div>
+<<<<<<< HEAD
                                     </div>
                                 </a>
                             </article>
@@ -154,6 +168,11 @@
 
                             -->
                             
+=======
+                                    </a>
+                                </article>
+                            <% }) %>
+>>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
                         </div>
                     </div>
                 </section>

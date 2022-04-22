@@ -7,35 +7,32 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
-  </head>
-  <body class="forms">
-      <div class="login-container">
-          <div class="login.box">
-              <img src="LOGO.png" alt="logo-fa-music" style="max-width: 100%;">
+</head>
+<body>
+    <div class="logo">
+     <img src="images/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
+    </div>
+    
+    <section class="formularioLogin">
+      <h2>Inicia Sesión</h2>
+      <form action="">
+          <div>
+              <input type="email" name="email" placeholder="Correo Electrónico">
           </div>
-     <section class="form-container login">
-        <h2 class="nombreLogin">LOGIN</h2>
-      <form action="" method="">
-          <div class="input-container">
-              <span class="error-message">Email</span>
-              <input type="email" class="input-style" name="email" placeholder="Ingrese su email" required>
-              
+          <div>
+              <input type="password" name="pass" placeholder="Contraseña">
           </div>
-          <div class="input-container">
-              <span class="error-message">Contraseña</span>
-              <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña" required>
-              <h1>Olvido su contraseña?</h1>
+          <div>
+              <button type="submit">Entrar</button>
           </div>
-          <div class="input_check-container">
-              <label for="recordar">Recordarme</label>
-              <input type="checkbox" name="remember" id="recordar">
-              <span class="error-message">Credenciales inválidas</span>
-          </div>
-          <div class="btn-container">
-           <button type="submit" class="btn btn-submit">Ingresar</button>
-          </div>
-          <span><a href="register.html" class="noTengoCuenta">No tengo cuenta</a></span>
-      </div>
-       </section>
-  </body>
-  </html>
+          <span>¿No tienes una cuenta? <a href="formularios">Registrate</a></span>
+      </form>
+  </section>
+
+           
+         <span><a href="register.html" class="noTengoCuenta">No tengo cuenta</a></span>
+     </div>
+    
+    </form>
+</body>
+</html>

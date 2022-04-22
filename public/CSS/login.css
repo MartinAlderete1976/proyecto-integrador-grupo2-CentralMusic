@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     box-sizing: border-box;
     margin: 0;
@@ -84,11 +85,121 @@ section.login {
     color: white;
 }
 @media(min-width:768px){
+=======
+div.container section.formularioLogin {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--naranja-Fuerte);
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 350px;
+    margin-bottom: 110px;
+}
+
+div.container section.formularioLogin h2 {
+    margin: 0 auto;
+}
+
+div.container section.formularioLogin form div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
     
-.formulario{
-         margin: auto;
-         width: 500px;
-         margin-top: 150px;
-         border-radius: 2%;
- }
- }
+}
+
+div.container section.formularioLogin form div input {
+    border-radius: 20px;
+    border-color: var(--naranja-Fuerte);
+    border-style: solid;
+    text-align: center;
+}
+
+div.container section.formularioLogin form div input::placeholder {
+    text-align: center;
+}
+
+div.container section.formularioLogin form div input:focus {
+    outline: none;
+}
+
+div.container section.formularioLogin form div button {
+    border: none;
+    background-color: var(--naranja-Fuerte);
+    color: white;
+    width: 50vw;
+    height: 30px;
+    border-radius: 20px;
+    max-width: 188px;
+    cursor: pointer;
+}
+
+div.container section.formularioLogin form span {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+div.container section.formularioLogin form span a{
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 768px){ 
+    div.container section.formularioLogin h2{
+        padding-top: 30px;
+    }
+
+    div.container section.formularioLogin {
+        margin-bottom: 50px;
+        width: 80vw;
+        height: 50vh;
+        max-width: 500px;
+    }
+
+    div.container section.formularioLogin form {
+        width: 80vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    div.container section.formularioLogin form div {
+        max-width: none;
+        max-height: none;
+    }
+    
+    div.container section.formularioLogin form div input {
+        height: 50px;
+        max-height: none;
+        width: 50vw;
+        max-width: 400px;
+        font-size: 20px;
+    }
+
+    
+    div.container section.formularioLogin form div button {
+        height: 50px;
+        max-height: none;
+        width: 50vw;
+        max-width: 400px;
+    }
+    
+    div.container section.formularioLogin form span {
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: -10px;
+    }
+>>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
+    
+
+    
+}

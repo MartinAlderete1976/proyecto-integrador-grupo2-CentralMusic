@@ -98,16 +98,17 @@
     display: none;
 }
 
-.products-interest .product-container {
-    margin: 0 auto;
-    width: 328px;
-}
 
 
 
 .details-product-footer {
     position: relative;
     top: -128px;
+}
+
+.card-interest {
+    display: flex;
+    gap: 6px;
 }
 
 
@@ -204,7 +205,7 @@
     }
 
     .card-interest {
-        display: flex;
+        flex-direction: row;
         justify-content: center;
         gap: 10px;
     }
@@ -220,6 +221,12 @@
     .details-product-footer {
         position: relative;
         top: -123px;
+    }
+
+    /* si queres que las tarjetas tengan el mismo tamañano que el home repsonsive borrar esta linea de abajo  */
+    .card-interest .product-container {
+        width: 328px;
+        height: 417px;
     }
     
 }
@@ -255,11 +262,8 @@
         display: block;
     }
 
-    .card-interest {
-        gap: 30px;
-    }
 
-    .card-interest article {
-        width: 328px;
-    }
+ 
+
+   
 }
