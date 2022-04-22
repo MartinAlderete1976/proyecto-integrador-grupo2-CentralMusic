@@ -26,27 +26,17 @@ SPRINT 1
 https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
 
 
-<<<<<<< HEAD
-Retrospectiva
-SPRINT 2
-=======
 # Retrospectiva
 
 SPRINT 2 
->>>>>>> master
 
 ## Empezar a hacer:
 - Estar mas atento al trello.
 - Practicar mas git.
 
-<<<<<<< HEAD
-## Hacer más:
-- Reuniones
-=======
 
 ## Hacer más:
 - Reuniones 
->>>>>>> master
 - Practicas de codigos
 
 ## Seguir haciendo:
