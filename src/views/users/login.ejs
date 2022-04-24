@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('../partials/head')  %> 
+    <%-include('../partials/head', {title:'login'})  %> 
 <body class="forms">
     <%-include('../partials/header')  %> 
         <div class="login-container">
@@ -28,7 +28,7 @@
                         <button type="submit" class="btn btn-submit">Ingresar</button>
                     </div>
                 </form>
-            <span><a href="/register" class="noTengoCuenta">No tengo cuenta</a></span>
+            <span><a href="/users/register" class="noTengoCuenta">No tengo cuenta</a></span>
             </section>
         </div>
      <%-include('../partials/footer')  %> 
