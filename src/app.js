@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // middlewares routes 
 app.use('/', indexRouter); // gestiona Home
-app.use('/productos', productsRouter); // gestiona listado, detalle
+app.use('/products', productsRouter); // gestiona listado, detalle
 app.use('/users', usersRouter); // gestiona login, perfil, registro
 app.use('/admin', adminRouter); // gestiona CRUD de productos 
 

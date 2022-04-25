@@ -16,7 +16,7 @@ let category = $selectCategory[0]
 
 let option = accesory[0]
 
-$btnFile[0].style.backgroundColor = 'blue'
+//$btnFile[0].style.backgroundColor = 'blue'
 
 /*
 function cambiarColor(){
@@ -53,7 +53,7 @@ console.log(category.value)
 
 //
 
-$btnFile[0].innerHTML = 'Sacar imagenes'
+//$btnFile[0].innerHTML = 'Sacar imagenes'
 
 
 let lblImage = $btnFile.item(0)

@@ -17,9 +17,9 @@ const productsController = {
         res.render('products/detailsProduct', {
             product,
             products,
-        })
-    }
-
+        });
+    },
+    
 
 }   
 module.exports = productsController;

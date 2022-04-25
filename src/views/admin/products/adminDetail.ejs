@@ -43,7 +43,7 @@
                             </div>
                             <div class="btns-container">
                                 <div class="btn-container">
-                                    <a class="btn-container" href="/">
+                                    <a class="btn-container" href="/admin/products/edit/<%=product.id %> ">
                                         <input class="btn-style" type="button" value="EDITAR">
                                     </a>
                                 </div>
@@ -67,8 +67,8 @@
                                 <p> <b>Modelo:</b> <%= product.model %> </p>
                                 <p><b>Orientacion de la mano:</b> <%= product.hand  %> </p>
                                 <p><b>Color:</b> <%= product.color  %> <br>
-                                <p><b>Tipo de madera del cuerpo:</b> <%= product.wood  %> </p>
-                                <p><b> Material del diapason:</b> <%= product.freatboard  %> </p>
+                                <p><b>Tipo de madera del cuerpo:</b> <%= product.materialBody  %> </p>
+                                <p><b> Material del diapason:</b> <%= product.materialFreatboard  %> </p>
                                 <p><b>Acabado del cuerpo:</b> <%= product.bodyFinish  %> </p>
                             <% } else { %>
                            
