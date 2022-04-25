@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../partials/head')  %> 
+<%-include('../partials/head', {title: 'Listado de productos'})  %> 
 <body class="listProduct home-container admin-container">
 <%-include('../partials/header')  %> 
 <main class="tabla">
@@ -18,62 +18,28 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>1</th>
-                <td>Gibson</td>
-                <td>Les Paul</td>
-                <td>$2995</td>
-                <td>Guitar</td>
-                <td>true</td>
-                <td>
-                    <a href="" class="btn-edit">
-                        <i class="fa-solid fa-pen"></i>
-                    </a>
-                    <form action="">
-                        <button class="btn-danger">
-                            <i class="fa-solid fa-xmark fa-lg"></i>
-                        </button>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>Fender </td>
-                <td>Statocaster</td>
-                <td>$3000</td>
-                <td>Guitar</td>
-                <td>true</td>
-                <td>
-                    <a href=""class="btn-edit" >
-                        <i class="fa-solid fa-pen"></i>
-                    </a>
-                    <form action="">
-                        <button class="btn-danger">
-                            <i class="fa-solid fa-xmark fa-lg"></i>
-                        </button>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>Fender</td>
-                <td>Telecaster</td>
-                <td>$2000</td>
-                <td>Guitar</td>
-                <td>true</td>
-                <td>
-                    <a href="" class="btn-edit">
-                        <i class="fa-solid fa-pen"></i>
-                    </a>
-                    <form action="">
-                        <button class="btn-danger">
-                            <i class="fa-solid fa-xmark fa-lg"></i>
-                        </button>
-                    </form>
-                </td>
-            </tr>
+            <% products.forEach(product => { %>
+                
+                    <tr>
+                        <th><a href="product/detail/<%- product.id %> "><%- product.id %></a></th>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.marca %></a></td>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.model %></a></td>
+                        <td><a href="product/detail/<%- product.id %> ">$<%- product.price %></a></td>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.category %></a></td>
+                        <td><%- product.stock %></td>
+                        <td>
+                            <a href="" class="btn-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                                <form action="">
+                                    <button class="btn-danger">
+                                        <i class="fa-solid fa-xmark fa-lg"></i>
+                                    </button>
+                                </form>
+                        </td>    
+                    </tr>
+            <% }) %>
         </tbody>
-        
     </table>
 </main>
     
