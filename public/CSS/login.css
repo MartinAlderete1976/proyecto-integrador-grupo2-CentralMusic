@@ -1,56 +1,86 @@
+.formulario_Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 350px;
+    margin-bottom: 110px;
+    border: 1px solid orange;
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-.contenedor {
-        width: 100%;
-        padding: 15px;
+.recordar {
+    display: flex;
+    justify-content:center;
+}
+
+
+/* div.container section.formularioLogin form div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    
+} */
+
+
+
+.input-style {
+   
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    
+}
+
+
+
+@media screen and (min-width: 768px){ 
+    div.container section.formularioLogin h2{
+        padding-top: 30px;
     }
-.formulario {
-        background: #fff;
-        margin-top: 150px;
-        padding: 3px;
+
+    div.container section.formularioLogin {
+        margin-bottom: 50px;
+        width: 80vw;
+        height: 50vh;
+        max-width: 500px;
     }
-h1{
-        text-align: center;
-        color: #1a2537;
-        font-size: 40px;
+
+    div.container section.formularioLogin form {
+        width: 80vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
-/* input[type="text"],
-input[type="pasword"] {
+
+    div.container section.formularioLogin form div {
+        max-width: none;
+        max-height: none;
+    }
+    
+    div.container section.formularioLogin form div input {
+        height: 50px;
+        max-height: none;
+        width: 50vw;
+        max-width: 400px;
         font-size: 20px;
-        width: 82%;
-        padding: 10px;
-        border: none;
-    } */
-.input-contenedor {
-        margin-bottom: 15px;
-        border: 1px solid #aaa;
     }
-.icon{
-        min-width: 50px;
-        text-align: center;
-        color: #999;
-    }
-.button{
-     border: none;
-     width: 100%;
-     color: white;
-     font-size: 20px;
-     padding: 15px 20px;
-     border-radius: 5px;
-     cursor: pointer;
-    }
-.button:hover{
-        background-color: #fa7a03;
-    }
-.login-container p{
-        text-align: center;
+
+    
+ 
+    
+    div.container section.formularioLogin form span {
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: -10px;
     }
     
-@media(min-width:768px){
+
     
-.formulario{
-         margin: auto;
-         width: 500px;
-         margin-top: 150px;
-         border-radius: 2%;
- }
- }
+}

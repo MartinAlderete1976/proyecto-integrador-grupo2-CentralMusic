@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('../partials/head')  %> 
+    <%-include('../partials/head',{title:'register'})  %> 
 <body class ="body-register home-container">
     <%-include('../partials/header')  %> 
      <section class="form">
         <img src="images/Home/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
         <h2 class="nombreRegistro">REGISTRO</h2>
         <form action="" method="">
-        <input type="email" class="input-style" name="email" placeholder="Ingrese su email">
+        <input  type="email" class="input-style" name="email" placeholder="Ingrese su email">
         <span class="error-message">Debe ingresar su email</span>
         <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña">
                 <span class="error-message">Debe ingresar su contraseña</span>

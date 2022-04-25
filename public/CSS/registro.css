@@ -1,72 +1,78 @@
-.registro body {
-font-family: 'Work Sans';
-margin: 0;
-background: url(/images/lespaul.jpg);
-background-size: cover;
-background-attachment: fixed; 
-}
-.registro * {
-    box-sizing: border-box;
-}
-.contenedor {
+
+.contenedor-formulario{
     width: 100%;
-    background-color: white;
     padding: 15px;
 }
-.formulario {
-    background-color: white;
+
+
+
+.formulario{
+    background: #ffffff;
     margin-top: 150px;
+    margin: auto;
     padding: 3px;
 }
 
-.regsitro h1{
+.titulo-formulario{
     text-align: center;
     color: #1a2537;
     font-size: 40px;
 }
 
-.registro input[type="tex"],
-.registro input[type="pasword"] {
+input{
     font-size: 20px;
     width: 82%;
-    background-color: white;
     padding: 10px;
     border: none;
-   
 }
-.span.error-message {
-    text-align: center;
-}
-.input-contenedor {
+
+.input-contenedor{
     margin-bottom: 15px;
     border: 1px solid #aaa;
-    background-color: white;
 }
-.icon{
+
+.input-contenedor i{
     min-width: 50px;
     text-align: center;
-    color: #999;
+    color: #999
 }
+
+
 .button{
- border: none;
- width: 100%;
- color: white;
- font-size: 20px;
- background-color: #fa7a03; 
- padding: 15px 20px;
- border-radius: 5px;
- cursor: pointer;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
 .button:hover{
-    background-color:#fa7a03;
+   background: cadetblue;
+}
+
+.texto-formulario{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.link-formulario{
+    text-decoration: none;
+    color: #1a2537;
+    font-weight: 600;
+}
+
+.link-formulario:hover{
+    color: cadetblue;
 }
 
 @media(min-width:768px){
-
-.formulario{
-     margin: auto;
-     width: 500px;
-     margin-top: 150px;
-     border-radius: 2%;
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 3%;
+    }
 }
- }

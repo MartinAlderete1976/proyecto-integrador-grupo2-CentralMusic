@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "first_name": "Ruthe",
+        "last_name": "Duckerin",
+        "email": "rduckerin0@spiegel.de",
+        "password": "UDQCOsPx",
+        "category": "user",
+        "image": "user_1.jpg"
+    },
+    {
+        "id": 2,
+        "first_name": "Benoit",
+        "last_name": "Dyball",
+        "email": "bdyball1@army.mil",
+        "password": "IdcIiGNCFgm",
+        "category": "user",
+        "image": "user_2.jpg"
+    },
+    {
+        "id": 3,
+        "first_name": "Konstantin",
+        "last_name": "Braybrooks",
+        "email": "kbraybrooks2@disqus.com",
+        "password": "tboaCge",
+        "category": "user",
+        "image": "user_3.jpg"
+    },
+    {
+        "id": 4,
+        "first_name": "Gradey",
+        "last_name": "Farndell",
+        "email": "gfarndell3@sourceforge.net",
+        "password": "dpQWoCamMR",
+        "category": "user",
+        "image": "user_4.jpg"
+    },
+    {
+        "id": 5,
+        "first_name": "Flinn",
+        "last_name": "Grzeszczyk",
+        "email": "fgrzeszczyk4@naver.com",
+        "password": "kUuYnb",
+        "category": "user",
+        "image": "user_5.jpg"
+    },
+    {
+        "id": 6,
+        "first_name": "Linn",
+        "last_name": "Guerrazzi",
+        "email": "lguerrazzi5@hp.com",
+        "password": "oOKzyE",
+        "category": "user",
+        "image": "user_6.jpg"
+    },
+    {
+        "id": 7,
+        "first_name": "Wadsworth",
+        "last_name": "Chesson",
+        "email": "wchesson6@mediafire.com",
+        "password": "rnDc9ty",
+        "category": "user",
+        "image": "user_7.jpg"
+    },
+    {
+        "id": 8,
+        "first_name": "Mikel",
+        "last_name": "Yglesia",
+        "email": "myglesia7@mail.ru",
+        "password": "h0doCECnYnA",
+        "category": "user",
+        "image": "user_8.jpg"
+    },
+    {
+        "id": 9,
+        "first_name": "Bord",
+        "last_name": "Kingzett",
+        "email": "bkingzett8@nature.com",
+        "password": "ZdZYzFnCWGV7",
+        "category": "user",
+        "image": "user_9.jpg"
+    },
+    {
+        "id": 10,
+        "first_name": "Adrian",
+        "last_name": "Swine",
+        "email": "aswine9@wsj.com",
+        "password": "6F0IwT",
+        "category": "user",
+        "image": "user_10.jpg"
+    }
+]
