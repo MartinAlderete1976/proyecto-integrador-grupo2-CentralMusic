@@ -10,7 +10,7 @@
     max-width: 350px;
     margin-bottom: 110px;
     border: 1px solid orange;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .recordar {
@@ -30,9 +30,11 @@
 
 
 
+
+
 .input-style {
    
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, );
     width: 100%;
     
 }
@@ -83,4 +85,10 @@
     
 
     
+}
+
+@media (min-width: 300px ) {
+    body .forms .header-detailsProduct {
+        background-color: initial;
+    }
 }

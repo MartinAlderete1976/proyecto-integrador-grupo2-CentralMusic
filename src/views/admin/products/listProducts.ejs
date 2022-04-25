@@ -2,7 +2,9 @@
 <html lang="en">
 <%-include('../partials/head', {title: 'Listado de productos'})  %> 
 <body class="listProduct home-container admin-container">
-<%-include('../partials/header')  %> 
+    <div class="color-container">
+    <%-include('../partials/header')  %> 
+    </div>
 <main class="tabla">
     <h2>Listado de productos</h2>
     <table>
@@ -20,6 +22,7 @@
         <tbody>
             <% products.forEach(product => { %>
                 
+              
                     <tr>
                         <th><a href="product/detail/<%- product.id %> "><%- product.id %></a></th>
                         <td><a href="product/detail/<%- product.id %> "><%- product.marca %></a></td>
@@ -36,13 +39,13 @@
                                         <i class="fa-solid fa-xmark fa-lg"></i>
                                     </button>
                                 </form>
+                            
                         </td>    
                     </tr>
             <% }) %>
         </tbody>
     </table>
 </main>
-    
  
     
     <%-include('../partials/footer')  %> 

@@ -3,7 +3,9 @@
 <%-include('../partials/head', {title: product.name}) %>
 
     <body class="home-container bodyDetailsProduct">
+        <div class="color-container">
         <%-include('../partials/header') %>
+        </div>
             <main class="details-main">
                 <section class="product-view">
                     <h1><%= product.name  %> </h1>
@@ -91,7 +93,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="products-interest new-products products popular-finds products ">
+              <!--   <section class="products-interest new-products products popular-finds products ">
                     <div class="product-interest-container">
                         <div class="new-products-separador"></div>
                         <h2>Productos que te podrian interesar</h2>
@@ -117,9 +119,9 @@
                             <% }) %>
                         </div>
                     </div>
-                </section>
+                </section> -->
+                <%-include('../partials/footer')  %>     
             </main>
-        <%-include('../partials/footer')  %>     
-    </body>
+        </body>
 
 </html>
