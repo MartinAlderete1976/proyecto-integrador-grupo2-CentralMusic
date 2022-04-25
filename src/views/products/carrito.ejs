@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%-include('../partials/head',{title:'carrito'})  %>  
-<body>
-<%-include('../partials/header')  %> 
+<body class="home-container">
+    <header class="header-container">
+        <%-include('../partials/header')  %> 
 <section class="carrito2">
    <div class="product">
         <div class="section1">
@@ -30,7 +31,7 @@
             <p>Descripción breve del producto</p>
         <a href="">eliminar</a>
     </div>
-      
+
 </div> <!--cierra el producto -->
 
 <div class="btn" >
@@ -40,6 +41,7 @@
             <button class="btn-style">Finalizar Compra</button>
         </div>
 </section>
+</header>
 <%-include('../partials/footer')  %> 
 </body>
 </html>
