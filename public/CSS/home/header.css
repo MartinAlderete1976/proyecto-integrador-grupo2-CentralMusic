@@ -13,8 +13,10 @@
 }
 
 
+
 /* DANDO ESTILOS A LA BARRA DE NAVEGACION LOGO Y MENU */
 .barra-navegacion {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +32,7 @@
 }
 
 .menu-burger {
+  
     width: 20px;
     height: 20px;
     color: #FFFFFF;
@@ -187,6 +190,7 @@
     .logo-container {
         display: flex;
         flex-grow: 0.9;
+        
     }
 
     .logo-container li {
