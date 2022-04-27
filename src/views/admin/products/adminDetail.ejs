@@ -3,9 +3,7 @@
 <%-include('../partials/head', {title: product.name}) %>
 
     <body class="home-container bodyDetailsProduct">
-        <div class="color-container">
         <%-include('../partials/header') %>
-        </div>
             <main class="details-main">
                 <section class="product-view">
                     <h1><%= product.name  %> </h1>
@@ -45,15 +43,29 @@
                             </div>
                             <div class="btns-container">
                                 <div class="btn-container">
-                                    <a class="btn-container" href="/admin/products/edit/<%=product.id %> ">
-                                        <input class="btn-style" type="button" value="EDITAR">
-                                    </a>
+                                    <% if (product.category === 'guitar') { %>
+                                        <a class="btn-container" href="/admin/products/guitar/edit/<%=product.id %> ">
+                                            <input class="btn-style" type="button" value="EDITAR">
+                                        </a>
+                                    <% } else { %>
+                                        <a class="btn-container" href="/admin/products/accesory/edit/<%=product.id %> ">
+                                            <input class="btn-style" type="button" value="EDITAR">
+                                        </a>
+
+                                    <% } %>
                                 </div>
                                 <div class="btn-container">
-                                    <a class="btn-container" href="/">
-                                        <input class="btn-style" type="button" value="ELIMINAR">
-                                    </a>
+                                    <form action="/admin/products/delete/<%- product.id %>?_method=DELETE" method="POST">
+                                        <button class="btn-style" type="submit">Eliminar</button>
+                                    </form>
                                 </div>
+                                <!--
+                                    <a class="btn-container" href="/">
+                                    <input class="btn-style" type="button" value="ELIMINAR">
+                                </a>
+
+                                -->
+                                
                             </div>
                         </div>
                     </div>
@@ -70,7 +82,7 @@
                                 <p><b>Orientacion de la mano:</b> <%= product.hand  %> </p>
                                 <p><b>Color:</b> <%= product.color  %> <br>
                                 <p><b>Tipo de madera del cuerpo:</b> <%= product.materialBody  %> </p>
-                                <p><b> Material del diapason:</b> <%= product.materialFreatboard  %> </p>
+                                <p><b> Material del diapason:</b> <%= product.materialFretboard  %> </p>
                                 <p><b>Acabado del cuerpo:</b> <%= product.bodyFinish  %> </p>
                             <% } else { %>
                            
@@ -84,7 +96,7 @@
                     <div class="features-details description-product">
 
                         <p>
-                           <%= product.description  %> 
+                           <%= product.description %>
                         </p>
                     </div>
                 </section>

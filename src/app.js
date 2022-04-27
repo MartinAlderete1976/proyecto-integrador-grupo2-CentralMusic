@@ -15,6 +15,8 @@ const adminRouter = require('./routes/adminRouter')
 
 // archivos estaticos de uso publico
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
 app.use(methodOverride('_method'));  // override with POST having ?_method=DELETE
 
 /* Temple engine config */

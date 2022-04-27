@@ -1,4 +1,4 @@
-const {guitars, accesories} = require('../data')
+const {products} = require('../data')
 
 
 const productsController = {
@@ -10,7 +10,6 @@ const productsController = {
     carrito: (req,res) => res.render('products/carrito'),
     // muestra detalle de cada producto
     detail: (req, res) => {
-        let products = [ ...guitars, ...accesories];
         let productId = +req.params.id;
         let product = products.find(product => product.id === productId);
 
