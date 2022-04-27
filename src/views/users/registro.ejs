@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <%-include('../partials/head',{title:'register'})  %> 
-<body class ="body-register home-container">
+<body class ="home-container">
     <%-include('../partials/header')  %> 
-     <section class="form">
-        <img src="images/Home/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
-        <h2 class="nombreRegistro">REGISTRO</h2>
+    <header class="header-container">
+
+     <section class="formulario_Login">
+           <h2 class="nombreRegistro">REGISTRO</h2>
         <form action="" method="">
-        <input  type="email" class="input-style" name="email" placeholder="Ingrese su email">
-        <span class="error-message">Debe ingresar su email</span>
-        <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña">
-                <span class="error-message">Debe ingresar su contraseña</span>
-        <input type="password" class="input-style" name="pass2" placeholder="Re-ingrese su contraseña">
-                <span class="error-message">Debe re-ingresar su contraseña</span>
+            <div class="contenedor-formulario">
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Nombre Completo">
+                </div>
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Correo Electronico">
+                </div>
+                <div class="input-contenedor">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" placeholder="Contraseña">  
+                </div>
+                <div class="input-contenedor">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" class="input-style" name="pass2" placeholder="Re-ingrese su contraseña">   
+                </div>
+                <div class="input-avatarcontainer">
+                <label for="image" class="avatar__image"><h4> <i class="fa-solid fa-user"></i></h4></label>
+               <input type="file" name="avatar" id="avatar" id="image" >
+            </div>
+
         <p>Estoy de Acuerdo con <a href="#">Terminos y Condiciones</a></p>
         <div class="btn-container">
             <span class="error-message">Hubo un error en el registro</span>
-            </div>
-        <input class="botons" type="submit" value="Registrarme"> 
-        <p><a href="#">Ya tengo Cuenta</a></p>
-
+         
+        </div>
+         <input class="botons" type="submit" value="Registrarme"> 
+            <p><a href="/users/login">Ya tengo Cuenta</a></p>
+        </div>
     </section>
+
+    </header>
     <%-include('../partials/footer')  %> 
 
 </body>
 </html>
+
+ 
+
