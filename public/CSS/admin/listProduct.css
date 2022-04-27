@@ -6,10 +6,12 @@
 .listProduct h2 {
     margin-bottom: 5px;
     margin-top: 5px;
+    
 }
 
 .tabla {
     font-size: 10px;
+    padding-top: 100px;
 }
 
 .tabla table {

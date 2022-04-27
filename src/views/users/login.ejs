@@ -2,27 +2,28 @@
 <html lang="en">
     <%-include('../partials/head', {title:'login'})  %> 
 <body class="forms">
-    <header class="header-container">
     <%-include('../partials/header')  %> 
+    <header class="header-container">
         <div class="div-container">
+           
             <section class="formulario_Login">
-            <h2>LOGIN</h2>
+            <h2 class="noTengoCuenta">LOGIN</h2>
                 <form action="" method="">
-                    <h3>Email</h3>
+                    <h3 class="noTengoCuenta">Email</h3>
                     <div class="input-contenedor">
                         <input type="email" class="input-style" name="email" placeholder="Ingrese su email" required>
                     </div>
-                    <h3>Contraseña</h3>
+                    <h3 class="noTengoCuenta">Contraseña</h3>
                     <div class="input-contenedor">
                         <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña" required>
                     </div>
-                    <h3>Olvidó su contraseña</h3>
+                    <h3 class="noTengoCuenta">Olvidó su contraseña</h3>
                     <div class="input_check-container">
                         <div class="recordar">
                         <input class="recordar" type="checkbox" name="remember">
                         <label for="">Recordarme</label>
                         </div>
-                        <span class="error-message">Credenciales inválidas</span>
+                        <span class="noTengoCuenta">Credenciales inválidas</span>
                     </div>
                     <div class="btn-container">
                         <button type="submit" class="btn-style">Ingresar</button>
