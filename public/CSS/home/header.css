@@ -177,7 +177,7 @@
 
 @media (min-width: 1353px) {
     .barra-navegacion {
-        justify-content: flex-start;
+        padding-right: 40px;
     }
 
     .header-menu-container {

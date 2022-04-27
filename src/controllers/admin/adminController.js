@@ -1,7 +1,9 @@
 
 const adminController = {
     index: (req, res) => {
-        res.send('Inicio')
+        res.render('admin/adminIndex', {
+            title: 'inicio admin'
+        })
     }
 }
 
