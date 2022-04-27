@@ -30,11 +30,9 @@
 }
 
 .product-view {
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
     background-color: #e8e8e8;
     height: 570px;
-    margin-top: 15px;
+    padding-top: 15px;
     
 }
 
