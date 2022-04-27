@@ -1,5 +1,5 @@
 
-
+/*
 const $select = document.getElementById('category');
 
 const $btnFile = document.querySelectorAll('.btn-file')
@@ -27,7 +27,7 @@ function cambiarColor(){
     
 }
 */
-
+/*
 option.addEventListener('click', e => {
     console.log(e)
 })
@@ -70,4 +70,4 @@ let lblImage = $btnFile.item(0)
 
 
 
-
+*/

@@ -8,7 +8,7 @@
         
         <div class="form-container1">
             <div class="new-products-separador"></div>
-            <h2>EDITAR PRODUCTO: <%= product.name %>  </h2>
+            <h2>EDITAR GUITARRA: <%= product.name %>  </h2>
             <div class="inputs-container1">
                 <div class="input-container1">
                     <label for="name">Nombre del producto</label>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="input-container1">
                     <label for="color">Color</label>
-                    <input type="text" name="color" id="color" placeholder="Ej: Sunsburts" class="input-style1" value="<%= product.price %>">
+                    <input type="text" name="color" id="color" placeholder="Ej: Sunsburts" class="input-style1" value="<%= product.color %>">
                 </div>
                 <div class="input-container1">
                     <label for="materialBody">Tipo de madera del cuerpo</label>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="input-container1">
                     <label for="materialFretboard">Material del diapason</label>
-                    <input type="text" name="materialFretboard" id="materialFretboard" placeholder="Ej:Palo rosa" class="input-style1" value="<%= product.materialFreatboard %>">
+                    <input type="text" name="materialFretboard" id="materialFretboard" placeholder="Ej:Palo rosa" class="input-style1" value="<%= product.materialFretboard %>">
                     <span class="error-message1">Debe ingresar el material</span>
                 </div>
                 <div class="input-container1">
@@ -58,18 +58,20 @@
                     <input type="text" name="bodyFinish" id="bodyFinish" placeholder="Ej:Polurietano" class="input-style1" value="<%= product.bodyFinish %>">
                     <span class="error-message1">Debe ingresar el acabado</span>
                 </div>
+                
+                
                 <div class="input-container1 file-container">
                     <label for="image"  class="btn-file">Agregar imagenes</label>
                     <input type="file" name="image" id="image" accept="image/png, image/jpg, image/svg" class="file">
                     <span class="error-message1">Debes agregar una imagen</span>
                 </div>
+
+                
+                
                 <div class="input-container1">
                     <label for="category">Categoria</label>
-                    <select name="categoryId" id="category" >
-                        <option selected hidden>Categoria</option>
-                        <option value="guitar" class="guitar">Guitarras</option>
-                        <option value="accesory" class="accesory">Accesorios</option>
-                        <span class="error-message1">Debe ingresar una categoria</span>
+                    <select name="category" id="category">
+                        <option selected hidden value="guitar" class="guitar" >Guitarra</option>
                     </select>
                  </div>
                  <div class="btn-switch input-container1">

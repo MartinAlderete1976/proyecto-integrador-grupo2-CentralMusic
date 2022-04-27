@@ -31,10 +31,18 @@
                         <td><a href="product/detail/<%- product.id %> "><%- product.category %></a></td>
                         <td><%- product.stock %></td>
                         <td>
-                            <a href="/admin/products/edit/<%- product.id %> " class="btn-edit">
-                                <i class="fa-solid fa-pen"></i>
-                            </a>
-                                <form action="">
+
+                            <% if (product.category === 'guitar') { %>
+                                <a href="/admin/products/guitar/edit/<%- product.id %> " class="btn-edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                            <% } else { %> 
+                                <a href="/admin/products/accesory/edit/<%- product.id %> " class="btn-edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                            
+                            <% } %>  
+                                <form action="/admin/products/delete/<%- product.id %>?_method=DELETE" method="POST">
                                     <button class="btn-danger">
                                         <i class="fa-solid fa-xmark fa-lg"></i>
                                     </button>
