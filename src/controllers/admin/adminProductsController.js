@@ -193,7 +193,7 @@ const adminProductsController = {
         writeProducts(products);
         /* 4 - Enviar respuesta  */
         res.redirect('/admin/products')
-    }
+    },
 }
 
 
