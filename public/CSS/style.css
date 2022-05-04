@@ -6,11 +6,10 @@
 /* detalle de producto*/
 @import url('./detailsProduct/detailsProduct.css');
 
-@import url('./admin/addProduct.css');
+
 @import url('./admin/listProduct.css');
 /* formularios */
-@import url('./login2.css');
-@import url('./registro.css');
+@import url('./admin/addProduct.css');
 @import url('forms.css');
 @import url('login.css');
 /* Carrito */
