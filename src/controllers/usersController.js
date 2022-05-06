@@ -1,4 +1,4 @@
-const {getUsers, writeJsonUsers} = require('../data/index')
+const {users} = require ('../data')
 
 module.exports = {
     login: (req, res) => {
@@ -16,15 +16,14 @@ module.exports = {
         });
         let { nombre, apellido, email, pass } = req.body;
 
-        let newUser = {
-            id : lastId + 1,
-            nombre,
-            apellido,
-            email,
-            pass
-        }
-        getUsers.push(newUser);
-        writeJsonUsers(getUsers);
-        res.redirect('/users/login')
-    },
-}
+const usersController = {
+    login: (req,res) => res.render('users/login'),
+    register: (req,res) => res.render('users/registro')}
+
+
+
+
+
+
+
+module.exports = usersController;

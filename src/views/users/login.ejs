@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('../partials/head')  %> 
+    <%-include('../partials/head', {title:'login'})  %> 
 <body class="forms">
     <%-include('../partials/header')  %> 
-        <div class="login-container">
-            <div class="login.box">
-                <img src="images/Home/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
-            </div>
-            <section class="form-container login formulario">
-            <h2 class="nombreLogin">LOGIN</h2>
+    <header class="header-container">
+        <div class="div-container">
+           
+            <section class="formulario_Login">
+            <h2 class="noTengoCuenta">LOGIN</h2>
                 <form action="" method="">
+                    <h3 class="noTengoCuenta">Email</h3>
                     <div class="input-contenedor">
-                        <span class="error-message">Email</span>
                         <input type="email" class="input-style" name="email" placeholder="Ingrese su email" required>
                     </div>
+                    <h3 class="noTengoCuenta">Contraseña</h3>
                     <div class="input-contenedor">
-                        <span class="error-message">Contraseña</span>
                         <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña" required>
-                        <h1>Olvido su contraseña?</h1>
                     </div>
+                    <h3 class="noTengoCuenta">Olvidó su contraseña</h3>
                     <div class="input_check-container">
-                        <label for="recordar">Recordarme</label>
-                        <input type="checkbox" name="remember" id="recordar">
-                        <span class="error-message">Credenciales inválidas</span>
+                        <div class="recordar">
+                        <input class="recordar" type="checkbox" name="remember">
+                        <label for="">Recordarme</label>
+                        </div>
+                        <span class="noTengoCuenta">Credenciales inválidas</span>
                     </div>
                     <div class="btn-container">
-                        <button type="submit" class="btn btn-submit">Ingresar</button>
+                        <button type="submit" class="btn-style">Ingresar</button>
                     </div>
                 </form>
-            <span><a href="/register" class="noTengoCuenta">No tengo cuenta</a></span>
+            <span><a href="/users/register" class="noTengoCuenta">No tengo cuenta</a></span>
             </section>
         </div>
-     <%-include('../partials/footer')  %> 
+    </header>
+    <%-include('../partials/footer')  %> 
 </body>
 </html>

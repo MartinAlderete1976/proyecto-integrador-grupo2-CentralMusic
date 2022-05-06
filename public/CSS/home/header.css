@@ -9,18 +9,20 @@
     height: 507px;
     padding: 44px 24px;
     
+    
 }
+
 
 
 /* DANDO ESTILOS A LA BARRA DE NAVEGACION LOGO Y MENU */
 .barra-navegacion {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+  
     
 }
-
 .menu-header {
     display: none;
 }
@@ -30,6 +32,7 @@
 }
 
 .menu-burger {
+  
     width: 20px;
     height: 20px;
     color: #FFFFFF;
@@ -174,7 +177,7 @@
 
 @media (min-width: 1353px) {
     .barra-navegacion {
-        justify-content: flex-start;
+        padding-right: 40px;
     }
 
     .header-menu-container {
@@ -187,6 +190,7 @@
     .logo-container {
         display: flex;
         flex-grow: 0.9;
+        
     }
 
     .logo-container li {

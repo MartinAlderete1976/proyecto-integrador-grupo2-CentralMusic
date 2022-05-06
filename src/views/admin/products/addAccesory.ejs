@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head', {title: 'Agregar producto'})  %> 
+<body class="listProduct home-container admin-container">
+    
+    <%-include('../partials/header')  %>    
+    
+    
+    <form action="/admin/products" method="POST" class="form-addProduct">
+        
+        <div class="form-container1">
+            <div class="new-products-separador"></div>
+            <h2>Agregar accesorio</h2>
+            <div class="inputs-container1">
+                <div class="input-container1">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Cuerdas Ernie Ball" class="input-style1">
+                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                </div>
+                <div class="input-container1">
+                    <label for="marca">Marca</label>
+                    <input type="text" name="marca" id="marca" placeholder="Ej:Ernie Ball" class="input-style1">
+                    <span class="error-message1">Debe ingresar la marca</span>
+                </div>
+                <div class="input-container1">
+                    <label for="line">Linea</label>
+                    <input type="text" name="line" id="line" placeholder="Ej: Standar" class="input-style1">
+                    <span class="error-message1">Debe ingresar la serie</span>
+                </div>
+                <div class="input-container1">
+                    <label for="model">Modelo</label>
+                    <input type="text" name="model" id="model" placeholder="Slinky" class="input-style1">
+                    <span class="error-message1">Debe ingresar modelo</span>
+                </div>
+                 <div class="input-container1">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1">
+                </div>
+                <div class="input-container1 file-container">
+                    <label for="image"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="image" id="image" accept="image/png, image/jpg, image/svg" class="file">
+                    <span class="error-message1">Debes agregar una imagen</span>
+                </div>
+                <div class="input-container1">
+                    <label for="category">Categoria</label>
+                    <select name="category" id="category" >
+                        <option selected hidden value="accesory" class="accesory">Accesorio</option>
+                        <span class="error-message1">Debe ingresar una categoria</span>
+                    </select>
+                 </div>
+                 <div class="btn-switch input-container1">
+                     
+                     <input type="checkbox" name="stock"  id="stock" >
+                     <label for="stock" class="lbl-switch"></label>
+                     <span class="lbl-stock">Stock disponible</span>
+                 </div>
+            </div>
+             <div class="input-container1 input-description-container">
+                <label for="description">Descripcion</label>
+                <textarea name="description" id="description" cols="30" rows="10" ></textarea>
+            </div>
+            <div class="btn-container">
+                <button class="btn-style" type="submit" >Crear</button>
+            </div>
+        </div>
+    </form>
+
+    <%-include('../partials/footer')  %> 
+    
+</body>
+</html>
