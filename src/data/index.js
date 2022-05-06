@@ -10,7 +10,4 @@ module.exports = {
     writeUsers: (data) => {
         fs.writeFileSync(path.join(__dirname, '/users.json'), JSON.stringify(data));
     },
-    writeJsonUsers : (index) => {
-        fs.writeFileSync('./src/data/users.json', JSON.stringify(index), "utf-8")
-    },
 }
