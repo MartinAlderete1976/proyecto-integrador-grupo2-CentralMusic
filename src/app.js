@@ -10,9 +10,9 @@ const PORT = 3000;
 const indexRouter = require('./routes/indexRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
-const adminRouter = require('./routes/adminRouter')
+const adminRouter = require('./routes/adminRouter');
 
-
+//Middlewares globales
 // archivos estaticos de uso publico
 app.use(express.static(path.join(__dirname, '../public')));
 //esto me permite procesar los formularios y poder usar req.body

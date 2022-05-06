@@ -37,25 +37,39 @@ const adminProductsController = {
             }
         });
         
+        let file = req.file;
+    
+        if(!file){
+            //res.status(400).send('No agregaste una imagen o la imagen que agregaste es superior a 2MB, volve para atras')
+            res.redirect('/admin/products/guitar/add');
+           
+        } else {
+
+            let newProduct = {
+                ...req.body,
+                id: lastId + 1,
+                image: file.filename,
+                stock: req.body.stock ? true : false
+            };
+
+            
+            // Guardo nueva guitarra en su respectivo array y sobresscribo el JSON
+            products.push(newProduct);
+
+            // Paso 3 - Escribir el JSON de productos con el array actual
+
+            writeProducts(products)
+
+        
+            res.redirect('/admin/products');
+
+
+        }    
+        
+        
        
-        
-        let newProduct = {
-            ...req.body,
-            id: lastId + 1,
-            image: ' ',
-            stock: req.body.stock? true : false
-        };
-        
-        
-        // Guardo nueva guitarra en su respectivo array y sobresscribo el JSON
-       products.push(newProduct);
 
-       // Paso 3 - Escribir el JSON de productos con el array actual
-
-       writeProducts(products)
-
-        
-        res.redirect('/admin/products');
+       
     },
     // envia la vista de form de edicion de producto
     editGuitar: (req, res) => {
@@ -76,31 +90,78 @@ const adminProductsController = {
     
         //1- Obtener el id del prodcuto
         let idProduct = +req.params.id;
+
+        // guardo en variable la imagen que subo
+        let file = req.file
+
+
+
+        // pregunto si el archvio existe (si se subio)
+        if(!file) {
+            //2- Buscar el producto a editar y mofidicar el producto
         
-        //2- Buscar el producto a editar y mofidicar el producto
+            products.forEach(product => {
+                if(product.id === idProduct){
+                    product.name = req.body.name;
+                    product.marca = req.body.marca;
+                    product.line = req.body.line;
+                    product.model = req.body.model;
+                    product.hand = req.body.hand;
+                    product.price = req.body.price;
+                    product.color = req.body.color;
+                    product.materialBody = req.body.materialBody;
+                    product.materialFretboard = req.body.materialFretboard;
+                    product.bodyFinish = req.body.bodyFinish;
+                    product.category = req.body.category;
+                    product.stock = req.body.stock ? true : false;
+                    product.description = req.body.description
+                }
+            }); 
+
+            
+            //3- Guardar los cambios
+            writeProducts(products)
+            //- Respuesta
+            res.redirect('/admin/products')
         
-        products.forEach(product => {
-            if(product.id === idProduct){
-                product.name = req.body.name;
-                product.marca = req.body.marca;
-                product.line = req.body.line;
-                product.model = req.body.model;
-                product.hand = req.body.hand;
-                product.price = req.body.price;
-                product.color = req.body.color;
-                product.materialBody = req.body.materialBody;
-                product.materialFretboard = req.body.materialFretboard;
-                product.bodyFinish = req.body.bodyFinish;
-                product.category = req.body.category;
-                product.stock = req.body.stock ? true : false;
-                product.description = req.body.description
-            }
-        }); 
-        //3- Guardar los cambios
-        writeProducts(products)
-        //- Respuesta
-        res.redirect('/admin/products')
+        } else {
+
+            products.forEach(product => {
+                if(product.id === idProduct){
+                    product.name = req.body.name;
+                    product.marca = req.body.marca;
+                    product.line = req.body.line;
+                    product.model = req.body.model;
+                    product.hand = req.body.hand;
+                    product.price = req.body.price;
+                    product.color = req.body.color;
+                    product.materialBody = req.body.materialBody;
+                    product.materialFretboard = req.body.materialFretboard;
+                    product.bodyFinish = req.body.bodyFinish;
+                    product.image = req.file.filename;
+                    product.category = req.body.category;
+                    product.stock = req.body.stock ? true : false;
+                    product.description = req.body.description
+                }
+            });
+            
+            //3- Guardar los cambios
+            writeProducts(products)
+            //- Respuesta
+            res.redirect('/admin/products')
         
+
+        }
+        
+
+            
+        
+        
+       
+       
+        
+        
+       
 
     },
     // envia la vista de formulario de creacion de un accesorio
@@ -119,23 +180,36 @@ const adminProductsController = {
         });
         
        
-        let newProduct = {
-            ...req.body,
-            id: lastId + 1,
-            image: ' ',
-            stock: req.body.stock? true : false
-        };
+        let file = req.file;
         
+        if(!file){
+            //res.status(400).send('No agregaste una imagen o la imagen que agregaste es superior a 2MB, volve para atras')
+            res.redirect('/admin/products/accesory/add');
+           
+        }  else {
+
+            let newProduct = {
+                ...req.body,
+                id: lastId + 1,
+                image: file.filename,
+                stock: req.body.stock ? true : false
+            };
+
+            
+            // Guardo nueva guitarra en su respectivo array y sobresscribo el JSON
+            products.push(newProduct);
+
+            // Paso 3 - Escribir el JSON de productos con el array actual
+
+            writeProducts(products)
+
         
-        // Guardo nuevo accesorio en su respectivo array y sobresscribo el JSON
-       products.push(newProduct);
+            res.redirect('/admin/products');
 
-       // Paso 3 - Escribir el JSON de productos con el array actual
 
-       writeProducts(products)
+        }    
 
         
-        res.redirect('/admin/products');
     
     },
 
@@ -158,23 +232,53 @@ const adminProductsController = {
     updateAccesory: (req, res) => {
         
         let idProduct = +req.params.id;
-        
-        products.forEach(product => {
-            if(product.id === idProduct){
-                product.name = req.body.name;
-                product.marca = req.body.marca;
-                product.model = req.body.model;
-                product.price = req.body.price;
-                product.category = req.body.category;
-                product.stock = req.body.stock ? true : false;
-                product.description = req.body.description;
-            }
-        });
 
-        //3- Guardar los cambios
-        writeProducts(products)
-        //- Respuesta
-        res.redirect('/admin/products')
+        let file = req.file;
+
+        if(!file){
+
+            products.forEach(product => {
+                if(product.id === idProduct){
+                    product.name = req.body.name;
+                    product.marca = req.body.marca;
+                    product.model = req.body.model;
+                    product.price = req.body.price;
+                    product.category = req.body.category;
+                    product.stock = req.body.stock ? true : false;
+                    product.description = req.body.description;
+                }
+            });
+    
+            //3- Guardar los cambios
+            writeProducts(products)
+            //- Respuesta
+            res.redirect('/admin/products')
+
+        } else {
+
+            products.forEach(product => {
+                if(product.id === idProduct){
+                    product.name = req.body.name;
+                    product.marca = req.body.marca;
+                    product.model = req.body.model;
+                    product.price = req.body.price;
+                    product.category = req.body.category;
+                    product.stock = req.body.stock ? true : false;
+                    product.image = req.file.filename;
+                    product.description = req.body.description;
+                }
+            });
+    
+            //3- Guardar los cambios
+            writeProducts(products)
+            //- Respuesta
+            res.redirect('/admin/products')
+
+
+
+        }
+        
+       
     },
 
     delete: (req, res) => {

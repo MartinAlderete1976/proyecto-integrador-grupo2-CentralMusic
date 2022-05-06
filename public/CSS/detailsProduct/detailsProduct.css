@@ -53,6 +53,12 @@
     background: radial-gradient(98.56% 98.92% at 1.22% 1.08%, #FBFBFB 0%, #D3D3D3 100%)
 }
 
+.product-view-container .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .details-description {
     display: flex;
     flex-direction: column;
