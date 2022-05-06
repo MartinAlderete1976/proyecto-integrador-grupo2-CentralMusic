@@ -66,7 +66,8 @@ Esto nos permite informarnos no solo del proyecto sino tambien compartir cosas v
 
 
 https://github.com/MartinAlderete1976/proyecto-integrador-grupo2-CentralMusic
->>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c:daily-weeklyStandups.md
+<<<<<<< HEAD
+
 
 
 ## Reuniones daily-weekly sobre el sprint 4
@@ -74,6 +75,7 @@ https://github.com/MartinAlderete1976/proyecto-integrador-grupo2-CentralMusic
 Se realizaron con total normalidad donde se resolvio o se llego al acuerdo de:
 
 # Reparto de Actividades:
+<<<<<<< HEAD
 Cada integrante asumió su tarea para el proyecto y cumplir con los plazos de entrega del Sprint
 
 ## Impedimentos:
@@ -88,3 +90,24 @@ seguimos comunicandonos a traves del grupo de whats-App.
 Esto nos permite informarnos no solo del proyecto sino tambien compartir cosas vistas en clases e informacion sobre temas que vamos viendo.
 
 GitHub - MartinAlderete1976/proyecto-integrador-grupo2-CentralMusic: proyecto integrador grupo2 "CentralMusic"
+=======
+Cada integrante asumió su tarea para el proyecto y cumplir con los plazos de entrega del Sprint 
+
+## Impedimentos:
+
+Cada integrante hablo y expuso los inconvenientes y contratiempos personales.
+
+## con respecto al proyecto:
+
+Se decidió no hacerlo personal sino todo en conjunto tanto para el exito o fracaso haciendonos responsables todos, con las demoras, sobre todo. No pasando uno por encima de otro.
+Prestar mas atencion al trello que se lo deja de lado e informar sobre los cambios que vamos haciendo en el proyecto.
+
+
+## Comunicacion:
+
+seguimos comunicandonos a traves  del grupo de whats-App.
+Esto nos permite informarnos no solo del proyecto sino tambien compartir cosas vistas en clases e informacion sobre temas que vamos viendo.
+
+
+https://github.com/MartinAlderete1976/proyecto-integrador-grupo2-CentralMusic
+>>>>>>> master

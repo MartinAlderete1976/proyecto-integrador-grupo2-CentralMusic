@@ -20,6 +20,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 
+//Middlewares globales
 // archivos estaticos de uso publico
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
