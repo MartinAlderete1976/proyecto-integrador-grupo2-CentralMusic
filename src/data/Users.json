@@ -2,8 +2,8 @@
     {
         "id": 1,
         "user": "hendrix90",
-        "first_name": "Ruthe",
-        "last_name": "Duckerin",
+        "name": "Ruthe",
+        "lastname": "Duckerin",
         "email": "rduckerin0@spiegel.de",
         "password": "UDQCOsPx",
         "category": "user",
@@ -12,8 +12,8 @@
     {
         "id": 2,
         "user": "51dias",
-        "first_name": "Benoit",
-        "last_name": "Dyball",
+        "name": "Benoit",
+        "lastname": "Dyball",
         "email": "bdyball1@army.mil",
         "password": "IdcIiGNCFgm",
         "category": "user",
@@ -22,8 +22,8 @@
     {
         "id": 3,
         "user": "foden",
-        "first_name": "Konstantin",
-        "last_name": "Braybrooks",
+        "name": "Konstantin",
+        "lastname": "Braybrooks",
         "email": "kbraybrooks2@disqus.com",
         "password": "tboaCge",
         "category": "user",
@@ -32,8 +32,8 @@
     {
         "id": 4,
         "user": "hazard33",
-        "first_name": "Gradey",
-        "last_name": "Farndell",
+        "name": "Gradey",
+        "lastname": "Farndell",
         "email": "gfarndell3@sourceforge.net",
         "password": "dpQWoCamMR",
         "category": "user",
@@ -42,8 +42,8 @@
     {
         "id": 5,
         "user": "dillom666",
-        "first_name": "Flinn",
-        "last_name": "Grzeszczyk",
+        "name": "Flinn",
+        "lastname": "Grzeszczyk",
         "email": "fgrzeszczyk4@naver.com",
         "password": "kUuYnb",
         "category": "user",
@@ -52,8 +52,8 @@
     {
         "id": 6,
         "user": "30dias",
-        "first_name": "Linn",
-        "last_name": "Guerrazzi",
+        "name": "Linn",
+        "lastname": "Guerrazzi",
         "email": "lguerrazzi5@hp.com",
         "password": "oOKzyE",
         "category": "user",
@@ -62,8 +62,8 @@
     {
         "id": 7,
         "user": "46dias",
-        "first_name": "Wadsworth",
-        "last_name": "Chesson",
+        "name": "Wadsworth",
+        "lastname": "Chesson",
         "email": "wchesson6@mediafire.com",
         "password": "rnDc9ty",
         "category": "user",
@@ -72,8 +72,8 @@
     {
         "id": 8,
         "user": "messi32",
-        "first_name": "Mikel",
-        "last_name": "Yglesia",
+        "name": "Mikel",
+        "lastname": "Yglesia",
         "email": "myglesia7@mail.ru",
         "password": "h0doCECnYnA",
         "category": "user",
@@ -82,8 +82,8 @@
     {
         "id": 9,
         "user": "gg21",
-        "first_name": "Bord",
-        "last_name": "Kingzett",
+        "name": "Bord",
+        "lastname": "Kingzett",
         "email": "bkingzett8@nature.com",
         "password": "ZdZYzFnCWGV7",
         "category": "user",
@@ -92,11 +92,21 @@
     {
         "id": 10,
         "user": "carlos21",
-        "first_name": "Adrian",
-        "last_name": "Swine",
+        "name": "Adrian",
+        "lastname": "Swine",
         "email": "aswine9@wsj.com",
         "password": "6F0IwT",
         "category": "user",
         "avatar": "user_10.jpg"
+    },
+    {
+        "id": 11,
+        "user": "90dias",
+        "name": "Elias Nahuel",
+        "lastname": "Prieto Rodriguez",
+        "email": "nahuel.rlz@gmail.com",
+        "password": "123456",
+        "avatar": "avatar-default.png",
+        "category": "costumer"
     }
 ]

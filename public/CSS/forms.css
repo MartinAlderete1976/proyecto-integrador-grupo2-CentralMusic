@@ -1,9 +1,7 @@
-.error-msg-register {
-    display: none;
-}
+
 
 .forms-body .form-container1 {
-    height: 860px;
+    height: 910px;
 }
 
 .forms-body .file-container {
@@ -20,9 +18,23 @@
     width: 300px;
 }
 
+.forms-body .input-container1 label {
+    margin-top: 10px;
+    padding: 4px 2px;
+}
+
+.forms-body input[type=checkbox] {
+    position: relative;
+    top: 1px;
+}
+
+
+.forms-body .input-container1 .btn-file {
+    margin-top: 21px;
+}
 
 .forms-body .btn-container {
-    height: 35px;
+    height: 40px;
     width: 295px;
     margin-top: 50px;
 }
@@ -43,7 +55,7 @@
 
 
 .login_acc {
-    margin-top: 35px;
+    margin-top: 54px;
     font-weight: 500;
     font-size: 16px;
 }
@@ -56,18 +68,21 @@
 
 @media (min-width: 768px) {
 
+    .forms-body .inputs-container1 {
+        gap: 21px 34px;
+    }
+
     .forms-body .form-container1 {
-        height: 600px;
+        height: 715px;
     }
 
     .forms-body .btn-container {
-        height: 35px;
         width: 450px;
         margin-top: 50px;
     }
 
     .terms-container {
-        margin-top: 30px;
+        margin-top: 24px;
         
     }
 

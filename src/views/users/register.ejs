@@ -11,42 +11,56 @@
                     <div class="inputs-container1">
                         <div class="input-container1">
                             <label for="user">Usuario</label>
-                            <input type="text" name="user" id="user" placeholder="Hendrix90" class="input-style1">
-                            <span class="error-message1 error-msg-register">Debe ingresar un usuario</span>
+                            <input type="text" name="user" id="user" placeholder="Hendrix90" class="input-style1" value="<%= locals.old ? old.user : null %>">
+                            <% if (locals.errors && errors.user) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.user.msg %></span>
+                            <% } %>
                         </div>
                         <div class="input-container1">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" placeholder="David" class="input-style1">
-                            <span class="error-message1 error-msg-register">Debe ingresar un nombre</span>
+                            <input type="text" name="name" id="name" placeholder="David" class="input-style1" value="<%= locals.old ? old.name : null %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.name.msg %></span>
+                            <% } %>
                         </div>
                         <div class="input-container1">
                             <label for="lastname">Apellido</label>
-                            <input type="text" name="lastname" id="lastname" placeholder="Gilmour" class="input-style1">
-                            <span class="error-message1 error-msg-register">Debe ingresar su apellido</span>
+                            <input type="text" name="lastname" id="lastname" placeholder="Gilmour" class="input-style1" value="<%= locals.old ? old.lastname : null %>">
+                            <% if (locals.errors && errors.lastname) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.lastname.msg %></span>
+                            <% } %>
                         </div>
                         <div class="input-container1">
                             <label for="email">Correo electronico</label>
-                            <input type="email" name="email" id="email" placeholder="john@mail.com" class="input-style1">
-                            <span class="error-message1 error-msg-register">Debe ingresar un email</span>
+                            <input type="email" name="email" id="email" placeholder="john@mail.com" class="input-style1" value="<%= locals.old ? old.email : null %>">
+                            <% if (locals.errors && errors.email) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.email.msg %></span>
+                            <% } %>
                         </div>
                         <div class="input-container1">
                             <label for="password">Contraseña</label>
-                            <input type="password" name="password" id="password" class="input-style1">
-                            <span class="error-message1 error-msg-register">Contraseña no valida</span>
+                            <input type="password" name="password" id="password" class="input-style1" value="<%= locals.old ? old.password : null %>">
+                            <% if (locals.errors && errors.password) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.password.msg %></span>
+                            <% } %>
                         </div>
                         <div class="input-container1">
                             <label for="password2">Confirmar contraseña</label>
-                            <input type="password" name="password2" id="password2" class="input-style1">
-                            <span class="error-message1 error-msg-register">Contraseña no valida</span>
+                            <input type="password" name="password2" id="password2" class="input-style1" value="<%= locals.old ? old.password2 : null %>">
+                            <% if (locals.errors && errors.password2) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.password2.msg %></span>
+                            <% } %>
                         </div>
                         <div class="input-container1 file-container">
                             <label for="avatar"  class="btn-file">Avatar</label>
                             <input type="file" name="avatar" id="avatar" accept=".png, .jpg" class="file">
                         </div>
                         <div class="input-container1 terms-container">
-                            <input type="checkbox" name="terms" id="terms" class="terms">
+                            <input type="checkbox" name="terms" id="terms" class="terms" <%= locals.old && (old.terms === 'on') ? 'checked' : null  %> >
                             <label for="terms" class="terms">Acepto los terminos y condiciones</label>
-                            <span class="error-message1 error-msg-register">Debe aceptar los terminos y condiciones</span>
+                            <% if (locals.errors && errors.terms) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.terms.msg %></span>
+                            <% } %>
                         </div>
                         <div class="btn-container">
                             <button class="btn-register" type="submit" >Registrarme</button>
