@@ -73,8 +73,9 @@
 
 .error-message1 {
     color: red;
-    font-size: 14px;
-    display: none;
+    font-size: 12px;
+    padding: 0 3px;
+    
 }
 
 .form-container1 select {
@@ -167,7 +168,7 @@
     }
 
     .btn-switch {
-        width: 87%;
+        width: 630px;
     }
 
     
