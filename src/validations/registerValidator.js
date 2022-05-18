@@ -6,8 +6,8 @@ let validateRegister = [
         .notEmpty().withMessage('Debes ingresar un usuario').bail()
         .isLength({ min: 5}).withMessage('ingrese un usuario valido')
         .custom((value) => {
-            let user = users.find(user => user.user === value);
-            if(user){
+            let userInDb = users.find(user => user.user === value);
+            if(userInDb){
                 return false;
             }
             return true
@@ -20,8 +20,8 @@ let validateRegister = [
         .notEmpty().withMessage('Debes ingresar un email').bail()
         .isEmail().withMessage('Debes ingresar un email valido'),
     check('email').custom((value) => {
-        let email = users.find(email => email.email === value);
-        if(email){
+        let emailInDb = users.find(email => email.email === value);
+        if(emailInDb){
             return false;
         }
         return true;

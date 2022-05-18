@@ -1,15 +1,49 @@
 const {users, writeUsers} = require ('../data');
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 const usersController = {
     login: (req,res) => res.render('users/login'),
     processLogin: (req, res) => {
-        res.send(req.body)
+        const errors = validationResult(req); // traigo los errores del body
+
+        
+
+        
+        if(errors.isEmpty()){
+            // inicia sesion
+            let userLogged = users.find(user => user.email === req.body.email); // guardo el usuario que conincide con el mail
+            
+            req.session.userLogged = {
+                id: userLogged.id,
+                user: userLogged.user,
+                name: userLogged.name,
+                emai: userLogged.email,
+                avatar: userLogged.avatar,
+                category: userLogged.category
+            }
+            
+            if(req.body.remember){
+                res.cookie('centralMusic', req.body.email, { maxAge: (1000 * 60) * 20 });
+            }
+            
+
+            res.redirect('/users/profile')
+            
+
+        }else{
+            res.render('users/login', {
+                errors: errors.mapped(),
+                old: req.body,
+            });
+        }
+
+        
     },
     register: (req,res) => res.render('users/register'),
     processRegister: (req, res) => {
         
-       const errors = validationResult(req)
+       const errors = validationResult(req);
 
        
 
@@ -29,7 +63,7 @@ const usersController = {
                 name: req.body.name,
                 lastname: req.body.lastname,
                 email: req.body.email,
-                password: req.body.password,
+                password: bcrypt.hashSync(req.body.password, 10),
                 avatar: req.file? req.file.filename: 'avatar-default.png',
                 category: 'costumer',
 
@@ -49,9 +83,22 @@ const usersController = {
        }
        
     },
+
+    profile: (req, res) => {
+        
+        res.render('users/profile', {
+            user: req.session.userLogged,
+        })
+
+    },
+
     logout: (req, res) => {
 
-    }
+        res.clearCookie('centralMusic');
+        req.session.destroy();
+        res.redirect('/')
+
+    },
 
 
 }

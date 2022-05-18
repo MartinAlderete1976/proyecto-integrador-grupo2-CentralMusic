@@ -8,6 +8,7 @@ const indexController = {
         res.render('home/index', {
             guitars,
             accesories,
+            
         })
             
         

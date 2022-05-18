@@ -39,6 +39,10 @@
     border-radius: 1px;
 }
 
+.acc-container {
+    display: none;
+}
+
 /* FIN DE ESTILOS DE LA BARRA DE NAVEGACION LOGO Y MENU*/
 
 /* DANDO STYLOS AL HEADER */
@@ -176,9 +180,7 @@
 
 
 @media (min-width: 1353px) {
-    .barra-navegacion {
-        padding-right: 40px;
-    }
+    
 
     .header-menu-container {
         display: block;
@@ -195,7 +197,7 @@
 
     .logo-container li {
         display: inline-block;
-        margin-right: 24px;
+        margin-left: 24px;
     }
 
     .logo-container  a {
@@ -215,6 +217,16 @@
 
     }
 
+    .menu-burger {
+  
+        width: 172px;
+        height: 74px;
+        color: #FFFFFF;
+        border-radius: 1px;
+        display: flex;
+        align-items: center;
+    }
+
     .icons-container a {
         margin-right: 16px;
     }
@@ -222,11 +234,11 @@
     .menu-header {
         display: block;
         align-self: center;
-        margin-left: 24px;
+        
         
     }
 
-
+   
 
     .header-frase {
         width: 600px;
