@@ -4,7 +4,9 @@ const path = require('path');
 const process = require('process');
 const methodOverride = require('method-override'); // requiero methodOverride para poder usar los metodos PUT y DELETE
 const PORT = 3000;
-
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const cookieSession = require('./middlewares/cookieSession');
 
 
 // enrutadores
@@ -18,6 +20,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.set('trust proxy', 1);
+app.use(session({
+    secret:"anubis",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {}
+}));
 
 
 //Middlewares globales
