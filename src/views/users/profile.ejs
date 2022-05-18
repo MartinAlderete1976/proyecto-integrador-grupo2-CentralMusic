@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head', {title: 'Mi perfil'})  %> 
+<body class="home-container bodyDetailsProduct">
+    <%-include('../partials/header')  %> 
+    <main class="home-container bodyDetailsProduct">
+        <h1>Hola <%= user.name  %> </h1>
+        <div class="profile-container">
+            <img src="../../images/avatars/<%= user.avatar  %> " alt="">
+        </div>
+    </main>
+    <%-include('../partials/footer')  %> 
+</body>
+</html>

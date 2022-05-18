@@ -1,9 +1,9 @@
 .login-container1 .error-message1 {
-    display: none;
+    font-size: 14px;
 }
 
 .form-login .form-container1 {
-    height: 480px;
+    height: 530px;
 }
 
 .login-inputs-container{
@@ -13,6 +13,7 @@
 
 .login-inputs-container .input-container1{
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .login-inputs-container .input-style1 {
@@ -47,6 +48,12 @@
 
 .login-container1 a:hover {
     color: #FF753A;
+}
+
+.remember {
+    text-align: center;
+    font-weight: 500;
+    
 }
 
 
