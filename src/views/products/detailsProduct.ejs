@@ -45,7 +45,10 @@
                             <div class="btns-container">
                                 <div class="btn-container">
                                     <a class="btn-container" href="/">
-                                        <input class="btn-style" type="button" value="Buy now">
+                                        <input class="btn-style" type="button" value="<%= (locals.old && old.name) ? old.name : "" %>">
+                                        <% if (locals.errors && errors.name) { %>
+                                            <small class="text-danger"><%= errors.name.msg%></small>
+                                           <% } %>
                                     </a>
                                 </div>
                                 <div class="btn-container">

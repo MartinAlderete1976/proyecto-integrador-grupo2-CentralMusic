@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+/* session */
 app.set('trust proxy', 1);
 app.use(session({
     secret:"anubis",
