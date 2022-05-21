@@ -8,6 +8,9 @@
             <ul class="menu-header">
                 <li><a href="/products/guitars">Guitars</a></li>
                 <li><a href="/products/accesories">Accesories</a></li>
+                <% if (locals.userIsLogged && locals.userLogged.category === 'admin') { %>
+                    <li><a href="/admin">Admin</a></li>
+                <% } %> 
             </ul>
         </div>
         <div class="menu-burger">
@@ -38,10 +41,7 @@
                         <li><a href="/users/login">Login</a></li>
                     </ul>
                 </div>
-
-            <% } %>    
-            
-            
+            <% } %>        
         </div>
     </nav>
 

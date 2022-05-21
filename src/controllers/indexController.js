@@ -8,7 +8,7 @@ const indexController = {
         res.render('home/index', {
             guitars,
             accesories,
-            
+            user: req.session.userLogged
         })
             
         

@@ -1,104 +1,5 @@
 [
-    {
-        "id": 1,
-        "user": "hendrix90",
-        "name": "Ruthe",
-        "lastname": "Duckerin",
-        "email": "rduckerin0@spiegel.de",
-        "password": "UDQCOsPx",
-        "category": "user",
-        "avatar": "user_1.jpg"
-    },
-    {
-        "id": 2,
-        "user": "51dias",
-        "name": "Benoit",
-        "lastname": "Dyball",
-        "email": "bdyball1@army.mil",
-        "password": "IdcIiGNCFgm",
-        "category": "user",
-        "avatar": "user_2.jpg"
-    },
-    {
-        "id": 3,
-        "user": "foden",
-        "name": "Konstantin",
-        "lastname": "Braybrooks",
-        "email": "kbraybrooks2@disqus.com",
-        "password": "tboaCge",
-        "category": "user",
-        "avatar": "user_3.jpg"
-    },
-    {
-        "id": 4,
-        "user": "hazard33",
-        "name": "Gradey",
-        "lastname": "Farndell",
-        "email": "gfarndell3@sourceforge.net",
-        "password": "dpQWoCamMR",
-        "category": "user",
-        "avatar": "user_4.jpg"
-    },
-    {
-        "id": 5,
-        "user": "dillom666",
-        "name": "Flinn",
-        "lastname": "Grzeszczyk",
-        "email": "fgrzeszczyk4@naver.com",
-        "password": "kUuYnb",
-        "category": "user",
-        "avatar": "user_5.jpg"
-    },
-    {
-        "id": 6,
-        "user": "30dias",
-        "name": "Linn",
-        "lastname": "Guerrazzi",
-        "email": "lguerrazzi5@hp.com",
-        "password": "oOKzyE",
-        "category": "user",
-        "avatar": "user_6.jpg"
-    },
-    {
-        "id": 7,
-        "user": "46dias",
-        "name": "Wadsworth",
-        "lastname": "Chesson",
-        "email": "wchesson6@mediafire.com",
-        "password": "rnDc9ty",
-        "category": "user",
-        "avatar": "user_7.jpg"
-    },
-    {
-        "id": 8,
-        "user": "messi32",
-        "name": "Mikel",
-        "lastname": "Yglesia",
-        "email": "myglesia7@mail.ru",
-        "password": "h0doCECnYnA",
-        "category": "user",
-        "avatar": "user_8.jpg"
-    },
-    {
-        "id": 9,
-        "user": "gg21",
-        "name": "Bord",
-        "lastname": "Kingzett",
-        "email": "bkingzett8@nature.com",
-        "password": "ZdZYzFnCWGV7",
-        "category": "user",
-        "avatar": "user_9.jpg"
-    },
-    {
-        "id": 10,
-        "user": "carlos21",
-        "name": "Adrian",
-        "lastname": "Swine",
-        "email": "aswine9@wsj.com",
-        "password": "6F0IwT",
-        "category": "user",
-        "avatar": "user_10.jpg"
-    },
+
     {
         "id": 11,
         "user": "90dias",
@@ -107,7 +8,7 @@
         "email": "nahuel.rlz@gmail.com",
         "password": "$2a$10$5bGq/Ecfo/go4PT9moVgE.9DJ1D2Jafp0dDzALU9qEjHqNrJeC536",
         "avatar": "avatar1652792934608.png",
-        "category": "costumer"
+        "category": "admin"
     },
     {
         "id": 12,

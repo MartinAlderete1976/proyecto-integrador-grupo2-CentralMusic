@@ -3,7 +3,11 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 const usersController = {
-    login: (req,res) => res.render('users/login'),
+    login: (req,res) => {
+        res.render('users/login', {
+            user: req.session.userLogged
+        })
+    },
     processLogin: (req, res) => {
         const errors = validationResult(req); // traigo los errores del body
 
@@ -27,6 +31,9 @@ const usersController = {
                 res.cookie('centralMusic', req.body.email, { maxAge: (1000 * 60) * 20 });
             }
             
+            res.locals.userLogged = req.session.userLogged
+
+            
 
             res.redirect('/users/profile')
             
@@ -35,12 +42,18 @@ const usersController = {
             res.render('users/login', {
                 errors: errors.mapped(),
                 old: req.body,
+                user: req.session.userLogged
             });
         }
 
         
     },
-    register: (req,res) => res.render('users/register'),
+    register: (req,res) => {
+        res.render('users/register', {
+            user: req.session
+        })
+        
+    },
     processRegister: (req, res) => {
         
        const errors = validationResult(req);
@@ -79,6 +92,7 @@ const usersController = {
            res.render('users/register', {
                errors: errors.mapped(),
                old: req.body,
+               user: req.session.userLogged
            })
        }
        
@@ -86,6 +100,7 @@ const usersController = {
 
     profile: (req, res) => {
         
+       
         res.render('users/profile', {
             user: req.session.userLogged,
         })
