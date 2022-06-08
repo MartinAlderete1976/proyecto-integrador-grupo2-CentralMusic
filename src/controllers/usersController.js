@@ -50,7 +50,7 @@ const usersController = {
     },
     register: (req,res) => {
         res.render('users/register', {
-            user: req.session
+            user: req.session.userLogged
         })
         
     },
