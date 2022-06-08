@@ -116,3 +116,34 @@ SPRINT 4
 https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
 
 
+SPRINT 5
+
+## Empezar a hacer:
+- Estar mas atento al trello.
+- Practicar mas codigos.
+- Mas comunicacion entre el grupo
+- Tener paciencia con los integrantes que estan en otro nivel ya sea avanzado o retrasado
+
+
+## Hacer más:
+- Reuniones. 
+- Practicas de codigos.
+- Uso del trello y debeaber
+- Adelanto de pasos en el proyecto
+
+## Seguir haciendo:
+- Cumplir plazos.
+- Buscar informacion que agilicen el proyecto.
+
+## Hacer menos:
+-  Dejar pasar el tiempo, cuando no entendemos algo en particular.
+- No dejar a algun miembro solo si se demora en su tarea.
+- NO ESPERAR A ULTIMO MOMENTO PARA ENTREGAR EL TRABAJO Y AVISAR A LOS DEMAS SI HAY QUE ACEPTAR CAMBIOS DEL TRABAJO DE OTRO COMPAÑERO
+- PONERSE AGRESIVO O ENOJARSE CON LOS DEMAS INTEGRANTES DEL EQUIPO
+
+## Dejar de hacer:
+- Retrasar la entrega del sprint.
+- Esperar al Sprint pera trabajar en el proyecto
+
+
+https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
