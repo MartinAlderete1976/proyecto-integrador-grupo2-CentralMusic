@@ -81,3 +81,38 @@ SPRINT 3
 
 https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
 
+
+# Retrospectiva
+
+SPRINT 4
+
+## Empezar a hacer:
+- Estar mas atento al trello.
+- Practicar mas codigos.
+- Mas comunicacion entre el grupo
+
+## Hacer más:
+- Reuniones. 
+- Practicas de codigos.
+- Uso del trello.
+- Adelanto de pasos en el proyecto
+
+## Seguir haciendo:
+- Cumplir plazos.
+- Buscar informacion que agilicen el proyecto.
+
+## Hacer menos:
+-  Dejar pasar el tiempo, cuando no entendemos algo en particular.
+- No dejar a algun miembro solo si se demora en su tarea.
+- NO ESPERAR A ULTIMO MOMENTO PARA ENTREGAR EL TRABAJO Y AVISAR A LOS DEMAS SI HAY QUE ACEPTAR CAMBIOS DEL TRABAJO DE OTRO COMPAÑERO
+
+
+## Dejar de hacer:
+- Reuniones largas que llevan a confusiones.
+- Retrasar la entrega del sprint.
+- Esperar al Sprint pera trabajar en el proyecto
+
+
+https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
+
+

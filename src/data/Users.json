@@ -1,0 +1,23 @@
+[
+
+    {
+        "id": 11,
+        "user": "90dias",
+        "name": "Elias Nahuel",
+        "lastname": "Prieto Rodriguez",
+        "email": "nahuel.rlz@gmail.com",
+        "password": "$2a$10$5bGq/Ecfo/go4PT9moVgE.9DJ1D2Jafp0dDzALU9qEjHqNrJeC536",
+        "avatar": "avatar1652792934608.png",
+        "category": "admin"
+    },
+    {
+        "id": 12,
+        "user": "50dias",
+        "name": "Elias Nahuel",
+        "lastname": "Prieto Rodriguez",
+        "email": "astronomy.domine@outlook.com",
+        "password": "$2a$10$e0G41mxYS8V1gYWAEkzS9OfACnUT6/0o6Id5QnDaEtot6ba9fLJLu",
+        "avatar": "avatar-default.png",
+        "category": "costumer"
+    }
+]

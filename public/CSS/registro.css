@@ -1,50 +1,7 @@
-<<<<<<< HEAD
-.registro body {
-font-family: 'Work Sans';
-margin: 0;
-background: url(/images/lespaul.jpg);
-background-size: cover;
-background-attachment: fixed; 
-}
-.registro * {
-    box-sizing: border-box;
-    font-family:'Work Sans, Sans Serif';
-    
-    
-}
-
-.form {
-    width: 400px;
-    height: 500px;
-    background-color: hsl(0, 0%, 15%);
-    color: white;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100xp;
-    border-radius: 8px;
-    font-family:'Work Sans, Sans Serif'  ;
-}
-
-.form h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.control {
-    width: 100%;
-    background-color: hsl(0, 0%, 15%);
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'Work Sans, Sans Serif';
-    font-size: 18px;
-=======
 
 .contenedor-formulario{
     width: 100%;
     padding: 15px;
->>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
 }
 
 
@@ -56,36 +13,18 @@ background-attachment: fixed;
     padding: 3px;
 }
 
-<<<<<<< HEAD
-.regsitro h1{
-=======
 .titulo-formulario{
->>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
     text-align: center;
     font-size: 16px;
     line-height: 20px;
     color: white;
 }
 
-<<<<<<< HEAD
-.registro input[type="tex"],
-.registro input[type="pasword"] {
-=======
 input{
->>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
     font-size: 20px;
     width: 82%;
     padding: 10px;
     border: none;
-<<<<<<< HEAD
-    border-radius: 4px;
-}
-.error-message {
-    text-align-last: auto;
-}
-
-
-=======
 }
 
 .input-contenedor{
@@ -129,7 +68,6 @@ input{
 .link-formulario:hover{
     color: cadetblue;
 }
->>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
 
 @media(min-width:768px){
     .formulario{

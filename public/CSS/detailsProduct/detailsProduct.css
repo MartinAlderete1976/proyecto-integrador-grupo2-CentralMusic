@@ -1,37 +1,44 @@
 @import url('generalDetailsProduct.css');
 
+
+
 .bodyDetailsProduct {
     background-color: #EAEAEA;
 }
 
 
 
+
 .header-detailsProduct {
-    height: 165px;
-    padding: 44px 25px;
-    background-color: #F40000;    
+    
+    width: 100%;
+    height: 115px;
+    padding: 20px 30px;
+    background-color: #F40000;  
+     
 }
 
+
+
 .details-main {
-    position: relative;
-    top: 1px;
+    height: 2000px;
     margin-top: 0;
     border: 1px solid rgb(224, 224, 224);
     background-color: #FFFFFF;
-    height: 2000px;
     margin: 0 auto;
     line-height: 120%
 }
 
 .product-view {
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
     background-color: #e8e8e8;
     height: 570px;
+    padding-top: 15px;
+    
 }
 
 .product-view-container {
-    padding: 15px;
+    
+    padding: 15px
     
 }
 
@@ -44,6 +51,12 @@
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
     background: radial-gradient(98.56% 98.92% at 1.22% 1.08%, #FBFBFB 0%, #D3D3D3 100%)
+}
+
+.product-view-container .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .details-description {
@@ -116,7 +129,7 @@
 
     .details-main {
         height: 2211px;
-    }
+    } 
 
 
     

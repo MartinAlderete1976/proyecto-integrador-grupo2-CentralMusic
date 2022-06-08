@@ -9,18 +9,20 @@
     height: 507px;
     padding: 44px 24px;
     
+    
 }
+
 
 
 /* DANDO ESTILOS A LA BARRA DE NAVEGACION LOGO Y MENU */
 .barra-navegacion {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+  
     
 }
-
 .menu-header {
     display: none;
 }
@@ -30,10 +32,15 @@
 }
 
 .menu-burger {
+  
     width: 20px;
     height: 20px;
     color: #FFFFFF;
     border-radius: 1px;
+}
+
+.acc-container {
+    display: none;
 }
 
 /* FIN DE ESTILOS DE LA BARRA DE NAVEGACION LOGO Y MENU*/
@@ -173,9 +180,7 @@
 
 
 @media (min-width: 1353px) {
-    .barra-navegacion {
-        justify-content: flex-start;
-    }
+    
 
     .header-menu-container {
         display: block;
@@ -187,11 +192,12 @@
     .logo-container {
         display: flex;
         flex-grow: 0.9;
+        
     }
 
     .logo-container li {
         display: inline-block;
-        margin-right: 24px;
+        margin-left: 24px;
     }
 
     .logo-container  a {
@@ -211,6 +217,16 @@
 
     }
 
+    .menu-burger {
+  
+        width: 172px;
+        height: 74px;
+        color: #FFFFFF;
+        border-radius: 1px;
+        display: flex;
+        align-items: center;
+    }
+
     .icons-container a {
         margin-right: 16px;
     }
@@ -218,11 +234,11 @@
     .menu-header {
         display: block;
         align-self: center;
-        margin-left: 24px;
+        
         
     }
 
-
+   
 
     .header-frase {
         width: 600px;

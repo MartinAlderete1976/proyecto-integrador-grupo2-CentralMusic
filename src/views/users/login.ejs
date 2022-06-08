@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('../partials/head')  %> 
-<body class="forms">
-    <%-include('../partials/header')  %> 
-        <div class="login-container">
-            <div class="login.box">
-                <img src="images/Home/Central Music Logo.svg" alt="logo-fa-music" style="max-width: 100%;">
-            </div>
-            <section class="form-container login formulario">
-            <h2 class="nombreLogin">LOGIN</h2>
-                <form action="" method="">
-                    <div class="input-contenedor">
-                        <span class="error-message">Email</span>
-                        <input type="email" class="input-style" name="email" placeholder="Ingrese su email" required>
+<%-include('../partials/head', {title: 'Login'}) %> 
+<body class="home-container forms-body admin-container form-login">
+    <%-include('../partials/header')  %>
+    <main>
+        <form action="/users/login" method="POST" class="form-addProduct">
+            <div class="form-container1 login-container1">
+                <div class="new-products-separador"></div>
+                <h2>Login</h2>
+                <div class="inputs-container1 login-inputs-container">
+                    <div class="input-container1">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Ingresar email" class="input-style1" value="<%= locals.old ? old.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <span class="error-message1 error-msg-register"><%= errors.email.msg %></span>
+                        <% } %>
                     </div>
-                    <div class="input-contenedor">
-                        <span class="error-message">Contraseña</span>
-                        <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña" required>
-                        <h1>Olvido su contraseña?</h1>
+                    <div class="input-container1">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="Ingresar contraseña" class="input-style1">
+                        <% if (locals.errors && errors.password) { %>
+                            <span class="error-message1 error-msg-register"><%= errors.password.msg %></span>
+                        <% } %>
                     </div>
-                    <div class="input_check-container">
-                        <label for="recordar">Recordarme</label>
-                        <input type="checkbox" name="remember" id="recordar">
-                        <span class="error-message">Credenciales inválidas</span>
+                    <div class="remember">
+                        <input type="checkbox" name="remember"  >
+                        <label for="remember">Recordame</label>
                     </div>
                     <div class="btn-container">
-                        <button type="submit" class="btn btn-submit">Ingresar</button>
+                        <button class="btn-register" type="submit" >Ingresar</button>
                     </div>
-                </form>
-            <span><a href="/register" class="noTengoCuenta">No tengo cuenta</a></span>
-            </section>
-        </div>
-     <%-include('../partials/footer')  %> 
+                    <div class="input-container1">
+                        <a href="">¿Olvidaste tu contraseña?</a><br>
+                        <a href="/users/register">¿No tenes cuenta?</a>
+                    </div>
+                </div>
+            </div>
+        </form>    
+    </main>
+    <%-include('../partials/footer')  %> 
+    <script src="../scripts/login.js"></script>
 </body>
 </html>

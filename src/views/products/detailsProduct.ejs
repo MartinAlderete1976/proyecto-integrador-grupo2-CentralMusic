@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../partials/head', {title: product.name}) %>
-
+    <%-include('../partials/head', {title: product.name}) %>
     <body class="home-container bodyDetailsProduct">
         <%-include('../partials/header') %>
-            <main class="details-main">
+        <main class="details-main">
                 <section class="product-view">
                     <h1><%= product.name  %> </h1>
                     <div class="product-view-container">
@@ -72,12 +71,17 @@
                                 <p> <b>Modelo:</b> <%= product.model %> </p>
                                 <p><b>Orientacion de la mano:</b> <%= product.hand  %> </p>
                                 <p><b>Color:</b> <%= product.color  %> <br>
+<<<<<<< HEAD
                                 <p><b>Tipo de madera del cuerpo:</b> <%= product.wood  %> </p>
 <<<<<<< HEAD
                                 <p><b> Material del diapason:</b> <%= product.fretboard  %> </p>
 =======
                                 <p><b> Material del diapason:</b> <%= product.freatboard  %> </p>
 >>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
+=======
+                                <p><b>Tipo de madera del cuerpo:</b> <%= product.materialBody  %> </p>
+                                <p><b> Material del diapason:</b> <%= product.materialFretboard  %> </p>
+>>>>>>> development
                                 <p><b>Acabado del cuerpo:</b> <%= product.bodyFinish  %> </p>
                             <% } else { %>
                            
@@ -95,14 +99,14 @@
                         </p>
                     </div>
                 </section>
-                <section class="products-interest new-products products popular-finds products ">
+              <!--   <section class="products-interest new-products products popular-finds products ">
                     <div class="product-interest-container">
                         <div class="new-products-separador"></div>
                         <h2>Productos que te podrian interesar</h2>
                         <div class="card-interest">
                             <% products.forEach(product => { %>
                                 <article>
-                                    <a href="/productos/detail/<%= product.id  %> ">
+                                    <a href="/products/detail/<%= product.id  %> ">
                                         <div class="product-container">
                                             <div class="img-container">
                                                 <img src="../../images/products/<%= product.image  %> " alt="accesorios">
@@ -175,9 +179,11 @@
 >>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
                         </div>
                     </div>
-                </section>
+                </section> -->
             </main>
-        <%-include('../partials/footer')  %>     
-    </body>
+        </body>
+        <%-include('../partials/footer')  %>
+                    
+           
 
 </html>

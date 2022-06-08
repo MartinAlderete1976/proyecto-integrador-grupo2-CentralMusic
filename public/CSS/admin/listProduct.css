@@ -6,6 +6,12 @@
 .listProduct h2 {
     margin-bottom: 5px;
     margin-top: 5px;
+    
+}
+
+.tabla {
+    font-size: 10px;
+
 }
 
 .tabla table {
@@ -48,4 +54,12 @@
 
 .listProduct tbody tr:hover {
     background-color: darkgrey;
+}
+
+
+
+@media(min-width: 768px) {
+    .tabla {
+        font-size: 16px;
+    }
 }
