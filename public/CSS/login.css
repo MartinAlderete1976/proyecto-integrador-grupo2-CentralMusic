@@ -1,99 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Work Sans, Sans Serif';
-    height: 100vh;  
-}
 
-
-.login-container{
-    width: 100%;
-    background-color: hsl(0, 0%, 15%);
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'Work Sans, Sans Serif';
-    font-size: 18px;
-}
-.login-container h1{ 
-    font-family:'Work Sans, Sans Serif';
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-body.forms section.form-container {
-    border-radius: 8px;
-    width: 100%;
-    
-}
-.input_check-container {
-    box-sizing: border-box;
-    width: 30px;
-    height: 40px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    
-}
-body.forms form .input-container,
-body.forms form .btn-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-button.btn {
-    border: none;
-    border-radius: 1rem;
-    height: 2.5rem;
-    text-transform: uppercase;
-    width: 8rem;
-    cursor: pointer;
-    margin: 0.2rem auto 0;
-}
-
-.btn-submit {
-    background:  linear-gradient(45deg, rgba(255,255,255,1) 0%,  #fa7a03 50%);
-    color: rgb(75, 75, 75);
-    font-weight: bold;
-    transition: all 0.5s ease;
-}
-
-
-section.login .input_check-container {
-    margin-bottom: 1rem;
-}
-section.login {
-    max-width: 375px;
-}
-
-.input-style{
-    border-radius: 20%;
-}
-
-.error-message{
-    color: white;
-}
-
-.nombreLogin{
-    color: white;
-}
-
-.noTengoCuenta{
-    color: white;
-}
-@media(min-width:768px){
-=======
 div.container section.formularioLogin {
     display: flex;
     flex-direction: column;
     margin-top: 150px;
     display: flex;
     flex-direction: column;
-=======
+}
 .login-container1 .error-message1 {
     font-size: 14px;
 }
@@ -108,7 +20,6 @@ div.container section.formularioLogin {
 }
 
 .login-inputs-container .input-container1{
->>>>>>> development
     align-items: center;
     margin-bottom: 20px;
 }
@@ -168,7 +79,7 @@ div.container section.formularioLogin {
     .login-inputs-container .btn-register {
         width: 360px;
     }
-<<<<<<< HEAD
+
 
     
     div.container section.formularioLogin form div button {
@@ -182,11 +93,5 @@ div.container section.formularioLogin {
         margin-top: 10px;
         font-size: 20px;
         margin-bottom: -10px;
-    }
->>>>>>> 7584abc28fbdb7a8d256a1a3d6a02ea932706f0c
-    
-
-    
-=======
->>>>>>> development
+    }   
 }
