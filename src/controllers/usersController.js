@@ -113,7 +113,6 @@ const usersController = {
 
     },
 
-  module.exports = {
     login: (req, res) => {
         res.render('users/login')
     },
@@ -141,7 +140,7 @@ const usersController = {
         res.redirect('/users/login')
     },
 }
-}
+
 
 
 

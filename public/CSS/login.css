@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9a460abce4d9f63a8dcb94563393b60e0fd51104
 body{
     box-sizing: border-box;
     margin: 0;
@@ -18,10 +11,6 @@ div.container section.formularioLogin {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-}
-
-=======
     align-items: center;
     border: 2px solid var(--naranja-Fuerte);
     width: 80vw;
@@ -31,7 +20,7 @@ div.container section.formularioLogin {
     border-radius: 20px;
     max-width: 350px;
     margin-bottom: 110px;
-=======
+}
 .formulario_Login {
     display: block;
    padding: 1em;
@@ -43,9 +32,7 @@ div.container section.formularioLogin {
    border-radius: 20px;
     border: 1px solid orange;
     background-color: rgba(255, 255, 255, 0.9);
->>>>>>> c38cb5a060d78d4885d6ae69b916d69d7b3009ed
-=======
->>>>>>> 9a460abce4d9f63a8dcb94563393b60e0fd51104
+}
 .login-container1 .error-message1 {
     font-size: 14px;
 }
@@ -56,8 +43,6 @@ div.container section.formularioLogin {
 
 .login-inputs-container{
     display: block;
-
->>>>>>> master
 }
 
 .login-inputs-container .input-container1{
@@ -117,17 +102,11 @@ div.container section.formularioLogin {
         width: 360px;
     }
     
-<<<<<<< HEAD
     .login-inputs-container .btn-register {
         width: 360px;
     }
 
-
-    
-    div.container section.formularioLogin form div button {
-=======
-<<<<<<< HEAD
->>>>>>> 9a460abce4d9f63a8dcb94563393b60e0fd51104
+    div.container section.formularioLogin form div button 
     div.container section.formularioLogin form div input {
         height: 50px;
         max-height: none;
@@ -149,23 +128,18 @@ div.container section.formularioLogin {
 @media (min-width: 300px ) {
     body .forms .header-detailsProduct {
         background-color: initial;
-        
+    }
     .login-inputs-container .btn-register {
         width: 360px;
     }
-
-<<<<<<< HEAD
-=======
     
 }
 
 @media (min-width: 300px ) {
     body .forms .header-detailsProduct {
         background-color: initial;
-=======
-    .login-inputs-container .btn-register {
-        width: 360px;
->>>>>>> master
     }
->>>>>>> 9a460abce4d9f63a8dcb94563393b60e0fd51104
+   .login-inputs-container .btn-register {
+        width: 360px;
+    }
 }
