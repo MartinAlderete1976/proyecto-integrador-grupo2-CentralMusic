@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 const {getUsers, writeJsonUsers} = require('../data/index')
-=======
-const {users, writeUsers} = require ('../data');
-const { validationResult } = require('express-validator');
-const bcrypt = require('bcryptjs');
 
 const usersController = {
     login: (req,res) => {
@@ -117,9 +112,8 @@ const usersController = {
         res.redirect('/')
 
     },
->>>>>>> development
 
-module.exports = {
+  module.exports = {
     login: (req, res) => {
         res.render('users/login')
     },
@@ -135,7 +129,6 @@ module.exports = {
         });
         let { nombre, apellido, email, pass } = req.body;
 
-<<<<<<< HEAD
         let newUser = {
             id : lastId + 1,
             nombre,
@@ -148,12 +141,8 @@ module.exports = {
         res.redirect('/users/login')
     },
 }
-=======
 }
 
 
 
-
-
 module.exports = usersController;
->>>>>>> development

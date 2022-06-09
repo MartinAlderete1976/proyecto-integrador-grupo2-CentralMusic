@@ -1,4 +1,11 @@
 
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans, Sans Serif';
+    height: 100vh;  
+}
 div.container section.formularioLogin {
     display: flex;
     flex-direction: column;
@@ -6,6 +13,7 @@ div.container section.formularioLogin {
     display: flex;
     flex-direction: column;
 }
+
 .login-container1 .error-message1 {
     font-size: 14px;
 }
@@ -83,15 +91,30 @@ div.container section.formularioLogin {
 
     
     div.container section.formularioLogin form div button {
+    div.container section.formularioLogin form div input {
         height: 50px;
         max-height: none;
         width: 50vw;
         max-width: 400px;
+        font-size: 20px;
     }
+
+    
+ 
     
     div.container section.formularioLogin form span {
         margin-top: 10px;
         font-size: 20px;
         margin-bottom: -10px;
-    }   
+    }    
+}
+
+@media (min-width: 300px ) {
+    body .forms .header-detailsProduct {
+        background-color: initial;
+        
+    .login-inputs-container .btn-register {
+        width: 360px;
+    }
+
 }

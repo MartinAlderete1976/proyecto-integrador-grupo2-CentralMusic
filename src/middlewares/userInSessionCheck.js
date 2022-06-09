@@ -1,8 +1,8 @@
 const userInSessionCheck = (req, res, next) => {
-    if(req.session.userLogged){
-        return res.redirect('/users/profile')
+    if(req.session.user){
+       return res.redirect('/')
     }
-    next();
-}
+    next()
+};
 
 module.exports = userInSessionCheck;

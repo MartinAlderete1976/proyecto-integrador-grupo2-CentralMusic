@@ -81,7 +81,6 @@ SPRINT 3
 
 https://jamboard.google.com/d/1HtyBpO0NQav19WXat91ZyCG7bGUpf13PeJf2vRKZlHQ/viewer?f=0
 
-
 # Retrospectiva
 
 SPRINT 4

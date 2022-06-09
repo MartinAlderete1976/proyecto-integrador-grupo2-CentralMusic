@@ -26,7 +26,6 @@ Cada integrante hablo y expuso los inconvenientes personales.
 ## con respecto al proyecto:
 Se decidió no hacerlo personal sino todo en conjunto tanto para el exito o fracaso haciendonos responsables todos con las demoras, sobre todo. No pasando uno por encima de otro.
 
-
 ## Comunicacion:
 Se decidió si bien a veces resulta complejo, realizar un grupo de whats-App.
 Esto nos permite informarnos no solo del proyecto sino tambien compartir cosas vistas en clases e informacion sobre temas que vamos viendo.
@@ -58,7 +57,6 @@ Esto nos permite informarnos no solo del proyecto sino tambien compartir cosas v
 
 
 https://github.com/MartinAlderete1976/proyecto-integrador-grupo2-CentralMusic
-
 
 
 ## Reuniones daily-weekly sobre el sprint 4

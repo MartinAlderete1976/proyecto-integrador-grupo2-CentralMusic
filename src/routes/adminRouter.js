@@ -3,7 +3,8 @@ const router = express.Router();
 const adminController = require('../controllers/admin/adminController')
 const adminProductsController = require('../controllers/admin/adminProductsController');
 const uploadFile = require('../middlewares/uploadProductImage'); //middleware para poder subir archivos
-const adminSessionCheck = require('../middlewares/adminSessionCheck');
+const userSession = require('../middlewares/userSessionCheck');
+const adminCheck = require('../middlewares/adminCheck');
 
 
 // admin index
