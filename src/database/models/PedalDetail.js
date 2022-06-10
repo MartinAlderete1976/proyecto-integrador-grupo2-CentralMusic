@@ -46,7 +46,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const PedalDetail = sequelize.define(alias, cols, config);
 
-
+    PedalDetail.associate = (models) => {
+        PedalDetail.belongsTo(models.Product, {
+            as: 'product',
+            foreignKey: 'products_id'
+        });
+    }
 
 
     return PedalDetail;

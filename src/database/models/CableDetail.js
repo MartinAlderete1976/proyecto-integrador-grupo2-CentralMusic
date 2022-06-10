@@ -29,7 +29,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const CableDetail = sequelize.define(alias, cols, config);
 
-
+    CableDetail.associate = (models) => {
+        CableDetail.belongsTo(models.Product, {
+            as: 'product',
+            foreignKey: 'products_id',
+        });
+    }
 
 
     return CableDetail;

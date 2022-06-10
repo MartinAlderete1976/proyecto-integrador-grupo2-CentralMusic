@@ -1,3 +1,5 @@
+const { production } = require("../config/config");
+
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Product';
     let cols = {
@@ -40,7 +42,37 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config);
 
+    Product.associate = (models) => {
+        Product.belongsTo(models.Subcategory, {
+            as: 'subcategory',
+            foreignKey: 'subcategories_id'
+        });
+        Product.belongsTo(models.Marca, {
+            as: 'marca',
+            foreignKey: 'marcas_id'
+        });
+        Product.hasMany(models.GuitarDetail, {
+            as: 'details',
+            foreignKey: 'products_id',
+        });
+        Product.hasMany(models.CuerdaDetail, {
+            as: 'details',
+            foreignKey: 'products_id'
+        });
+        Product.hasMany(models.PedalDetail, {
+            as: 'details',
+            foreignKey: 'products_id'
+        });
+        Product.hasMany(models.CableDetail, {
+            as: 'details',
+            foreignKey: 'products_id',
+        });
+        Product.hasMany(models.ProductImage, {
+            as: 'productImage',
+            foreignKey: 'products_id',
+        });
 
+    }
 
     
 

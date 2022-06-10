@@ -47,7 +47,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const GuitarDetail = sequelize.define(alias, cols, config);
 
-
+    GuitarDetail.associate = (models) => {
+        GuitarDetail.belongsTo(models.Product, {
+            as: 'product',
+            foreignKey: 'products_id',
+        });
+    }
 
     
 

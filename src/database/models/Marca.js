@@ -19,7 +19,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const Marca = sequelize.define(alias, cols, config);
 
-
+    Marca.associate = (models) => {
+        Marca.hasMany(models.Product, {
+            as: 'products',
+            foreingKey: 'marcas_id'
+        });
+    }
 
     return Marca;
 }
