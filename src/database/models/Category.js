@@ -20,7 +20,8 @@ module.exports = (sequelize, dataTypes) => {
 
 
     const Category = sequelize.define(alias, cols, config);
-
+    
+    
     Category.associate = (models) => {
         Category.hasMany(models.Subcategory, {
             as: 'subcategories',

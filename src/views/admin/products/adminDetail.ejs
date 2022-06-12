@@ -10,7 +10,7 @@
                     <h1><%= product.name  %> </h1>
                     <div class="product-view-container">
                         <div class="img-container">
-                            <img src="/images/products/<%= product.image %>" alt="producto-guitarra">
+                            <img src="/images/products/<%= product.productsImages[0].name_image %>" alt="producto-guitarra">
                         </div>
                         <div class="details-description">
                             <div>
@@ -44,7 +44,7 @@
                             </div>
                             <div class="btns-container">
                                 <div class="btn-container">
-                                    <% if (product.category === 'guitar') { %>
+                                    <% if (product.subcategories.name === 'Guitarras Electricas') { %>
                                         <a class="btn-container" href="/admin/products/guitar/edit/<%=product.id %> ">
                                             <input class="btn-style" type="button" value="EDITAR">
                                         </a>
@@ -70,20 +70,47 @@
                         <div class="new-products-separador"></div>
                         <h2>Caracteristicas principales</h2>
                         <div class="features-details">
-                            <% if (product.category === 'guitar') { %>
-                                <p> <b>Marca:</b> <%= product.marca %> </p>
-                                <p><b>Linea:</b> <%= product.line %> </p>
-                                <p> <b>Modelo:</b> <%= product.model %> </p>
-                                <p><b>Orientacion de la mano:</b> <%= product.hand  %> </p>
-                                <p><b>Color:</b> <%= product.color  %> <br>
-                                <p><b>Tipo de madera del cuerpo:</b> <%= product.materialBody  %> </p>
-                                <p><b> Material del diapason:</b> <%= product.materialFretboard  %> </p>
-                                <p><b>Acabado del cuerpo:</b> <%= product.bodyFinish  %> </p>
+                            <% if (product.subcategories.name === 'Guitarras Electricas') { %>
+                                <p><b>Marca:</b> <%= product.marca.marca %> </p>
+                                <p><b>Modelo:</b> <%= product.guitarDetail.model %> </p>
+                                <p><b>Linea:</b> <%= product.guitarDetail.line %> </p>
+                                <p><b>Orientacion de la mano:</b> <%= product.guitarDetail.hand  %> </p>
+                                <p><b>Color:</b> <%= product.guitarDetail.color  %> <br>
+                                <p><b>Tipo de madera del cuerpo:</b> <%= product.guitarDetail.material_body  %> </p>
+                                <p><b> Material del diapason:</b> <%= product.guitarDetail.material_fretboard  %> </p>
+                                <p><b>Acabado del cuerpo:</b> <%= product.guitarDetail.body_finish  %> </p>
+                            
+                            
+    
+                            <% } else if (product.subcategories.name === 'Pedales') {%> 
+                                <p><b>Marca:</b> <%= product.marca.marca %> </p>
+                                <p><b>Vocal:</b> <%= product.pedalDetail.vocal %> </p>
+                                <p><b>Cantidad de efectos:</b> <%= product.pedalDetail.cantidad_efectos %> </p>
+                                <p><b>Instrumentos compatibles:</b> <%= product.pedalDetail.instrumentos_compatibles %></p>
+                                <p><b>Tipo de efectos:</b> <%= product.pedalDetail.tipo_de_efectos %></p>
+                                <p><b>Tecnologia:</b> <%= product.pedalDetail.tecnologia %> <br>
+                                <p><b>Alimentacion:</b> <%= product.pedalDetail.alimentacion %></p>
+                            
+                            <% } else if (product.subcategories.name === 'Cuerdas') { %>
+                                <p><b>Marca:</b> <%= product.marca.marca %> </p>
+                                <p><b>Cantidad de cuerdas:</b> <%= product.cuerdaDetail.cantidad_cuerdas %> </p>
+                                <p><b>Tension:</b> <%= product.cuerdaDetail.tension %> </p>
+                                <p><b>Materiales:</b> <%= product.cuerdaDetail.materiales %></p>
+                                <p><b>Calibre:</b> <%= product.cuerdaDetail.calibre %></p>
+
+                            <% } else if (product.subcategories.name === 'Cables para instrumentos') { %>
+                                <p><b>Marca:</b> <%= product.marca.marca %> </p>
+                                <p><b>Conector de entrada:</b> <%= product.cableDetail.conector_entrada %> </p>
+                                <p><b>Conector de salida:</b> <%= product.cableDetail.conector_salida %> </p>
+                                <p><b>Largo:</b> <%= product.cableDetail.largo %></p>
+                                
+
                             <% } else { %>
-                           
-                                <p> <b>Marca:</b> <%= product.marca %> </p>
-                                <p> <b>Modelo:</b> <%= product.model %> </p>
-                            <% } %> 
+                                <p><b>Marca:</b> <%= product.marca.marca %> </p>
+                                
+                                
+                            <% } %>    
+                             
                         </div>
                     </div>
 

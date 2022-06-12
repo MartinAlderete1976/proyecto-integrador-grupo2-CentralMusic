@@ -23,6 +23,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Subcategory.associate = (models) => {
         
+        
         Subcategory.belongsTo(models.Category, {
             as: 'category',
             foreignKey: 'categories_id',

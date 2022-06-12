@@ -1,5 +1,7 @@
 const {products, writeProducts} = require('../../data');
 const db = require('../../database/models');
+const { validationResult } = require('express-validator');
+
 
 
 
@@ -8,43 +10,93 @@ const adminProductsController = {
     //muestra listado de productos
     list: (req, res) => {
         db.Product.findAll({
-            include: [ {association: 'guitarDetails'}]
+            include: [
+                {association: 'marca'},
+                {association: 'subcategories'}
+            ]
         })
             .then(products => {
 
-                res.send(products)
-
-                /*
+    
                 res.render('admin/products/listProducts', {
                     products, 
-                })*/
+                })
             })
         
     },
     // muestra detalle del producto en admin
     detail: (req, res) => {
-
         let productId = +req.params.id;
-        let product = products.find(product => product.id == productId);
+        
+        db.Product.findByPk(productId, {
+            include: [
+                {association: 'subcategories'},
+                {association: 'guitarDetail'},
+                {association: 'cuerdaDetail'},
+                {association: 'pedalDetail'},
+                {association: 'cableDetail'},
+                {association: 'marca'},
+                {association: 'productsImages'}
+            ]
+        })
+            .then(product => {
+                res.render('admin/products/adminDetail', {
+                    product,
+                    //products,
+                })
+            })
+        
+        
+        
+       // let product = products.find(product => product.id == productId);
 
         
-        res.render('admin/products/adminDetail', {
-            product,
-            products,
-        })
+        
     },
     // envia la vista de formulario de creacion de producto
     addProduct: (req, res) => {
-        db.Subcategory.findAll()
-            .then(subcategories => {
-                res.render('admin/products/addProduct', {
-                    subcategories
-                });
+       let listaMarca
+       let listaSubcategory
+
+        db.Marca.findAll()
+            .then(marcas => {
+                listaMarca = marcas
+                db.Subcategory.findAll()
+                    .then(subcategories => {
+                        listaSubcategory =subcategories
+                        res.render('admin/products/addProduct', {
+                            listaMarca,
+                            listaSubcategory,
+                        
+                        });
+                  
+                    })
+                
             })
+        
+            
+       
         
     },
     // Recibe los datos del form de creacion y guarda el producto en la DB
     productCreate: (req, res) => {
+
+        let errors = validationResult(req)
+
+        if(errors.isEmpty()){
+
+
+
+
+
+
+        }else{
+            res.render('admin/products/addProduct', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+
+        }
 
         // 1 - Crear el objeto producto
         let lastId = 0;

@@ -11,10 +11,10 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Producto</th>
                 <th>Marca</th>
-                <th>Modelo</th>
                 <th>Precio</th>
-                <th>Categoria</th>
+                <th>Subcategoria</th>
                 <th>Stock</th>
                 <th></th>
             </tr>
@@ -26,9 +26,9 @@
                     <tr>
                         <th><a href="product/detail/<%- product.id %> "><%- product.id %></a></th>
                         <td><a href="product/detail/<%- product.id %> "><%- product.name %></a></td>
-                        <td><a href="product/detail/<%- product.id %> "><%- product.guitarDetails %></a></td>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.marca.marca %></a></td>
                         <td><a href="product/detail/<%- product.id %> ">$<%- product.price %></a></td>
-                        <td><a href="product/detail/<%- product.id %> "><%- product.subcategory.name %></a></td>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.subcategories.name %></a></td>
                         <td><%- product.stock %></td>
                         <td>
 

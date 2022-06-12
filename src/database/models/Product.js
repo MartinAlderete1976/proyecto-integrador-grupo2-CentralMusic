@@ -43,36 +43,39 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = (models) => {
-        Product.belongsTo(models.Subcategory, {
-            as: 'subcategory',
-            foreignKey: 'subcategories_id'
-        });
+        Product.hasOne(models.GuitarDetail, {
+            as: 'guitarDetail',
+            foreignKey: 'products_id'
+        })
+        Product.hasOne(models.CableDetail, {
+            as: 'cableDetail',
+            foreignKey: 'products_id'
+        })
+        Product.hasOne(models.CuerdaDetail, {
+            as: 'cuerdaDetail',
+            foreignKey: 'products_id'
+        })
+        Product.hasOne(models.PedalDetail, {
+            as: 'pedalDetail',
+            foreignKey: 'products_id'
+        })
+        
         Product.belongsTo(models.Marca, {
             as: 'marca',
             foreignKey: 'marcas_id'
-        });
-        Product.hasMany(models.GuitarDetail, {
-            as: 'guitarDetails',
-            foreignKey: 'products_id',
-        });
-        Product.hasMany(models.CuerdaDetail, {
-            as: 'cuerdaDetails',
-            foreignKey: 'products_id'
-        });
-        Product.hasMany(models.PedalDetail, {
-            as: 'pedalDetails',
-            foreignKey: 'products_id'
-        });
-        Product.hasMany(models.CableDetail, {
-            as: 'cableDetails',
-            foreignKey: 'products_id',
-        });
-        Product.hasMany(models.ProductImage, {
-            as: 'productImage',
-            foreignKey: 'products_id',
-        });
+        })
+        
+        Product.belongsTo(models.Subcategory, {
+            as: 'subcategories',
+            foreignKey: 'subcategories_id'
+        })
 
+        Product.hasMany(models.ProductImage, {
+            as: 'productsImages',
+            foreignKey: 'products_id'
+        })
     }
+
 
     
 
