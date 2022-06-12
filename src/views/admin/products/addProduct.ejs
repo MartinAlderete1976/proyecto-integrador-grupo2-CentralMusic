@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head', {title: 'Agregar producto'})  %> 
+<body class="listProduct home-container admin-container">
+    
+    <%-include('../partials/header')  %>    
+    
+    
+    <form action="/admin/products" method="POST" enctype="multipart/form-data" class="form-addProduct">
+        
+        <div class="form-container1">
+            <div class="new-products-separador"></div>
+            <h2>Agregar Producto</h2>
+            <div class="input-container1">
+                <label for="category">Seleccione producto</label>
+                <select name="product" id="product" >
+                    <option value="" disabled selected>- seleccionar producto - </option>
+                    <% subcategories.forEach(subcategory => { %>
+                        <option class="product" ><%= subcategory.name %></option>
+                    <% }); %>
+                    
+                </select>
+             </div>
+            <div class="inputs-container1" id="guitar-details">
+                <div class="input-container1">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Guitarra Gibson" class="input-style1">
+                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                </div>
+                <div class="input-container1">
+                    <label for="marca">Marca</label>
+                    <input type="text" name="marca" id="marca" placeholder="Ej:Gibson" class="input-style1">
+                    <span class="error-message1">Debe ingresar la marca</span>
+                </div>
+                <div class="input-container1">
+                    <label for="line">Linea</label>
+                    <input type="text" name="line" id="line" placeholder="Ej:SE series" class="input-style1">
+                    <span class="error-message1">Debe ingresar la serie</span>
+                </div>
+                <div class="input-container1">
+                    <label for="model">Modelo</label>
+                    <input type="text" name="model" id="model" placeholder="Ej: Standar 24" class="input-style1">
+                    <span class="error-message1">Debe ingresar modelo</span>
+                </div>
+                <div class="input-container1">
+                    <label for="hand">Orientacion de la mano</label>
+                    <input type="text" name="hand" id="hand" placeholder="Ej:Diestro" class="input-style1">
+                    <span class="error-message1">Debe ingresar la orientacion</span>
+                </div>
+                 <div class="input-container1">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1">
+                    <span class="error-message1">Debe ingresar el precio</span>
+                </div>
+                <div class="input-container1">
+                    <label for="color">Color</label>
+                    <input type="text" name="color" id="color" placeholder="Ej: Sunsburts" class="input-style1">
+                    <span class="error-message1">Debe ingresar el color</span>
+                </div>
+                <div class="input-container1">
+                    <label for="materialBody">Tipo de madera del cuerpo</label>
+                    <input type="text" name="materialBody" id="materialBody" placeholder="Ej:Caoba" class="input-style1">
+                    <span class="error-message1">Debe ingresar el material</span>
+                </div>
+                <div class="input-container1">
+                    <label for="materialFretboard">Material del diapason</label>
+                    <input type="text" name="materialFretboard" id="materialFretboard" placeholder="Ej:Palo rosa" class="input-style1">
+                    <span class="error-message1">Debe ingresar el material</span>
+                </div>
+                <div class="input-container1">
+                    <label for="bodyFinish">Acabado del cuerpo</label>
+                    <input type="text" name="bodyFinish" id="bodyFinish" placeholder="Ej:Polurietano" class="input-style1">
+                    <span class="error-message1">Debe ingresar el acabado</span>
+                </div>
+                <div class="input-container1 file-container">
+                    <label for="image"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file">
+                    <span class="error-message1">Debes agregar una imagen</span>
+                </div>
+               
+                 <div class="btn-switch input-container1">
+                     
+                     <input type="checkbox" name="stock"  id="stock" >
+                     <label for="stock" class="lbl-switch"></label>
+                     <span class="lbl-stock">Stock disponible</span>
+                 </div>
+            </div>
+
+            <div class="inputs-container1" id="cuerda-details">
+                <div class="input-container1">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Cuerdas Ernie Ball " class="input-style1">
+                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                </div>
+                <div class="input-container1">
+                    <label for="marca">Marca</label>
+                    <input type="text" name="marca" id="marca" placeholder="Ej: Ernie Ball" class="input-style1">
+                    <span class="error-message1">Debe ingresar la marca</span>
+                </div>
+                <div class="input-container1">
+                    <label for="strings">Cantidad de cuerdas</label>
+                    <input type="number" name="strings" id="strings" placeholder="Ej: 6" class="input-style1">
+                    <span class="error-message1">Debe ingresar la cantidad de cuerdas</span>
+                </div>
+                 <div class="input-container1">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1">
+                    <span class="error-message1">Debe ingresar el precio</span>
+                </div>
+                <div class="input-container1">
+                    <label for="tension">Tension</label>
+                    <input type="text" name="tension" id="tension" placeholder="Ej: Media" class="input-style1">
+                    <span class="error-message1">Debe ingresar la tensiond de las cuerdas</span>
+                </div>
+                <div class="input-container1">
+                    <label for="material">Material </label>
+                    <input type="text" name="material" id="material" placeholder="Ej: Nickel" class="input-style1">
+                    <span class="error-message1">Debe ingresar el tipo de material</span>
+                </div>
+                <div class="input-container1">
+                    <label for="calibre">Calibre</label>
+                    <input type="text" name="calibre" id="calibre" placeholder="Ej: 0.10" class="input-style1">
+                    <span class="error-message1">Debe ingresar el calibre</span>
+                </div>
+                <div class="input-container1 file-container">
+                    <label for="image"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file">
+                    <span class="error-message1">Debes agregar una imagen</span>
+                </div>
+                 <div class="btn-switch input-container1">
+                     <input type="checkbox" name="stock"  id="stock" >
+                     <label for="stock" class="lbl-switch"></label>
+                     <span class="lbl-stock">Stock disponible</span>
+                 </div>
+            </div>
+
+
+            <div class="inputs-container1" id="pedal-details">
+                <div class="input-container1">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Pedal FuzzFace mini" class="input-style1">
+                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                </div>
+                <div class="input-container1">
+                    <label for="marca">Marca</label>
+                    <input type="text" name="marca" id="marca" placeholder="Ej: FuzzFace" class="input-style1">
+                    <span class="error-message1">Debe ingresar la marca</span>
+                </div>
+                <div class="input-container1">
+                    <label for="vocal">Vocal</label>
+                    <input type="text" name="vocal" id="vocal" placeholder="Ej: No" class="input-style1">
+                    <span class="error-message1">Debe ingresar si el producto es vocal</span>
+                </div>
+                <div class="input-container1">
+                    <label for="efects">Cantidad de efectos</label>
+                    <input type="number" name="efects" id="efects" placeholder="Ej: 3" class="input-style1">
+                    <span class="error-message1">Debe ingresar la cantidad de efectos</span>
+                </div>
+                 <div class="input-container1">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1">
+                    <span class="error-message1">Debe ingresar el precio</span>
+                </div>
+                <div class="input-container1">
+                    <label for="instruments">Instrumentos compatibles</label>
+                    <input type="text" name="instruments" id="instuments" placeholder="Ej: Guitarra Electrica" class="input-style1">
+                    <span class="error-message1">Debe ingresar instrumento compatible</span>
+                </div>
+                <div class="input-container1">
+                    <label for="type-efect">Tipo de efecto</label>
+                    <input type="text" name="type-efect" id="type-efect" placeholder="Ej: Fuzz" class="input-style1">
+                    <span class="error-message1">Debe ingresar el tipo de efecto</span>
+                </div>
+                <div class="input-container1">
+                    <label for="voltaje">Voltaje</label>
+                    <input type="text" name="voltaje" id="voltaje" placeholder="Ej: 9V" class="input-style1">
+                    <span class="error-message1">Debe ingresar el voltaje</span>
+                </div>
+                <div class="input-container1">
+                    <label for="technology">Tecnologia</label>
+                    <input type="text" name="technology" id="technology" placeholder="Ej: digital" class="input-style1">
+                    <span class="error-message1">Debe ingresar la tecnologia del pedal</span>
+                </div>
+                <div class="input-container1">
+                    <label for="feeding">Alimentacion</label>
+                    <input type="text" name="feeding" id="feeding" placeholder="Ej: Fuente" class="input-style1">
+                    <span class="error-message1">Debe ingresar tipo de alimentacion</span>
+                </div>
+                <div class="input-container1 file-container">
+                    <label for="image"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file">
+                    <span class="error-message1">Debes agregar una imagen</span>
+                </div>
+               
+                 <div class="btn-switch input-container1">
+                     
+                     <input type="checkbox" name="stock"  id="stock" >
+                     <label for="stock" class="lbl-switch"></label>
+                     <span class="lbl-stock">Stock disponible</span>
+                 </div>
+            </div>
+
+            <div class="inputs-container1" id="cable-details">
+                <div class="input-container1">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Cable KWC x10metros  " class="input-style1">
+                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                </div>
+                <div class="input-container1">
+                    <label for="marca">Marca</label>
+                    <input type="text" name="marca" id="marca" placeholder="Ej: KWC" class="input-style1">
+                    <span class="error-message1">Debe ingresar la marca</span>
+                </div>
+                <div class="input-container1">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1">
+                    <span class="error-message1">Debe ingresar el precio</span>
+                </div>
+                <div class="input-container1">
+                    <label for="input-in">Conector de entrada</label>
+                    <input type="number" name="input-in" id="input-in" placeholder="Ej: Plug" class="input-style1">
+                    <span class="error-message1">Debe ingresar la entrada</span>
+                </div>
+                 
+                <div class="input-container1">
+                    <label for="input-out">Conector de salida</label>
+                    <input type="text" name="input-out" id="input-out" placeholder="Ej: Plug" class="input-style1">
+                    <span class="error-message1">Debe ingresar la salida</span>
+                </div>
+                <div class="input-container1">
+                    <label for="large">Largo</label>
+                    <input type="text" name="large" id="large" placeholder="Ej: 10 metros" class="input-style1">
+                    <span class="error-message1">Debe ingresar el largo del cable</span>
+                </div>
+                <div class="input-container1 file-container">
+                    <label for="image"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file">
+                    <span class="error-message1">Debes agregar una imagen</span>
+                </div>
+                 <div class="btn-switch input-container1">
+                     <input type="checkbox" name="stock"  id="stock" >
+                     <label for="stock" class="lbl-switch"></label>
+                     <span class="lbl-stock">Stock disponible</span>
+                 </div>
+            </div>
+
+            <div class="input-container1 input-description-container">
+                <label for="description">Descripcion</label>
+                <textarea name="description" id="description" cols="30" rows="10" ></textarea>
+            </div>
+            <div class="btn-container">
+                <button class="btn-style" type="submit" >Crear</button>
+            </div>
+        </div>
+    </form>
+
+    <%-include('../partials/footer')  %> 
+    <script src="/scripts/addProduct.js"></script>
+    
+</body>
+</html>

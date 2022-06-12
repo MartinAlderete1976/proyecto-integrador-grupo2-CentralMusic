@@ -1,14 +1,25 @@
 const {products, writeProducts} = require('../../data');
+const db = require('../../database/models');
+
 
 
 const adminProductsController = {
     
     //muestra listado de productos
     list: (req, res) => {
-
-        res.render('admin/products/listProducts', {
-            products,
+        db.Product.findAll({
+            include: [ {association: 'guitarDetails'}]
         })
+            .then(products => {
+
+                res.send(products)
+
+                /*
+                res.render('admin/products/listProducts', {
+                    products, 
+                })*/
+            })
+        
     },
     // muestra detalle del producto en admin
     detail: (req, res) => {
@@ -23,11 +34,17 @@ const adminProductsController = {
         })
     },
     // envia la vista de formulario de creacion de producto
-    addGuitar: (req, res) => {
-        res.render('admin/products/addGuitar');
+    addProduct: (req, res) => {
+        db.Subcategory.findAll()
+            .then(subcategories => {
+                res.render('admin/products/addProduct', {
+                    subcategories
+                });
+            })
+        
     },
     // Recibe los datos del form de creacion y guarda el producto en la DB
-    createGuitar: (req, res) => {
+    productCreate: (req, res) => {
 
         // 1 - Crear el objeto producto
         let lastId = 0;

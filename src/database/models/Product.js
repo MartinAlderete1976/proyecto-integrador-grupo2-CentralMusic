@@ -52,19 +52,19 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'marcas_id'
         });
         Product.hasMany(models.GuitarDetail, {
-            as: 'details',
+            as: 'guitarDetails',
             foreignKey: 'products_id',
         });
         Product.hasMany(models.CuerdaDetail, {
-            as: 'details',
+            as: 'cuerdaDetails',
             foreignKey: 'products_id'
         });
         Product.hasMany(models.PedalDetail, {
-            as: 'details',
+            as: 'pedalDetails',
             foreignKey: 'products_id'
         });
         Product.hasMany(models.CableDetail, {
-            as: 'details',
+            as: 'cableDetails',
             foreignKey: 'products_id',
         });
         Product.hasMany(models.ProductImage, {

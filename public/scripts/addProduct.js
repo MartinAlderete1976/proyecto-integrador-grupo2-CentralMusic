@@ -1,3 +1,64 @@
+const $product = document.getElementById('product');
+const $formGuitarDetails = document.querySelectorAll('#guitar-details');
+const $formCuerdaDetails = document.querySelectorAll('#cuerda-details');
+const $formPedalDetails = document.querySelectorAll('#pedal-details');
+const $formCableDetails = document.querySelectorAll('#cable-details');
+
+// guardo en variable los formularios porque las variable de arrbia me devuelve un nodelist
+let formGuitarDetails = $formGuitarDetails[0]; //esto me devuelve el elemento y puedo usar la propiedad style
+let formCuerdaDetails = $formCuerdaDetails[0];
+let formPedalDetails = $formPedalDetails[0];
+let formCableDetails = $formCableDetails[0];
+/*
+
+
+$formGuitarDetails[0].style.display = 'none';
+$formCuerdaDetails[0].style.display = 'none';
+$formPedalDetails[0].style.display = 'none';
+$formCableDetails[0].style.display = 'block'
+
+*/
+
+
+
+
+$product.addEventListener('click', e => {
+    switch(e.target.value){
+        case 'Guitarras Electricas':
+            formGuitarDetails.style.display = 'flex'
+            formCuerdaDetails.style.display = 'none'
+            formPedalDetails.style.display = 'none'
+            formCableDetails.style.display = 'none'
+        break;
+        case 'Cuerdas':
+            formGuitarDetails.style.display = 'none'
+            formCuerdaDetails.style.display = 'flex'
+            formPedalDetails.style.display = 'none'
+            formCableDetails.style.display = 'none'
+        break;
+        case 'Pedales':
+            formGuitarDetails.style.display = 'none'
+            formCuerdaDetails.style.display = 'none'
+            formPedalDetails.style.display = 'flex'
+            formCableDetails.style.display = 'none'
+        break;
+        case 'Cables para instrumentos':
+            formGuitarDetails.style.display = 'none'
+            formCuerdaDetails.style.display = 'none'
+            formPedalDetails.style.display = 'none'
+            formCableDetails.style.display = 'flex' 
+        break;               
+    }
+})
+
+
+
+
+
+
+
+
+
 
 /*
 const $select = document.getElementById('category');
@@ -26,15 +87,10 @@ function cambiarColor(){
     }    
     
 }
-*/
-/*
-option.addEventListener('click', e => {
-    console.log(e)
-})
 
 
 
-console.log(category.value)
+
 
 
 

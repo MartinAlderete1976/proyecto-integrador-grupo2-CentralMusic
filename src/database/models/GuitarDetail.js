@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
-        material_freboard: {
+        material_fretboard: {
             type: dataTypes.STRING(45),
         },
         products_id: {

@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
         marca: {
             type: dataTypes.STRING(45),
             allowNull: false,
-        }
+        },
     }
     let config = {
         tableName: 'marcas',
@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
     Marca.associate = (models) => {
         Marca.hasMany(models.Product, {
             as: 'products',
-            foreingKey: 'marcas_id'
+            foreignKey: 'marcas_id'
         });
     }
 
