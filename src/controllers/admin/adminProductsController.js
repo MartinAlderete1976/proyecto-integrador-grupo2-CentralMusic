@@ -54,17 +54,17 @@ const adminProductsController = {
         
     },
     // envia la vista de formulario de creacion de producto
-    addProduct: (req, res) => {
+    addGuitar: (req, res) => {
        let listaMarca
        let listaSubcategory
-
+        
         db.Marca.findAll()
             .then(marcas => {
                 listaMarca = marcas
                 db.Subcategory.findAll()
                     .then(subcategories => {
-                        listaSubcategory =subcategories
-                        res.render('admin/products/addProduct', {
+                        listaSubcategory = subcategories
+                        res.render('admin/products/addGuitar', {
                             listaMarca,
                             listaSubcategory,
                         
@@ -79,9 +79,11 @@ const adminProductsController = {
         
     },
     // Recibe los datos del form de creacion y guarda el producto en la DB
-    productCreate: (req, res) => {
+    createGuitar: (req, res) => {
 
         let errors = validationResult(req)
+
+       // return res.send(errors)
 
         if(errors.isEmpty()){
 
@@ -91,13 +93,38 @@ const adminProductsController = {
 
 
         }else{
+           // return res.send(errors)
+            let listaMarca
+            let listaSubcategory
+            
+        db.Marca.findAll()
+            .then(marcas => {
+                listaMarca = marcas
+                db.Subcategory.findAll()
+                    .then(subcategories => {
+                        listaSubcategory =subcategories
+                        res.render('admin/products/addGuitar', {
+                            listaMarca,
+                            listaSubcategory,
+                            errors: errors.mapped(),
+                            old: req.body
+                        
+                        });
+                  
+                    })
+                
+            })
+
+
+
+            /*
             res.render('admin/products/addProduct', {
                 errors: errors.mapped(),
                 old: req.body
-            })
+            })*/
 
         }
-
+        /*
         // 1 - Crear el objeto producto
         let lastId = 0;
         products.forEach(product => {
@@ -135,7 +162,7 @@ const adminProductsController = {
 
         }    
         
-        
+        */
        
 
        

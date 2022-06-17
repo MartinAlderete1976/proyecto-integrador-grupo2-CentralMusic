@@ -1,0 +1,108 @@
+
+
+
+
+<div class="inputs-container1" id="pedal-details">
+    <div class="input-container1">
+        <label for="nameProduct">Nombre del producto</label>
+        <input type="text" name="nameProduct" id="nameProduct" placeholder="Ej: Guitarra Gibson" class="input-style1" value="<%= locals.old ? old.nameProduct : null  %>">
+        <% if (locals.errors && errors.nameProduct) { %>
+            <span class="error-message1"><%= errors.nameProduct.msg %></span>
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="marca">Seleccione marca</label>
+        <select name="marca" id="marca" >
+            <option value="" disabled selected>- seleccionar marca - </option>
+            <% listaMarca.forEach(marca => { %>
+                <option value="<%= marca.marca %>" <%= (locals.old && old.marca) && old.marca === marca.marca ? 'selected' : null %>  ><%= marca.marca %></option>
+            <% }); %>
+            
+        </select>
+        <% if (locals.errors && errors.marca) { %>
+            <span class="error-message1"><%= errors.marca.msg %></span>
+        <% } %>
+        
+     </div>
+    <div class="input-container1">
+        <label for="vocal">Vocal</label>
+        <input type="text" name="vocal" id="vocal" placeholder="Ej: No" class="input-style1" value="<%= locals.old ? old.vocal : null  %>">
+        <% if (locals.errors && errors.vocal) { %>
+            <span class="error-message1"><%= errors.vocal.msg  %></span>
+
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="efects">Cantidad de efectos</label>
+        <input type="number" name="efects" id="efects" placeholder="Ej: 3" class="input-style1" value="<%= locals.old ? old.efects : null  %>">
+        <% if (locals.errors && errors.efects) { %>
+            <span class="error-message1"><%= errors.efects.msg  %></span>
+
+        <% } %> 
+    </div>
+    <div class="input-container1">
+        <label for="price">Precio</label>
+        <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1" value="<%= locals.old ? old.price : null  %>">
+        <% if (locals.errors && errors.price) { %>
+            <span class="error-message1"><%= errors.price.msg  %> </span>
+        <% } %>
+        
+    </div>
+    <div class="input-container1">
+        <label for="instruments">Instrumentos compatibles</label>
+        <input type="text" name="instruments" id="instuments" placeholder="Ej: Guitarra Electrica" class="input-style1" value="<%= locals.old ? old.instruments : null  %>">
+        <% if (locals.errors && errors.instruments) { %>
+            <span class="error-message1"><%= errors.instruments %></span>
+
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="typeEfect">Tipo de efecto</label>
+        <input type="text" name="typeEfect" id="typeEfect" placeholder="Ej: Fuzz" class="input-style1" value="<%= locals.old ? old.typeEfect : null  %>">
+        <% if (locals.errors && errors.typeEfect) { %>
+            <span class="error-message1"><%= errors.typeEfect %></span>
+
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="voltaje">Voltaje</label>
+        <input type="text" name="voltaje" id="voltaje" placeholder="Ej: 9V" class="input-style1" value="<%= locals.old ? old.voltaje : null  %>">
+        <% if (locals.errors && errors.votlaje) { %>
+            <span class="error-message1"><%= errors.voltaje %></span>
+
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="technology">Tecnologia</label>
+        <input type="text" name="technology" id="technology" placeholder="Ej: digital" class="input-style1" value="<%= locals.old ? old.technology : null  %>">
+        <% if (locals.errors && errors.technology) { %>
+            <span class="error-message1"><%= errors.technology %></span>
+
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="feeding">Alimentacion</label>
+        <input type="text" name="feeding" id="feeding" placeholder="Ej: Fuente" class="input-style1" value="<%= locals.old ? old.feeding : null  %>">
+        <% if (locals.errors && errors.feeding) { %>
+            <span class="error-message1"><%= errors.feeding %></span>
+        <% } %>
+    </div>
+    <div class="input-container1 file-container">
+        <label for="image"  class="btn-file">Agregar imagenes</label>
+        <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file" multiple>
+        <% if (locals.errors && errors.image) { %>
+            <span class="error-message1"><%= errors.image.msg %></span>
+        <% } %>
+        
+    </div>
+   
+    <div class="btn-switch input-container1">
+         
+        <input type="checkbox" name="stock"  id="stock" <%= (locals.old && old.stock) ? "checked" : null %>>
+        <label for="stock" class="lbl-switch"></label>
+        <span class="lbl-stock">Stock disponible</span>
+    </div>
+</div>
+
+
+<script src="../scripts/addProduct.js"></script>

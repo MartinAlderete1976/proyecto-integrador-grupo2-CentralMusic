@@ -1,0 +1,91 @@
+<div class="input-container1">
+    <label for="product">Seleccione producto</label>
+    <select name="product" id="product" >
+        <option value="" disabled selected>- seleccionar producto - </option>
+        <% listaSubcategory.forEach(subcategory => { %>
+            <option value="<%= subcategory.name %>" <%= (locals.old && old.product) && old.product ===  subcategory.name ? 'selected' : '' %>  ><%= subcategory.name %></option>
+        <% }); %>
+        
+    </select>
+    <% if (locals.errors && errors.product) { %>
+        <span class="error-message1"><%= errors.product.msg %> </span>
+    <% } %>
+    
+ </div>
+
+
+
+
+
+<div class="inputs-container1" id="cable-details">
+    <div class="input-container1">
+        <label for="nameProduct">Nombre del producto</label>
+        <input type="text" name="nameProduct" id="nameProduct" placeholder="Ej: Guitarra Gibson" class="input-style1" value="<%= locals.old ? old.nameProduct : null  %>">
+        <% if (locals.errors && errors.nameProduct) { %>
+            <span class="error-message1"><%= errors.nameProduct.msg %></span>
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="marca">Seleccione marca</label>
+        <select name="marca" id="marca" >
+            <option value="" disabled selected>- seleccionar marca - </option>
+            <% listaMarca.forEach(marca => { %>
+                <option value="<%= marca.marca %>" <%= (locals.old && old.marca) && old.marca === marca.marca ? 'selected' : null %>  ><%= marca.marca %></option>
+            <% }); %>
+            
+        </select>
+        <% if (locals.errors && errors.marca) { %>
+            <span class="error-message1"><%= errors.marca.msg %></span>
+        <% } %>
+        
+     </div>
+     <div class="input-container1">
+        <label for="price">Precio</label>
+        <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1" value="<%= locals.old ? old.price : null  %>">
+        <% if (locals.errors && errors.price) { %>
+            <span class="error-message1"><%= errors.price.msg  %> </span>
+        <% } %>
+        
+    </div>
+    <div class="input-container1">
+        <label for="inputIn">Conector de entrada</label>
+        <input type="number" name="inputIn" id="inputIn" placeholder="Ej: Plug" class="input-style1" value="<%= locals.old ? old.inputIn : null  %>">
+        <% if (locals.errors && errors.inputIn) { %>
+            <span class="error-message1"><%= errors.inputIn %></span>
+        <% } %>
+    </div>
+     
+    <div class="input-container1">
+        <label for="inputOut">Conector de salida</label>
+        <input type="text" name="inputOut" id="inputOut" placeholder="Ej: Plug" class="input-style1" value="<%= locals.old ? old.inputOut : null  %>">
+        <% if (locals.errors && errors.inputOut) { %>
+            <span class="error-message1"><%= errors.inputOut %></span>
+
+        <% } %>
+    </div>
+    <div class="input-container1">
+        <label for="large">Largo</label>
+        <input type="text" name="large" id="large" placeholder="Ej: 10 metros" class="input-style1" value="<%= locals.old ? old.large : null  %>">
+        <% if (locals.errors && errors.large) { %>
+            <span class="error-message1"><%= errors.large %></span>
+
+        <% } %>
+    </div>
+    <div class="input-container1 file-container">
+        <label for="image"  class="btn-file">Agregar imagenes</label>
+        <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file" multiple>
+        <% if (locals.errors && errors.image) { %>
+            <span class="error-message1"><%= errors.image.msg %></span>
+        <% } %>
+        
+    </div>
+    <div class="btn-switch input-container1">
+         
+        <input type="checkbox" name="stock"  id="stock" <%= (locals.old && old.stock) ? "checked" : null %>>
+        <label for="stock" class="lbl-switch"></label>
+        <span class="lbl-stock">Stock disponible</span>
+    </div>
+</div>
+
+
+<script src="/scripts/addProduct.js"></script>

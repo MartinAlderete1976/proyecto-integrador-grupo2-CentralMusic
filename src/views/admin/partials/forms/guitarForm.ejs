@@ -1,0 +1,98 @@
+
+
+<form action="/admin/products" method="POST" enctype="multipart/form-data" class="form-addProduct" id="guitar-details">
+
+    
+
+    <div class="inputs-container1" >
+        <div class="input-container1">
+            <label for="nameProduct">Nombre del producto</label>
+            <input type="text"  id="nameProduct" placeholder="Ej: Guitarra Gibson" class="input-style1" value="<%= locals.old ? old.nameProduct : null  %>">
+            <% if (locals.errors && errors.nameProduct) { %>
+                <span class="error-message1"><%= errors.nameProduct.msg %></span>
+            <% } %>
+        </div>
+    
+        <div class="input-container1">
+            <label for="line">Linea</label>
+            <input type="text" id="line"  placeholder="Ej:SE series" class="input-style1" value="<%= locals.old ? old.line : null  %>">
+            <% if (locals.errors && errors.line) { %>
+                <span class="error-message1"><%= errors.line.msg  %> </span>
+            <% } %>
+            
+        </div>
+        <div class="input-container1">
+            <label for="model">Modelo</label>
+            <input type="text" id="model"  placeholder="Ej: Standar 24" class="input-style1"  value="<%= locals.old ? old.model : null  %>">
+            <% if (locals.errors && errors.model) { %>
+                <span class="error-message1"><%= errors.model.msg  %> </span>
+            <% } %>
+            
+        </div>
+        <div class="input-container1">
+            <label for="hand">Orientacion de la mano</label>
+            <input type="text" id="hand"  placeholder="Ej:Diestro" class="input-style1" value="<%= locals.old ? old.hand : null  %>">
+            <% if (locals.errors && errors.hand) { %>
+                <span class="error-message1"><%= errors.hand.msg  %> </span>
+            <% } %>
+            
+        </div>
+        
+        <div class="input-container1">
+            <label for="color">Color</label>
+            <input type="text"   id="color" placeholder="Ej: Sunsburts" class="input-style1" value="<%= locals.old ? old.color : null  %>">
+            <% if (locals.errors && errors.color) { %>
+                <span class="error-message1"><%= errors.color.msg  %> </span>
+            <% } %>
+            
+        </div>
+        <div class="input-container1">
+            <label for="materialBody">Tipo de madera del cuerpo</label>
+            <input type="text" name="materialBody" id="materialBody" placeholder="Ej:Caoba" class="input-style1" value="<%= locals.old ? old.materialBody : null  %>">
+            <% if (locals.errors && errors.materialBody) { %>
+                <span class="error-message1"><%= errors.materialBody %></span>
+            <% } %>
+            
+        </div>
+        <div class="input-container1">
+            <label for="materialFretboard">Material del diapason</label>
+            <input type="text" name="materialFretboard" id="materialFretboard" placeholder="Ej:Palo rosa" class="input-style1" value="<%= locals.old ? old.materialFretboard : null  %>">
+            <% if (locals.errors && errors.materialFretboard) { %>
+                <span class="error-message1"><%= errors.materialFretboard  %> </span>
+            <% } %>
+            
+        </div>
+        <div class="input-container1">
+            <label for="bodyFinish">Acabado del cuerpo</label>
+            <input type="text" name="bodyFinish" id="bodyFinish" placeholder="Ej:Polurietano" class="input-style1" value="<%= locals.old ? old.bodyFinish : null  %>">
+            <% if (locals.errors && errors.bodyFinish) { %>
+                <span class="error-message1"><%= errors.bodyFinish %></span>
+            <% } %> 
+        </div>
+        <div class="input-container1 file-container">
+            <label for="image"  class="btn-file">Agregar imagenes</label>
+            <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file" multiple>
+            <% if (locals.errors && errors.image) { %>
+                <span class="error-message1"><%= errors.image.msg %></span>
+            <% } %>
+            
+        </div>
+    
+        <div class="btn-switch input-container1">
+            
+            <input type="checkbox" name="stock"  id="stock" <%= (locals.old && old.stock) ? "checked" : null %>>
+            <label for="stock" class="lbl-switch"></label>
+            <span class="lbl-stock">Stock disponible</span>
+        </div>
+
+        <div class="input-container1 input-description-container">
+            <label for="description">Descripcion</label>
+            <textarea name="description" id="description" cols="30" rows="10" ><%= (locals.old && old.description) ? old.description : null %></textarea>
+        </div>
+        <div class="btn-container">
+            <button class="btn-style" type="submit" >Crear</button>
+        </div>
+    </div>
+</form>    
+
+<script src="/scripts/addProduct.js"></script>
