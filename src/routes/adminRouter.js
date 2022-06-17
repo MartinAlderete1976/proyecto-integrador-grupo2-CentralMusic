@@ -4,6 +4,7 @@ const adminController = require('../controllers/admin/adminController')
 const adminProductsController = require('../controllers/admin/adminProductsController');
 const guitarValidator = require('../validations/guitarValidator')
 const pedalValidator = require('../validations/pedalValidator')
+const cuerdaValidator = require('../validations/cuerdaValidator')
 const uploadFile = require('../middlewares/uploadProductImage'); //middleware para poder subir archivos
 const adminSessionCheck = require('../middlewares/adminSessionCheck');
 
@@ -32,7 +33,7 @@ router.put('/products/:id', uploadFile.single('image'), adminProductsController.
 //GET envia vista de formulario para agregar un accesorio
 router.get('/products/accesory/add', /*adminSessionCheck,*/ adminProductsController.addAccesory);
 //POST - Crea accesorio en la DB
-router.post('products', uploadFile.single('image'), adminProductsController.createAccesory)
+router.post('/products', uploadFile.single('image'), cuerdaValidator, adminProductsController.createAccesory)
 //GET envia la vista de edicion del accesorio
 router.get('/products/accesory/edit/:id', /*adminSessionCheck,*/ adminProductsController.editAccesory);
 //PUT - actualiza accesorio en al DB

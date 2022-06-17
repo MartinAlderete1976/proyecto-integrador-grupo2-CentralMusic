@@ -55,22 +55,13 @@ const adminProductsController = {
     },
     // envia la vista de formulario de creacion de producto
     addGuitar: (req, res) => {
-       let listaMarca
-       let listaSubcategory
-        
+       
         db.Marca.findAll()
             .then(marcas => {
-                listaMarca = marcas
-                db.Subcategory.findAll()
-                    .then(subcategories => {
-                        listaSubcategory = subcategories
-                        res.render('admin/products/addGuitar', {
-                            listaMarca,
-                            listaSubcategory,
-                        
-                        });
-                  
-                    })
+                res.render('admin/products/addGuitar', {
+                    marcas,
+                
+                });
                 
             })
         
@@ -82,8 +73,9 @@ const adminProductsController = {
     createGuitar: (req, res) => {
 
         let errors = validationResult(req)
-
-       // return res.send(errors)
+        //return res.send('holaaa')
+        
+        
 
         if(errors.isEmpty()){
 
@@ -93,35 +85,22 @@ const adminProductsController = {
 
 
         }else{
-           // return res.send(errors)
-            let listaMarca
-            let listaSubcategory
+          // return res.send(errors)
+            
             
         db.Marca.findAll()
             .then(marcas => {
-                listaMarca = marcas
-                db.Subcategory.findAll()
-                    .then(subcategories => {
-                        listaSubcategory =subcategories
-                        res.render('admin/products/addGuitar', {
-                            listaMarca,
-                            listaSubcategory,
-                            errors: errors.mapped(),
-                            old: req.body
-                        
-                        });
-                  
-                    })
+                res.render('admin/products/addGuitar', {
+                    marcas,
+                    errors: errors.mapped(),
+                    old: req.body
+                
+                });
                 
             })
 
 
 
-            /*
-            res.render('admin/products/addProduct', {
-                errors: errors.mapped(),
-                old: req.body
-            })*/
 
         }
         /*
@@ -262,11 +241,46 @@ const adminProductsController = {
     },
     // envia la vista de formulario de creacion de un accesorio
     addAccesory: (req, res) => {
-        res.render('admin/products/addAccesory');
+       
+         db.Marca.findAll()
+            .then(marcas => {
+                res.render('admin/products/addAccesory', {
+                    marcas,
+                })
+            })
+         
+             
     },
 
     createAccesory: (req, res) => {
 
+        let errors = validationResult(req)
+        
+       
+
+
+        if(errors.isEmpty()){
+
+
+
+
+
+
+        }else{
+           //return res.send(errors)
+           
+            
+            db.Marca.findAll()
+                .then(marcas => {
+                    res.render('admin/products/addAccesory', {
+                        marcas,
+                        errors: errors.mapped(),
+                        old: req.body
+                        });
+                })
+
+        }   
+        /*
         // 1 - Crear el objeto producto
         let lastId = 0;
         products.forEach(product => {
@@ -305,7 +319,7 @@ const adminProductsController = {
 
         }    
 
-        
+        */
     
     },
 

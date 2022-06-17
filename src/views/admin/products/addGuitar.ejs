@@ -23,7 +23,7 @@
                     <label for="marca">Seleccione marca</label>
                     <select name="marca" id="marca" >
                         <option value="" disabled selected>- seleccionar marca - </option>
-                        <% listaMarca.forEach(marca => { %>
+                        <% marcas.forEach(marca => { %>
                             <option value="<%= marca.marca %>" <%= (locals.old && old.marca) && old.marca === marca.marca ? 'selected' : null %>  ><%= marca.marca %></option>
                         <% }); %>
                         

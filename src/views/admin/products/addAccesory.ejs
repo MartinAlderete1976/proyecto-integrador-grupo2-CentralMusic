@@ -13,51 +13,87 @@
             <h2>Agregar accesorio</h2>
             <div class="inputs-container1">
                 <div class="input-container1">
-                    <label for="name">Nombre del producto</label>
-                    <input type="text" name="name" id="name" placeholder="Ej: Cuerdas Ernie Ball" class="input-style1">
-                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                    <label for="nameAccesory">Nombre del producto</label>
+                    <input type="text" name="nameAccesory"id="nameAccesory" placeholder="Ej: Ernie Ball" class="input-style1" value="<%= locals.old ? old.nameAccesory : null  %>">
+                    <% if (locals.errors && errors.nameAccesory) { %>
+                        <span class="error-message1"><%= errors.nameAccesory.msg %></span>
+                    <% } %>
                 </div>
                 <div class="input-container1">
-                    <label for="marca">Marca</label>
-                    <input type="text" name="marca" id="marca" placeholder="Ej:Ernie Ball" class="input-style1">
-                    <span class="error-message1">Debe ingresar la marca</span>
+                    <label for="marcaAccesory">Seleccione marca</label>
+                    <select name="marcaAccesory" id="marcaAccesory" >
+                        <option value="" disabled selected>- seleccionar marca - </option>
+                        <% marcas.forEach(marca => { %>
+                            <option value="<%= marca.marca %>" <%= (locals.old && old.marca) && old.marca === marca.marca ? 'selected' : null %>  ><%= marca.marca %></option>
+                        <% }); %>
+                        
+                    </select>
+                    <% if (locals.errors && errors.marca) { %>
+                        <span class="error-message1"><%= errors.marca.msg %></span>
+                    <% } %>
+                    
+                 </div>
+                <div class="input-container1">
+                    <label for="strings">Cantidad de cuerdas</label>
+                    <input type="number" name="strings" id="strings" placeholder="Ej: 6" class="input-style1" value="<%= locals.old ? old.strings : null  %>">
+                    <% if (locals.errors && errors.strings) { %>
+                        <span class="error-message1"><%= errors.strings.msg %></span>
+                    <% } %>
+                    
                 </div>
                 <div class="input-container1">
-                    <label for="line">Linea</label>
-                    <input type="text" name="line" id="line" placeholder="Ej: Standar" class="input-style1">
-                    <span class="error-message1">Debe ingresar la serie</span>
+                    <label for="priceAccesory">Precio</label>
+                    <input type="number" name="priceAccesory" id="priceAccesory" placeholder="Ej: 3000" class="input-style1" value="<%= locals.old ? old.priceAccesory : null  %>">
+                    <% if (locals.errors && errors.priceAccesory) { %>
+                        <span class="error-message1"><%= errors.priceAccesory.msg  %> </span>
+                    <% } %>
+                    
                 </div>
                 <div class="input-container1">
-                    <label for="model">Modelo</label>
-                    <input type="text" name="model" id="model" placeholder="Slinky" class="input-style1">
-                    <span class="error-message1">Debe ingresar modelo</span>
+                    <label for="tension">Tension</label>
+                    <input type="text" name="tension" id="tension" placeholder="Ej: Media" class="input-style1" value="<%= locals.old ? old.tension : null  %>">
+                    <% if (locals.errors && errors.tension) { %>
+                        <span class="error-message1"><%= errors.tension.msg %></span>
+            
+                    <% } %>
                 </div>
-                 <div class="input-container1">
-                    <label for="price">Precio</label>
-                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1">
+                <div class="input-container1">
+                    <label for="material">Material </label>
+                    <input type="text" name="material" id="material" placeholder="Ej: Nickel" class="input-style1" value="<%= locals.old ? old.material : null  %>">
+                    <% if (locals.errors && errors.material) { %>
+                        <span class="error-message1"><%= errors.material.msg  %></span>
+            
+                    <% } %>
+                </div>
+                <div class="input-container1">
+                    <label for="calibre">Calibre</label>
+                    <input type="text" name="calibre" id="calibre" placeholder="Ej: 0.10" class="input-style1" value="<%= locals.old ? old.calibre : null  %>">
+                    <% if (locals.errors && errors.calibre) { %>
+                        <span class="error-message1"><%= errors.calibre.msg  %> </span>
+                    <% } %>
+                    
                 </div>
                 <div class="input-container1 file-container">
-                    <label for="image"  class="btn-file">Agregar imagenes</label>
-                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file">
-                    <span class="error-message1">Debes agregar una imagen</span>
+                    <label for="imageAccesory"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="imageAccesory" id="imageAccesory" accept=".png, .jpg, .svg" class="file" multiple>
+                    <% if (locals.errors && errors.imageAccesory) { %>
+                        <span class="error-message1"><%= errors.imageAccesory.msg %></span>
+                    <% } %>
+                    
                 </div>
-                <div class="input-container1">
-                    <label for="category">Categoria</label>
-                    <select name="category" id="category" >
-                        <option selected hidden value="accesory" class="accesory">Accesorio</option>
-                        <span class="error-message1">Debe ingresar una categoria</span>
-                    </select>
-                 </div>
-                 <div class="btn-switch input-container1">
+                <div class="btn-switch input-container1">
                      
-                     <input type="checkbox" name="stock"  id="stock" >
-                     <label for="stock" class="lbl-switch"></label>
-                     <span class="lbl-stock">Stock disponible</span>
-                 </div>
+                    <input type="checkbox" name="stock"  id="stock" <%= (locals.old && old.stock) ? "checked" : null %>>
+                    <label for="stock" class="lbl-switch"></label>
+                    <span class="lbl-stock">Stock disponible</span>
+                </div>
             </div>
-             <div class="input-container1 input-description-container">
-                <label for="description">Descripcion</label>
-                <textarea name="description" id="description" cols="30" rows="10" ></textarea>
+            <div class="input-container1 input-description-container">
+                <label for="descriptionAccesory">Descripcion</label>
+                <textarea name="descriptionAccesory" id="descriptionAccesory" cols="30" rows="10" ><%= (locals.old && old.descriptionAccesory) && old.descriptionAccesory %></textarea>
+                <% if (locals.errors && errors.descriptionAccesory) { %>
+                    <span class="error-message1"><%= errors.descriptionAccesory.msg %></span>
+                <% } %>
             </div>
             <div class="btn-container">
                 <button class="btn-style" type="submit" >Crear</button>

@@ -2,7 +2,7 @@ const {check, body} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 
-let addProductValidate = [
+let guitarValidator = [
     
     check('nameProduct')
         .notEmpty().withMessage('Debe ingresar nombre del producto'),
@@ -15,7 +15,7 @@ let addProductValidate = [
      check('hand')
         .notEmpty().withMessage('Debe ingresar la orientacion'),
     check('price')
-         .isNumeric().withMessage('Debe ser numeros')
+        .isNumeric().withMessage('Debe ser numeros')
         .notEmpty().withMessage('Debe ingresar precio'),
     check('color')
         .notEmpty().withMessage('Debe ingresar color'),
@@ -37,18 +37,10 @@ let addProductValidate = [
         .notEmpty().withMessage('Debe ingresar una descripcion')    
   
 
-    /*
-    check('strings')
-        .notEmpty().withMessage('Debe ingresar cantidad de cuerdas'),
-    check('tension')
-        .notEmpty().withMessage('Debe ingresar la tension'),
-    check('material')
-        .notEmpty().withMessage('Debe ingresar tipo de material'),
-    check('calibre')
-        .notEmpty().withMessage('Debe ingresar calibre'),
-        
    
         
+   
+        /*
     check('inputIn')
         .notEmpty().withMessage('Debe ingresar entrada'),
     check('inputOut')
@@ -59,4 +51,4 @@ let addProductValidate = [
                      */
 ]
 
-module.exports = addProductValidate;
+module.exports = guitarValidator;

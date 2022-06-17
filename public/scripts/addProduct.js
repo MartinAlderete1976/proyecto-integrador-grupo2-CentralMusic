@@ -1,4 +1,4 @@
-
+/*
 
 const $product = document.getElementById('product');
 const $formGuitarDetails = document.querySelectorAll('#guitar-details');
@@ -15,7 +15,7 @@ let formPedalDetails = $formPedalDetails[0];
 let formCableDetails = $formCableDetails[0];
 
 
-/*
+
 
 
 $formGuitarDetails[0].style.display = 'none';
@@ -23,7 +23,7 @@ $formCuerdaDetails[0].style.display = 'none';
 $formPedalDetails[0].style.display = 'none';
 $formCableDetails[0].style.display = 'block'
 
-*/
+
 // options[0].selected = false
 
 
@@ -52,7 +52,7 @@ $product.addEventListener('click', e => {
             formPedalDetails.style.display = 'flex'
             //formCableDetails.style.display = 'none'
         break;
-        /*
+        
         case 'Cuerdas':
             formGuitarDetails.style.display = 'none'
             formCuerdaDetails.style.display = 'flex'
@@ -65,7 +65,7 @@ $product.addEventListener('click', e => {
             formCuerdaDetails.style.display = 'none'
             formPedalDetails.style.display = 'none'
             formCableDetails.style.display = 'flex' 
-        break;  */             
+        break;         
     }
 
     
