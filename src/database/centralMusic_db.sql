@@ -38,7 +38,7 @@ CREATE TABLE `cables_details` (
 -- Dumping data for table `cables_details`
 --
 
-LOCK TABLES `cables_details` WRITE;
+
 /*!40000 ALTER TABLE `cables_details` DISABLE KEYS */;
 INSERT INTO `cables_details` VALUES (2,'Plug','Plug','10 metros',6),(3,'Plug','Plug','10 metros',7),(8,'plug','plug','6 metros',24);
 /*!40000 ALTER TABLE `cables_details` ENABLE KEYS */;
@@ -62,7 +62,7 @@ CREATE TABLE `categories` (
 -- Dumping data for table `categories`
 --
 
-LOCK TABLES `categories` WRITE;
+
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 INSERT INTO `categories` VALUES (1,'Instrumentos de cuerda'),(2,'Efectos'),(3,'Accesorios'),(4,'Cables');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
@@ -92,7 +92,7 @@ CREATE TABLE `cuerdas_details` (
 -- Dumping data for table `cuerdas_details`
 --
 
-LOCK TABLES `cuerdas_details` WRITE;
+
 /*!40000 ALTER TABLE `cuerdas_details` DISABLE KEYS */;
 INSERT INTO `cuerdas_details` VALUES (1,6,'Media','Nickel','0.10',5);
 /*!40000 ALTER TABLE `cuerdas_details` ENABLE KEYS */;
@@ -125,7 +125,7 @@ CREATE TABLE `guitar_details` (
 -- Dumping data for table `guitar_details`
 --
 
-LOCK TABLES `guitar_details` WRITE;
+
 /*!40000 ALTER TABLE `guitar_details` DISABLE KEYS */;
 INSERT INTO `guitar_details` VALUES (5,'Stratocaster','American Standar','Saten','Aliso','Diestro','Sunburst','Palo Rosa',2),(6,'Les Paul','Standar','Saten','Aliso','Diestro','Gold','Palo Rosa',1),(7,'Jaguar','Vintage Modified','Saten','Tilo','Diestro','Red','Palo Rosa',3),(8,'SG','Custom Shop','Saten','Aliso','Diestro','Red','Palo Rosa',4);
 /*!40000 ALTER TABLE `guitar_details` ENABLE KEYS */;
@@ -149,7 +149,7 @@ CREATE TABLE `marcas` (
 -- Dumping data for table `marcas`
 --
 
-LOCK TABLES `marcas` WRITE;
+
 /*!40000 ALTER TABLE `marcas` DISABLE KEYS */;
 INSERT INTO `marcas` VALUES (1,'Fender'),(2,'Gibson'),(3,'Ernie Ball'),(4,'TC Electronic'),(5,'Ross'),(6,'Roxtone');
 /*!40000 ALTER TABLE `marcas` ENABLE KEYS */;
@@ -182,7 +182,7 @@ CREATE TABLE `pedal_details` (
 -- Dumping data for table `pedal_details`
 --
 
-LOCK TABLES `pedal_details` WRITE;
+
 /*!40000 ALTER TABLE `pedal_details` DISABLE KEYS */;
 INSERT INTO `pedal_details` VALUES (1,'no',2,'Guitarra Electrica','Afinador','9V','Digital','Fuente',8);
 /*!40000 ALTER TABLE `pedal_details` ENABLE KEYS */;
@@ -215,7 +215,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-LOCK TABLES `products` WRITE;
+
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` VALUES (1,3000,'Gibson Les Paul','La mejor viola de todas',1,1,2),(2,3000,'Fender Stratocaster','Viola para blusear',1,1,1),(3,2500,'Fender Jaguar','La mejor viola',1,1,1),(4,1000,'Gibson SG','La mejor viola',1,1,2),(5,100,'Ernie Ball x6','Cuerdas para guitarra',1,3,3),(6,100,'Plug Green','Cables para instrumentos',1,4,5),(7,150,'Plug Gold','Cuerdas para guitarra',1,4,6),(8,500,'Pedal Polytune Afinador','Pedales',1,2,4),(24,20,'cable','cableeee',1,4,6);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
@@ -242,7 +242,6 @@ CREATE TABLE `products_images` (
 -- Dumping data for table `products_images`
 --
 
-LOCK TABLES `products_images` WRITE;
 /*!40000 ALTER TABLE `products_images` DISABLE KEYS */;
 INSERT INTO `products_images` VALUES (1,'lespaul.svg',1),(2,'stratocaster.svg',2),(3,'jaguar.svg',3),(4,'gibsonsg.svg',4),(5,'cuerdas.svg',5),(6,'pluggreen.svg',6),(7,'pluggolden.svg',7),(8,'afinador.svg',8),(24,'imageProduct1656025476290.jpg',24);
 /*!40000 ALTER TABLE `products_images` ENABLE KEYS */;
@@ -269,7 +268,7 @@ CREATE TABLE `subcategories` (
 -- Dumping data for table `subcategories`
 --
 
-LOCK TABLES `subcategories` WRITE;
+
 /*!40000 ALTER TABLE `subcategories` DISABLE KEYS */;
 INSERT INTO `subcategories` VALUES (1,'Guitarras Electricas',1),(2,'Pedales',2),(3,'Accesorios',3),(4,'Cables para instrumentos',4);
 /*!40000 ALTER TABLE `subcategories` ENABLE KEYS */;
@@ -293,7 +292,7 @@ CREATE TABLE `user_rol` (
 -- Dumping data for table `user_rol`
 --
 
-LOCK TABLES `user_rol` WRITE;
+
 /*!40000 ALTER TABLE `user_rol` DISABLE KEYS */;
 INSERT INTO `user_rol` VALUES (1,'costumer'),(2,'admin');
 /*!40000 ALTER TABLE `user_rol` ENABLE KEYS */;
@@ -326,7 +325,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-LOCK TABLES `users` WRITE;
+
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES (1,'90dias','Nahuel','Prieto','nahuel@gmail.com','$2a$10$UHi.CdbXP3Z8g7CzY3d6cuG0cYLF2g9xkS3vLI','avatar-default.png',2);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;

@@ -6,6 +6,8 @@
 /* detalle de producto*/
 @import url('./detailsProduct/detailsProduct.css');
 
+@import url('profile.css');
+
 
 @import url('./admin/listProduct.css');
 /* formularios */

@@ -35,7 +35,7 @@ const usersController = {
                 }
 
                 if(req.body.remember){
-                    res.cookie('centralMusic', req.body.email, { maxAge: (1000 * 60) * 20 });
+                    res.cookie('centralMusic', req.session.userLogged, { maxAge: (1000 * 60) * 20 });
                 }
                 
                 res.locals.userLogged = req.session.userLogged
