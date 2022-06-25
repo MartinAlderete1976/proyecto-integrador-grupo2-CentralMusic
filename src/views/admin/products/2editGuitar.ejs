@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')  %> 
+<body class="home-container admin-container">
+    <%-include('../partials/header')  %> 
+    
+    <form action="/admin/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-addProduct">
+        
+        <div class="form-container1">
+            <div class="new-products-separador"></div>
+            <h2>EDITAR GUITARRA: <%= product.name %>  </h2>
+            <div class="inputs-container1">
+                <div class="input-container1">
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Guitarra Gibson" class="input-style1" value="<%= product.name %>"  >
+                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                </div>
+                <div class="input-container1">
+                    <label for="marca">Marca</label>
+                    <input type="text" name="marca" id="marca" placeholder="Ej:Gibson" class="input-style1" value="<%= product.marca %>">
+                    <span class="error-message1">Debe ingresar la marca</span>
+                </div>
+                <div class="input-container1">
+                    <label for="line">Linea</label>
+                    <input type="text" name="line" id="line" placeholder="Ej:SE series" class="input-style1" value="<%= product.line %>">
+                    <span class="error-message1">Debe ingresar la serie</span>
+                </div>
+                <div class="input-container1">
+                    <label for="model">Modelo</label>
+                    <input type="text" name="model" id="model" placeholder="Ej: Standar 24" class="input-style1" value="<%= product.model %>">
+                    <span class="error-message1">Debe ingresar modelo</span>
+                </div>
+                <div class="input-container1">
+                    <label for="hand">Orientacion de la mano</label>
+                    <input type="text" name="hand" id="hand" placeholder="Ej:Diestro" class="input-style1" value="<%= product.hand %>">
+                    <span class="error-message1">Debe ingresar la orientacion</span>
+                </div>
+                 <div class="input-container1">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1" value="<%= product.price %>">
+                </div>
+                <div class="input-container1">
+                    <label for="color">Color</label>
+                    <input type="text" name="color" id="color" placeholder="Ej: Sunsburts" class="input-style1" value="<%= product.color %>">
+                </div>
+                <div class="input-container1">
+                    <label for="materialBody">Tipo de madera del cuerpo</label>
+                    <input type="text" name="materialBody" id="materialBody" placeholder="Ej:Caoba" class="input-style1" value="<%= product.materialBody %>">
+                    <span class="error-message1">Debe ingresar el material</span>
+                </div>
+                <div class="input-container1">
+                    <label for="materialFretboard">Material del diapason</label>
+                    <input type="text" name="materialFretboard" id="materialFretboard" placeholder="Ej:Palo rosa" class="input-style1" value="<%= product.materialFretboard %>">
+                    <span class="error-message1">Debe ingresar el material</span>
+                </div>
+                <div class="input-container1">
+                    <label for="bodyFinish">Acabado del cuerpo</label>
+                    <input type="text" name="bodyFinish" id="bodyFinish" placeholder="Ej:Polurietano" class="input-style1" value="<%= product.bodyFinish %>">
+                    <span class="error-message1">Debe ingresar el acabado</span>
+                </div>
+                
+                
+                <div class="input-container1 file-container">
+                    <label for="image"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file">
+                    <span class="error-message1">Debes agregar una imagen</span>
+                </div>
+
+                
+                
+                
+                 <div class="btn-switch input-container1">
+                     
+                     <input <%= product.stock ? "checked" : ""  %>  type="checkbox" name="stock" role="switch" id="stock" >
+                     <label for="stock" class="lbl-switch"></label>
+                     <span class="lbl-stock">Stock disponible</span>
+                 </div>
+            </div>
+             <div class="input-container1 input-description-container">
+                <label for="description">Descripcion</label>
+                <textarea name="description" id="description" cols="30" rows="10"><%= product.description%></textarea>
+            </div>
+            <div class="btn-container">
+                <button class="btn-style" type="submit" >Editar</button>
+            </div>
+        </div>
+    </form>
+
+    <%-include('../partials/footer')  %> 
+    
+</body>
+</html>

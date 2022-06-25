@@ -1,22 +1,16 @@
-const {check, body} = require('express-validator');
-const bcrypt = require('bcryptjs');
-const db = require('../database/models');
+const {check} = require('express-validator');
 
-let cuerdaValidator = [
+const cableValidator = [
     check('nameProduct')
         .notEmpty().withMessage('Debe ingresar nombre del producto'),
     check('marca')
         .notEmpty().withMessage('Debe seleccionar una marca'),
-    check('marca')
-        .notEmpty().withMessage('Debe seleccionar una marca'),
-    check('strings')
-        .notEmpty().withMessage('Debe ingresar cantidad de cuerdas'),
-    check('tension')
-        .notEmpty().withMessage('Debe ingresar la tension'),
-    check('material')
-        .notEmpty().withMessage('Debe ingresar tipo de material'),
-    check('calibre')
-        .notEmpty().withMessage('Debe ingresar calibre'),
+    check('inputIn')
+        .notEmpty().withMessage('Debe ingresar entrada'),
+    check('inputOut')
+        .notEmpty().withMessage('Debe ingresar salida'),
+    check('large')
+        .notEmpty().withMessage('Debe ingresar largo de cable'),
     check('price')
         .isNumeric().withMessage('Debe ser numeros')
         .notEmpty().withMessage('Debe ingresar precio'),
@@ -30,6 +24,6 @@ let cuerdaValidator = [
        
     check('description')
         .notEmpty().withMessage('Debe ingresar una descripcion')      
-]
+];
 
-module.exports = cuerdaValidator;
+module.exports = cableValidator;

@@ -8,7 +8,7 @@
             <ul class="menu-header">
                 <li><a href="/products/guitars">Guitars</a></li>
                 <li><a href="/products/accesories">Accesories</a></li>
-                <% if (locals.userIsLogged && locals.userLogged.category === 'admin') { %>
+                <% if (locals.userIsLogged && locals.userLogged.user_rol_id === 2) { %>
                     <li><a href="/admin">Admin</a></li>
                 <% } %> 
             </ul>

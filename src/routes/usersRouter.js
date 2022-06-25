@@ -9,15 +9,15 @@ const userSessionCheck = require('../middlewares/userSessionCheck')
 
 
 // GET - renderiza vista login 
-router.get('/login', /*userInSessionCheck,*/ usersController.login);
+router.get('/login', userInSessionCheck, usersController.login);
 // POST - loguea al usuario
 router.post('/login', loginValidator, usersController.processLogin);
 // GET - Renderiza vista registro
-router.get('/register', /*userInSessionCheck,*/ usersController.register);
+router.get('/register', userInSessionCheck, usersController.register);
 // POST - Crea un nuevo usuario
 router.post('/register', uploadFile.single('avatar'), registerValidator, usersController.processRegister);
 
-router.get('/profile', /*userSessionCheck,*/ usersController.profile);
+router.get('/profile', userSessionCheck, usersController.profile);
 // get - logout 
 router.get('/logout', usersController.logout);
 

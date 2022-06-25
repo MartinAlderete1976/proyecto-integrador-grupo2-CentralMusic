@@ -48,12 +48,20 @@
                                         <a class="btn-container" href="/admin/products/guitar/edit/<%=product.id %> ">
                                             <input class="btn-style" type="button" value="EDITAR">
                                         </a>
-                                    <% } else { %>
+                                    <% } else if (product.subcategories.name === 'Accesorios') { %>
                                         <a class="btn-container" href="/admin/products/accesory/edit/<%=product.id %> ">
                                             <input class="btn-style" type="button" value="EDITAR">
                                         </a>
 
-                                    <% } %>
+                                    <% } else if (product.subcategories.name === 'Pedales') { %>
+                                        <a class="btn-container" href="/admin/products/pedal/edit/<%=product.id %> ">
+                                            <input class="btn-style" type="button" value="EDITAR">
+                                        </a>
+                                    <% } else if (product.subcategories.name === 'Cables para instrumentos') { %>
+                                        <a class="btn-container" href="/admin/products/cable/edit/<%=product.id %> ">
+                                            <input class="btn-style" type="button" value="EDITAR">
+                                        </a>
+                                    <% } %>    
                                 </div>
                                 <div class="btn-container">
                                     <form action="/admin/products/delete/<%- product.id %>?_method=DELETE" method="POST">
@@ -91,7 +99,7 @@
                                 <p><b>Tecnologia:</b> <%= product.pedalDetail.tecnologia %> <br>
                                 <p><b>Alimentacion:</b> <%= product.pedalDetail.alimentacion %></p>
                             
-                            <% } else if (product.subcategories.name === 'Cuerdas') { %>
+                            <% } else if (product.subcategories.name === 'Accesorios') { %>
                                 <p><b>Marca:</b> <%= product.marca.marca %> </p>
                                 <p><b>Cantidad de cuerdas:</b> <%= product.cuerdaDetail.cantidad_cuerdas %> </p>
                                 <p><b>Tension:</b> <%= product.cuerdaDetail.tension %> </p>

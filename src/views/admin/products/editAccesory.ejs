@@ -6,63 +6,100 @@
     <%-include('../partials/header')  %>    
     
     
-    <form action="/admin/products/<%= product.id %>?_method=PUT"" method="POST" enctype="multipart/form-data" class="form-addProduct">
+    <form action="/admin/products/accesory/<%= product.id %>?_method=PUT " method="POST" enctype="multipart/form-data" class="form-addProduct">
         
         <div class="form-container1">
             <div class="new-products-separador"></div>
             <h2>EDITAR ACCESORIO: <%= product.name %></h2>
             <div class="inputs-container1">
                 <div class="input-container1">
-                    <label for="name">Nombre del producto</label>
-                    <input type="text" name="name" id="name" placeholder="Ej: Guitarra Gibson" class="input-style1"  value="<%= product.name %>">
-                    <span class="error-message1">Debe ingresar un nombre de producto</span>
+                    <label for="nameProduct">Nombre del producto</label>
+                    <input type="text" name="nameProduct"id="nameProduct" placeholder="Ej: Ernie Ball" class="input-style1" value="<%= product.name %>">
+                    <% if (locals.errors && errors.nameProduct) { %>
+                        <span class="error-message1"><%= errors.nameProduct.msg %></span>
+                    <% } %>
                 </div>
                 <div class="input-container1">
-                    <label for="marca">Marca</label>
-                    <input type="text" name="marca" id="marca" placeholder="Ej:Gibson" class="input-style1"  value="<%= product.marca %>">
-                    <span class="error-message1">Debe ingresar la marca</span>
-                </div>
-                <div class="input-container1">
-                    <label for="model">Modelo</label>
-                    <input type="text" name="model" id="model" placeholder="Ej: Standar 24" class="input-style1"  value="<%= product.model %>">
-                    <span class="error-message1">Debe ingresar modelo</span>
-                </div>
-                 <div class="input-container1">
-                    <label for="price">Precio</label>
-                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1"  value="<%= product.price %>">
-                </div>
-                
-                    <div class="input-container1 file-container">
-                    <label for="image"  class="btn-file">Agregar imagenes</label>
-                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file">
-                    <span class="error-message1">Debes agregar una imagen</span>
-                </div>
-                
-                
-                <div class="input-container1">
-                    <label for="category">Categoria</label>
-                    <select name="category" id="category" >
-                        <option selected hidden value="accesory" class="accesory">Accesorio</option>
-                        <span class="error-message1">Debe ingresar una categoria</span>
+                    <label for="marca">Seleccione marca</label>
+                    <select name="marca" id="marca" >
+                        <option value="<% product.marca.id %> " disabled selected> <%= product.marca.marca  %>  </option>
+                        <% listaMarcas.forEach(marca => { %>
+                            <option value="<%= marca.id %>" <%= (locals.old && old.marca) && old.marca === marca.marca ? 'selected' : null %>  ><%= marca.marca %></option>
+                        <% }); %>
+                        
                     </select>
-                 </div>
-                 <div class="btn-switch input-container1">
+                    <% if (locals.errors && errors.marca) { %>
+                        <span class="error-message1"><%= errors.marca.msg %></span>
+                    <% } %>
+                    
+                </div>
+                <div class="input-container1">
+                    <label for="strings">Cantidad de cuerdas</label>
+                    <input type="number" name="strings" id="strings" placeholder="Ej: 6" class="input-style1" value="<%= product.cuerdaDetail.cantidad_cuerdas %>">
+                    <% if (locals.errors && errors.strings) { %>
+                        <span class="error-message1"><%= errors.strings.msg %></span>
+                    <% } %>
+                    
+                </div>
+                <div class="input-container1">
+                    <label for="price">Precio</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1" value="<%= product.price %>">
+                    <% if (locals.errors && errors.price) { %>
+                        <span class="error-message1"><%= errors.price.msg  %> </span>
+                    <% } %>
+                    
+                </div>
+                <div class="input-container1">
+                    <label for="tension">Tension</label>
+                    <input type="text" name="tension" id="tension" placeholder="Ej: Media" class="input-style1" value="<%= product.cuerdaDetail.tension %>">
+                    <% if (locals.errors && errors.tension) { %>
+                        <span class="error-message1"><%= errors.tension.msg %></span>
+            
+                    <% } %>
+                </div>
+                <div class="input-container1">
+                    <label for="material">Material </label>
+                    <input type="text" name="material" id="material" placeholder="Ej: Nickel" class="input-style1" value="<%= product.cuerdaDetail.materiales %>">
+                    <% if (locals.errors && errors.material) { %>
+                        <span class="error-message1"><%= errors.material.msg  %></span>
+            
+                    <% } %>
+                </div>
+                <div class="input-container1">
+                    <label for="calibre">Calibre</label>
+                    <input type="text" name="calibre" id="calibre" placeholder="Ej: 0.10" class="input-style1" value="<%= product.cuerdaDetail.calibre %>">
+                    <% if (locals.errors && errors.calibre) { %>
+                        <span class="error-message1"><%= errors.calibre.msg  %> </span>
+                    <% } %>
+                    
+                </div>
+                <div class="input-container1 file-container">
+                    <label for="image"  class="btn-file">Agregar imagenes</label>
+                    <input type="file" name="image" id="image" accept=".png, .jpg, .svg" class="file" multiple>
+                    <% if (locals.errors && errors.image) { %>
+                        <span class="error-message1"><%= errors.image.msg %></span>
+                    <% } %>
+                    
+                </div>
+                <div class="btn-switch input-container1">
                      
-                     <input  <%= product.stock ? "checked" : ""  %> type="checkbox" name="stock"  id="stock" >
-                     <label for="stock" class="lbl-switch"></label>
-                     <span class="lbl-stock">Stock disponible</span>
-                 </div>
+                    <input type="checkbox" name="stock"  id="stock" <%= product.stock === true ? "checked" : null %>>
+                    <label for="stock" class="lbl-switch"></label>
+                    <span class="lbl-stock">Stock disponible</span>
+                </div>
             </div>
-             <div class="input-container1 input-description-container">
+            <div class="input-container1 input-description-container">
                 <label for="description">Descripcion</label>
-                <textarea name="description" id="description" cols="30" rows="10" ><%= product.description%></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" ><%= product.description %></textarea>
+                <% if (locals.errors && errors.description) { %>
+                    <span class="error-message1"><%= errors.description.msg %></span>
+                <% } %>
             </div>
             <div class="btn-container">
-                <button class="btn-style" type="submit" >Editar</button>
+                <button class="btn-style" type="submit" >Crear</button>
             </div>
         </div>
     </form>
-
     <%-include('../partials/footer')  %> 
     
 </body>

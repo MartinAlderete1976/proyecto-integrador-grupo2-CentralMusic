@@ -27,7 +27,7 @@ let guitarValidator = [
         .notEmpty().withMessage('Debe ingresar el acabado de la guitarra'),
     check('image')
         .custom((value, {req}) => {
-            if(!(req.files)){
+            if(!(req.files.length > 0)){
                 return Promise.reject('Imagenes requeridas')
             }
             return true;

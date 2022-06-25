@@ -1,17 +1,23 @@
 const { check, body } = require('express-validator');
-const {users} = require('../data');
+const db = require('../database/models');
 
 let validateRegister = [
     check('user')
         .notEmpty().withMessage('Debes ingresar un usuario').bail()
         .isLength({ min: 5}).withMessage('ingrese un usuario valido')
         .custom((value) => {
-            let userInDb = users.find(user => user.user === value);
-            if(userInDb){
-                return false;
-            }
-            return true
-        }).withMessage('Usuario no disponible'),
+            return db.User.findOne({
+                where: {
+                    user: value
+                }
+            })
+            .then(user => {
+                if(user){
+                    return Promise.reject('Usuario no disponible')
+                }
+            })
+
+        }),
     check('name')
         .notEmpty().withMessage('Debes ingresar un nombre').bail(),
     check('lastname')
@@ -20,12 +26,18 @@ let validateRegister = [
         .notEmpty().withMessage('Debes ingresar un email').bail()
         .isEmail().withMessage('Debes ingresar un email valido'),
     check('email').custom((value) => {
-        let emailInDb = users.find(email => email.email === value);
-        if(emailInDb){
-            return false;
-        }
-        return true;
-    }).withMessage('Email ya registrado'),
+       return db.User.findOne({
+           where: {
+               email: value
+           }
+       })
+       .then(user => {
+           if(user){
+               return Promise.reject('Email ya registrado')
+           }
+
+       })
+    }),
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
         .isLength({ min: 6 }).withMessage('Contraseña debe ser mas larga'),

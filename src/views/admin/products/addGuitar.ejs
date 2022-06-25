@@ -6,7 +6,7 @@
     <%-include('../partials/header')  %>    
     
     
-    <form action="/admin/products" method="POST" enctype="multipart/form-data" class="form-addProduct">
+    <form action="/admin/guitars" method="POST" enctype="multipart/form-data" class="form-addProduct">
         
         <div class="form-container1">
             <div class="new-products-separador"></div>
@@ -14,7 +14,7 @@
             <div class="inputs-container1">
                 <div class="input-container1">
                     <label for="nameProduct">Nombre del producto</label>
-                    <input type="text"  id="nameProduct" placeholder="Ej: Guitarra Gibson" class="input-style1" value="<%= locals.old ? old.nameProduct : null  %>">
+                    <input type="text" name="nameProduct" id="nameProduct" placeholder="Ej: Guitarra Gibson" class="input-style1" value="<%= locals.old ? old.nameProduct : null  %>">
                     <% if (locals.errors && errors.nameProduct) { %>
                         <span class="error-message1"><%= errors.nameProduct.msg %></span>
                     <% } %>
@@ -24,7 +24,7 @@
                     <select name="marca" id="marca" >
                         <option value="" disabled selected>- seleccionar marca - </option>
                         <% marcas.forEach(marca => { %>
-                            <option value="<%= marca.marca %>" <%= (locals.old && old.marca) && old.marca === marca.marca ? 'selected' : null %>  ><%= marca.marca %></option>
+                            <option value="<%= marca.id %>" <%= (locals.old && old.marca) && old.marca === marca.marca ? 'selected' : null %>  ><%= marca.marca %></option>
                         <% }); %>
                         
                     </select>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="input-container1">
                     <label for="line">Linea</label>
-                    <input type="text" id="line"  placeholder="Ej:SE series" class="input-style1" value="<%= locals.old ? old.line : null  %>">
+                    <input type="text" name="line" id="line"  placeholder="Ej:SE series" class="input-style1" value="<%= locals.old ? old.line : null  %>">
                     <% if (locals.errors && errors.line) { %>
                         <span class="error-message1"><%= errors.line.msg  %> </span>
                     <% } %>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="input-container1">
                     <label for="model">Modelo</label>
-                    <input type="text" id="model"  placeholder="Ej: Standar 24" class="input-style1"  value="<%= locals.old ? old.model : null  %>">
+                    <input type="text" name="model" id="model"  placeholder="Ej: Standar 24" class="input-style1"  value="<%= locals.old ? old.model : null  %>">
                     <% if (locals.errors && errors.model) { %>
                         <span class="error-message1"><%= errors.model.msg  %> </span>
                     <% } %>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="input-container1">
                     <label for="hand">Orientacion de la mano</label>
-                    <input type="text" id="hand"  placeholder="Ej:Diestro" class="input-style1" value="<%= locals.old ? old.hand : null  %>">
+                    <input type="text" name="hand" id="hand"  placeholder="Ej:Diestro" class="input-style1" value="<%= locals.old ? old.hand : null  %>">
                     <% if (locals.errors && errors.hand) { %>
                         <span class="error-message1"><%= errors.hand.msg  %> </span>
                     <% } %>
@@ -68,7 +68,7 @@
                 
                 <div class="input-container1">
                     <label for="color">Color</label>
-                    <input type="text"   id="color" placeholder="Ej: Sunsburts" class="input-style1" value="<%= locals.old ? old.color : null  %>">
+                    <input type="text" name="color"  id="color" placeholder="Ej: Sunsburts" class="input-style1" value="<%= locals.old ? old.color : null  %>">
                     <% if (locals.errors && errors.color) { %>
                         <span class="error-message1"><%= errors.color.msg  %> </span>
                     <% } %>

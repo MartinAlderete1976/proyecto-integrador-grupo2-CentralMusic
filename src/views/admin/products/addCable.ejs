@@ -6,15 +6,15 @@
     <%-include('../partials/header')  %>    
     
     
-    <form action="/admin/accesories" method="POST" enctype="multipart/form-data" class="form-addProduct">
+    <form action="/admin/cables" method="POST" enctype="multipart/form-data" class="form-addProduct">
         
         <div class="form-container1">
             <div class="new-products-separador"></div>
-            <h2>Agregar accesorio</h2>
+            <h2>Agregar Cable</h2>
             <div class="inputs-container1">
                 <div class="input-container1">
                     <label for="nameProduct">Nombre del producto</label>
-                    <input type="text" name="nameProduct"id="nameProduct" placeholder="Ej: Ernie Ball" class="input-style1" value="<%= locals.old ? old.nameProduct : null  %>">
+                    <input type="text" name="nameProduct" id="nameProduct" placeholder="Ej: Guitarra Gibson" class="input-style1" value="<%= locals.old ? old.nameProduct : null  %>">
                     <% if (locals.errors && errors.nameProduct) { %>
                         <span class="error-message1"><%= errors.nameProduct.msg %></span>
                     <% } %>
@@ -33,15 +33,7 @@
                     <% } %>
                     
                  </div>
-                <div class="input-container1">
-                    <label for="strings">Cantidad de cuerdas</label>
-                    <input type="number" name="strings" id="strings" placeholder="Ej: 6" class="input-style1" value="<%= locals.old ? old.strings : null  %>">
-                    <% if (locals.errors && errors.strings) { %>
-                        <span class="error-message1"><%= errors.strings.msg %></span>
-                    <% } %>
-                    
-                </div>
-                <div class="input-container1">
+                 <div class="input-container1">
                     <label for="price">Precio</label>
                     <input type="number" name="price" id="price" placeholder="Ej: 3000" class="input-style1" value="<%= locals.old ? old.price : null  %>">
                     <% if (locals.errors && errors.price) { %>
@@ -50,28 +42,28 @@
                     
                 </div>
                 <div class="input-container1">
-                    <label for="tension">Tension</label>
-                    <input type="text" name="tension" id="tension" placeholder="Ej: Media" class="input-style1" value="<%= locals.old ? old.tension : null  %>">
-                    <% if (locals.errors && errors.tension) { %>
-                        <span class="error-message1"><%= errors.tension.msg %></span>
+                    <label for="inputIn">Conector de entrada</label>
+                    <input type="text" name="inputIn" id="inputIn" placeholder="Ej: Plug" class="input-style1" value="<%= locals.old ? old.inputIn : null  %>">
+                    <% if (locals.errors && errors.inputIn) { %>
+                        <span class="error-message1"><%= errors.inputIn.msg %></span>
+                    <% } %>
+                </div>
+                 
+                <div class="input-container1">
+                    <label for="inputOut">Conector de salida</label>
+                    <input type="text" name="inputOut" id="inputOut" placeholder="Ej: Plug" class="input-style1" value="<%= locals.old ? old.inputOut : null  %>">
+                    <% if (locals.errors && errors.inputOut) { %>
+                        <span class="error-message1"><%= errors.inputOut.msg %></span>
             
                     <% } %>
                 </div>
                 <div class="input-container1">
-                    <label for="material">Material </label>
-                    <input type="text" name="material" id="material" placeholder="Ej: Nickel" class="input-style1" value="<%= locals.old ? old.material : null  %>">
-                    <% if (locals.errors && errors.material) { %>
-                        <span class="error-message1"><%= errors.material.msg  %></span>
+                    <label for="large">Largo</label>
+                    <input type="text" name="large" id="large" placeholder="Ej: 10 metros" class="input-style1" value="<%= locals.old ? old.large : null  %>">
+                    <% if (locals.errors && errors.large) { %>
+                        <span class="error-message1"><%= errors.large.msg %></span>
             
                     <% } %>
-                </div>
-                <div class="input-container1">
-                    <label for="calibre">Calibre</label>
-                    <input type="text" name="calibre" id="calibre" placeholder="Ej: 0.10" class="input-style1" value="<%= locals.old ? old.calibre : null  %>">
-                    <% if (locals.errors && errors.calibre) { %>
-                        <span class="error-message1"><%= errors.calibre.msg  %> </span>
-                    <% } %>
-                    
                 </div>
                 <div class="input-container1 file-container">
                     <label for="image"  class="btn-file">Agregar imagenes</label>
@@ -87,7 +79,7 @@
                     <label for="stock" class="lbl-switch"></label>
                     <span class="lbl-stock">Stock disponible</span>
                 </div>
-            </div>
+            </div>    
             <div class="input-container1 input-description-container">
                 <label for="description">Descripcion</label>
                 <textarea name="description" id="description" cols="30" rows="10" ><%= (locals.old && old.description) && old.description %></textarea>

@@ -1,11 +1,13 @@
 const {users, writeUsers} = require ('../data');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const db = require('../database/models');
 
 const usersController = {
     login: (req,res) => {
         res.render('users/login', {
-            user: req.session.userLogged
+            user: req.session.userLogged,
+            session: req.session,
         })
     },
     processLogin: (req, res) => {
@@ -16,33 +18,37 @@ const usersController = {
         
         if(errors.isEmpty()){
             // inicia sesion
-            let userLogged = users.find(user => user.email === req.body.email); // guardo el usuario que conincide con el mail
             
-            req.session.userLogged = {
-                id: userLogged.id,
-                user: userLogged.user,
-                name: userLogged.name,
-                emai: userLogged.email,
-                avatar: userLogged.avatar,
-                category: userLogged.category
-            }
-            
-            if(req.body.remember){
-                res.cookie('centralMusic', req.body.email, { maxAge: (1000 * 60) * 20 });
-            }
-            
-            res.locals.userLogged = req.session.userLogged
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            .then(userLogged => {
+                req.session.userLogged = {
+                    id: userLogged.id,
+                    user: userLogged.user,
+                    name: userLogged.name,
+                    email: userLogged.email,
+                    avatar: userLogged.avatar,
+                    user_rol_id: userLogged.user_rol_id,
+                }
 
-            
-
-            res.redirect('/users/profile')
-            
-
+                if(req.body.remember){
+                    res.cookie('centralMusic', req.body.email, { maxAge: (1000 * 60) * 20 });
+                }
+                
+                res.locals.userLogged = req.session.userLogged
+    
+                res.redirect('/users/profile')
+            })
+    
         }else{
             res.render('users/login', {
                 errors: errors.mapped(),
                 old: req.body,
-                user: req.session.userLogged
+                user: req.session.userLogged,
+                session: req.session,
             });
         }
 
@@ -50,7 +56,8 @@ const usersController = {
     },
     register: (req,res) => {
         res.render('users/register', {
-            user: req.session.userLogged
+            user: req.session.userLogged,
+            session: req.session,
         })
         
     },
@@ -62,36 +69,26 @@ const usersController = {
 
        if(errors.isEmpty()){
            // si no hay errores crear el usuario
-
-            let lastId = 0;
-            users.forEach(user => {
-                if(user.id > lastId){
-                    lastId = user.id
-                }
-            });
-
-            let newUser = {
-                id: lastId + 1,
-                user: req.body.user,
-                name: req.body.name,
-                lastname: req.body.lastname,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                avatar: req.file? req.file.filename: 'avatar-default.png',
-                category: 'costumer',
-
-            }
-
-            users.push(newUser);
-
-            writeUsers(users);
-
-            res.redirect('/users/login');
+           db.User.create({
+               user: req.body.user,
+               name: req.body.name,
+               last_name: req.body.lastname,
+               email: req.body.email,
+               password:  bcrypt.hashSync(req.body.password, 10),
+               avatar: req.file ? req.file.filename : 'avatar-default.png',
+               user_rol_id: 1,
+           })
+           .then(user => {
+               res.redirect('/users/login')
+           })
+           .catch(error => res.send(error))
+           
        }else{
            //codigo para mostar errores
            res.render('users/register', {
                errors: errors.mapped(),
                old: req.body,
+               session: req.session,
                user: req.session.userLogged
            })
        }
@@ -103,6 +100,7 @@ const usersController = {
        
         res.render('users/profile', {
             user: req.session.userLogged,
+            session: req.session
         })
 
     },
