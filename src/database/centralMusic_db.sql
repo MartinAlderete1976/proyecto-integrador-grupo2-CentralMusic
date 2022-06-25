@@ -15,18 +15,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
--- -----------------------------------------------------
--- Schema centralMusic_db
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema centralMusic_db
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `centralMusic_db` DEFAULT CHARACTER SET utf8 ;
-USE `centralMusic_db` ;
-
-
 --
 -- Table structure for table `cables_details`
 --
@@ -43,7 +31,7 @@ CREATE TABLE `cables_details` (
   PRIMARY KEY (`id`),
   KEY `fk_cables_details_products1_idx` (`products_id`),
   CONSTRAINT `fk_cables_details_products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,7 +40,7 @@ CREATE TABLE `cables_details` (
 
 LOCK TABLES `cables_details` WRITE;
 /*!40000 ALTER TABLE `cables_details` DISABLE KEYS */;
-INSERT INTO `cables_details` VALUES (2,'Plug','Plug','10 metros',6),(3,'Plug','Plug','10 metros',7);
+INSERT INTO `cables_details` VALUES (2,'Plug','Plug','10 metros',6),(3,'Plug','Plug','10 metros',7),(8,'plug','plug','6 metros',24);
 /*!40000 ALTER TABLE `cables_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +85,7 @@ CREATE TABLE `cuerdas_details` (
   PRIMARY KEY (`id`),
   KEY `fk_cuerdas_details_products1_idx` (`products_id`),
   CONSTRAINT `fk_cuerdas_details_products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,7 +118,7 @@ CREATE TABLE `guitar_details` (
   PRIMARY KEY (`id`),
   KEY `fk_guitar_details_products1_idx` (`products_id`),
   CONSTRAINT `fk_guitar_details_products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +175,7 @@ CREATE TABLE `pedal_details` (
   PRIMARY KEY (`id`),
   KEY `fk_pedal_details_products1_idx` (`products_id`),
   CONSTRAINT `fk_pedal_details_products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +208,7 @@ CREATE TABLE `products` (
   KEY `fk_products_marcas1_idx` (`marcas_id`),
   CONSTRAINT `fk_products_marcas1` FOREIGN KEY (`marcas_id`) REFERENCES `marcas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_products_subcategories1` FOREIGN KEY (`subcategories_id`) REFERENCES `subcategories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -229,7 +217,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,3000,'Gibson Les Paul','La mejor viola de todas',1,1,2),(2,3000,'Fender Stratocaster','Viola para blusear',1,1,1),(3,2500,'Fender Jaguar','La mejor viola',1,1,1),(4,1000,'Gibson SG','La mejor viola',1,1,2),(5,100,'Ernie Ball x6','Cuerdas para guitarra',1,3,3),(6,100,'Plug Green','Cables para instrumentos',1,4,5),(7,150,'Plug Gold','Cuerdas para guitarra',1,4,6),(8,500,'Pedal Polytune Afinador','Pedales',1,2,4);
+INSERT INTO `products` VALUES (1,3000,'Gibson Les Paul','La mejor viola de todas',1,1,2),(2,3000,'Fender Stratocaster','Viola para blusear',1,1,1),(3,2500,'Fender Jaguar','La mejor viola',1,1,1),(4,1000,'Gibson SG','La mejor viola',1,1,2),(5,100,'Ernie Ball x6','Cuerdas para guitarra',1,3,3),(6,100,'Plug Green','Cables para instrumentos',1,4,5),(7,150,'Plug Gold','Cuerdas para guitarra',1,4,6),(8,500,'Pedal Polytune Afinador','Pedales',1,2,4),(24,20,'cable','cableeee',1,4,6);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -247,7 +235,7 @@ CREATE TABLE `products_images` (
   PRIMARY KEY (`id`),
   KEY `fk_products_images_products1_idx` (`products_id`),
   CONSTRAINT `fk_products_images_products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -256,6 +244,7 @@ CREATE TABLE `products_images` (
 
 LOCK TABLES `products_images` WRITE;
 /*!40000 ALTER TABLE `products_images` DISABLE KEYS */;
+INSERT INTO `products_images` VALUES (1,'lespaul.svg',1),(2,'stratocaster.svg',2),(3,'jaguar.svg',3),(4,'gibsonsg.svg',4),(5,'cuerdas.svg',5),(6,'pluggreen.svg',6),(7,'pluggolden.svg',7),(8,'afinador.svg',8),(24,'imageProduct1656025476290.jpg',24);
 /*!40000 ALTER TABLE `products_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -282,7 +271,7 @@ CREATE TABLE `subcategories` (
 
 LOCK TABLES `subcategories` WRITE;
 /*!40000 ALTER TABLE `subcategories` DISABLE KEYS */;
-INSERT INTO `subcategories` VALUES (1,'Guitarras Electricas',1),(2,'Pedales',2),(3,'Cuerdas',3),(4,'Cables para instrumentos',4);
+INSERT INTO `subcategories` VALUES (1,'Guitarras Electricas',1),(2,'Pedales',2),(3,'Accesorios',3),(4,'Cables para instrumentos',4);
 /*!40000 ALTER TABLE `subcategories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -297,7 +286,7 @@ CREATE TABLE `user_rol` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `rol_name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -306,6 +295,7 @@ CREATE TABLE `user_rol` (
 
 LOCK TABLES `user_rol` WRITE;
 /*!40000 ALTER TABLE `user_rol` DISABLE KEYS */;
+INSERT INTO `user_rol` VALUES (1,'costumer'),(2,'admin');
 /*!40000 ALTER TABLE `user_rol` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -329,7 +319,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `email_UNIQUE` (`email`),
   KEY `fk_users_user_rol1_idx` (`user_rol_id`),
   CONSTRAINT `fk_users_user_rol1` FOREIGN KEY (`user_rol_id`) REFERENCES `user_rol` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -338,6 +328,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'90dias','Nahuel','Prieto','nahuel@gmail.com','$2a$10$UHi.CdbXP3Z8g7CzY3d6cuG0cYLF2g9xkS3vLI','avatar-default.png',2);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -354,4 +345,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-12  7:39:00
+-- Dump completed on 2022-06-25  2:20:03
