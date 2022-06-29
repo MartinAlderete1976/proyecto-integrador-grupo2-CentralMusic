@@ -11,11 +11,11 @@ const adminSessionCheck = require('../middlewares/adminSessionCheck');
 
 
 // admin index
-router.get('/', /*adminSessionCheck,*/ adminController.index);
-router.get('/guitars', adminController.guitars)
-router.get('/accesories', adminController.accesories)
-router.get('/pedals', adminController.pedals)
-router.get('/cables', adminController.cables)
+router.get('/', adminSessionCheck, adminController.index);
+router.get('/guitars', adminSessionCheck, adminController.guitars)
+router.get('/accesories', adminSessionCheck, adminController.accesories)
+router.get('/pedals', adminSessionCheck,adminController.pedals)
+router.get('/cables', adminSessionCheck, adminController.cables)
 
 
 
@@ -59,7 +59,7 @@ router.put('/products/pedal/:id', uploadFile.array('image'), adminProductsContro
 router.get('/products/cable/add', adminProductsController.addCable);
 router.post('/cables',uploadFile.array('image'), cableValidator, adminProductsController.createCable);
 //GET envia la vista de edicion del cable
-router.get('/products/cable/edit/:id', /*adminSessionCheck,*/ adminProductsController.editCable);
+router.get('/products/cable/edit/:id', adminSessionCheck, adminProductsController.editCable);
 //PUT - actualiza accesorio en al DB
 router.put('/products/cable/:id', uploadFile.array('image'), adminProductsController.updateCable);
 

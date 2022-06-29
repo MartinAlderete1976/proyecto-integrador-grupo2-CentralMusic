@@ -421,32 +421,32 @@ const adminProductsController = {
                                             products_id: req.params.id
                                         }
                                     })
-                                        .then(images => {
-                                            let imagesName = images.map(image => image.name_image);
+                                    .then(images => {
+                                        let imagesName = images.map(image => image.name_image);
 
-                                            imagesName.forEach(image => {
-                                                if (fs.existsSync(path.join(__dirname, `../../../public/images/products/${image}`))) {
-                                                    fs.unlinkSync(path.join(__dirname, `../../../public/images/products/${image}`))
-                                                } else {
-                                                    console.log('-- no se encontro el archivo')
-                                                }
+                                        imagesName.forEach(image => {
+                                            if (fs.existsSync(path.join(__dirname, `../../../public/images/products/${image}`))) {
+                                                fs.unlinkSync(path.join(__dirname, `../../../public/images/products/${image}`))
+                                            } else {
+                                                console.log('-- no se encontro el archivo')
+                                            }
+                                        })
+                                        db.ProductImage.destroy({
+                                            where: {
+                                                products_id: req.params.id,
+                                            }
+                                        })
+                                        .then(() => {
+                                             let arrayImages = req.files.map(image => {
+                                                    return {
+                                                        name_image: image.filename,
+                                                        products_id: req.params.id
+                                                    }
                                             })
-                                            db.ProductImage.destroy({
-                                                where: {
-                                                    products_id: req.params.id,
-                                                }
-                                            })
-                                                .then(() => {
-                                                    let arrayImages = req.files.map(image => {
-                                                        return {
-                                                            name_image: image.filename,
-                                                            products_id: req.params.id
-                                                        }
-                                                    })
-                                                    db.ProductImage.bulkCreate(arrayImages)
-                                                        .then(() => res.redirect('/admin/products'))
-                                                })
-                                                .catch(error => console.log(error))
+                                                db.ProductImage.bulkCreate(arrayImages)
+                                                    .then(() => res.redirect('/admin/products'))
+                                        })
+                                        .catch(error => console.log(error))
                                         })
                                         .catch(error => console.log(error))
                                 } else {
@@ -803,7 +803,7 @@ const adminProductsController = {
 
 
         if (errors.isEmpty()) {
-
+            
 
             db.Product.update({
                 price: req.body.price,

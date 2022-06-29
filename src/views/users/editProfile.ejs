@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head', {title: 'Editar datos'}) %> 
+<body class="home-container forms-body admin-container">
+    <%-include('../partials/header') %>
+        <main>
+            <form action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data" class="form-addProduct">
+                <div class="form-container1">
+                    <div class="new-products-separador"></div>
+                    <h2>Editar datos personales: <%= user.name %></h2>
+                    <div class="inputs-container1">
+                       
+                        <div class="input-container1">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="name" placeholder="David" class="input-style1" value="<%= user.name %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.name.msg %></span>
+                            <% } %>
+                        </div>
+                        <div class="input-container1">
+                            <label for="lastname">Apellido</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="Gilmour" class="input-style1" value="<%= user.last_name %>">
+                            <% if (locals.errors && errors.lastname) { %>
+                                <span class="error-message1 error-msg-register"><%= errors.lastname.msg %></span>
+                            <% } %>
+                        </div>
+                        <div class="input-container1 file-container">
+                            <label for="avatar"  class="btn-file">Cambiar Avatar</label>
+                            <input type="file" name="avatar" id="avatar" accept=".png, .jpg" class="file">
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-register" type="submit" >Guardar</button>
+            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+    <%-include('../partials/footer') %> 
+</body>
+</html>

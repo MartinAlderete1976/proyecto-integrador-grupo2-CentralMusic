@@ -1,4 +1,3 @@
-const {users, writeUsers} = require ('../data');
 const db = require('../database/models')
 
 const userIsLogged = (req, res, next) => {

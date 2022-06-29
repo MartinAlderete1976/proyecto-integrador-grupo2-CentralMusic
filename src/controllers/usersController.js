@@ -2,6 +2,9 @@ const {users, writeUsers} = require ('../data');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
+const fs = require('fs');
+const path = require('path');
+
 
 const usersController = {
     login: (req,res) => {
@@ -29,6 +32,7 @@ const usersController = {
                     id: userLogged.id,
                     user: userLogged.user,
                     name: userLogged.name,
+                    lastname: userLogged.last_name,
                     email: userLogged.email,
                     avatar: userLogged.avatar,
                     user_rol_id: userLogged.user_rol_id,
@@ -97,11 +101,220 @@ const usersController = {
 
     profile: (req, res) => {
         
-       
-        res.render('users/profile', {
-            user: req.session.userLogged,
-            session: req.session
+        db.User.findOne({
+            where: {
+                id: req.session.userLogged.id
+            }
         })
+        .then((user) => {
+            res.render('users/profile', {
+                user,
+                session: req.session.userLogged
+            })
+        })
+        
+
+    },
+
+    editProfile: (req, res) => {
+
+        db.User.findByPk(req.session.userLogged.id)
+            .then(user => {
+                res.render('users/editProfile', {
+                    user,
+                    session: req.session,
+                })
+            })
+            .catch(error => console.log(error))
+        
+    },
+
+    updateProfile: (req, res) => {
+        let errors = validationResult(req);
+        //return res.send(errors)
+        if(errors.isEmpty()){
+           //return res.send(req.file)
+            if(req.file !== undefined){   
+                db.User.findOne({
+                    where: {
+                        id: req.session.userLogged.id,
+                    }
+                })
+                .then(user => {
+
+                    if(user.avatar === 'avatar-default.png'){
+                        db.User.update({
+                            name: req.body.name,
+                            last_name: req.body.lastname,
+                            avatar: req.file.filename,
+                         }, {
+                            where: {
+                                id: req.session.userLogged.id
+                            }
+                        })
+                        .then(() => {
+                            
+                             res.clearCookie('centralMusic');
+                             db.User.findOne({
+                                 where: {
+                                     email: req.session.userLogged.email
+                                 }
+                             })
+                             .then(userLogged => {
+                                 req.session.userLogged = {
+                                     id: userLogged.id,
+                                     user: userLogged.user,
+                                     name: userLogged.name,
+                                     lastname: userLogged.last_name,
+                                     email: userLogged.email,
+                                     avatar: userLogged.avatar,
+                                     user_rol_id: userLogged.user_rol_id,
+                                 }
+                                 res.redirect('/users/profile')
+                             })
+                            .catch(error => console.log(error))
+                        })
+                        .catch(error => console.log(error))
+                    }else{
+                        //return  res.send(user.avatar)
+                    if (fs.existsSync(path.join(__dirname, `../../public/images/avatars/${user.avatar}`))) {
+                        fs.unlinkSync(path.join(__dirname, `../../public/images/avatars/${user.avatar}`))
+                    } else {
+                        console.log('-- no se encontro el archivo')
+                    }
+                    db.User.update({
+                        name: req.body.name,
+                        last_name: req.body.lastname,
+                        avatar: req.file.filename,
+                     }, {
+                        where: {
+                            id: req.session.userLogged.id
+                        }
+                    })
+                    .then(() => {
+                        
+                         res.clearCookie('centralMusic');
+                         db.User.findOne({
+                             where: {
+                                 email: req.session.userLogged.email
+                             }
+                         })
+                         .then(userLogged => {
+                             req.session.userLogged = {
+                                 id: userLogged.id,
+                                 user: userLogged.user,
+                                 name: userLogged.name,
+                                 lastname: userLogged.last_name,
+                                 email: userLogged.email,
+                                 avatar: userLogged.avatar,
+                                 user_rol_id: userLogged.user_rol_id,
+                             }
+                             res.redirect('/users/profile')
+                         })
+                        .catch(error => console.log(error))
+                    })
+                    .catch(error => console.log(error))
+                    }
+
+                    
+                })
+                .catch(error => console.log(error))
+                
+            }else{
+                db.User.update({
+                    name: req.body.name,
+                    last_name: req.body.lastname,
+                    avatar: req.session.userLogged.avatar,
+                 }, {
+                    where: {
+                        id: req.session.userLogged.id
+                    }
+                })
+                .then(() => {
+                    
+                     res.clearCookie('centralMusic');
+                     db.User.findOne({
+                         where: {
+                             email: req.session.userLogged.email
+                         }
+                     })
+                     .then(userLogged => {
+                         req.session.userLogged = {
+                             id: userLogged.id,
+                             user: userLogged.user,
+                             name: userLogged.name,
+                             lastname: userLogged.last_name,
+                             email: userLogged.email,
+                             avatar: userLogged.avatar,
+                             user_rol_id: userLogged.user_rol_id,
+                         }
+                         res.redirect('/users/profile')
+                     })
+                    .catch(error => console.log(error))
+                })
+                .catch(error => console.log(error))
+            }
+
+            
+        } else {
+            db.User.findOne({
+                where: {
+                    id: req.session.userLogged.id
+                }
+            })
+            .then((user) => {
+                res.render('users/editProfile', {
+                    user,
+                    session: req.session,
+                    errors: errors.mapped()
+                })
+            })
+        }
+
+    },
+
+
+    deleteUser: (req, res) => {
+
+        db.User.findOne({
+            where: {
+                id: req.params.id,
+            }
+        })
+        .then(user => {
+            if(user.avatar === 'avatar-default.png'){
+                db.User.destroy({
+                    where: {
+                        id: req.params.id,
+                    }
+                })
+                .then(() => {
+                    res.clearCookie('centralMusic');
+                    req.session.destroy();
+                    res.redirect('/')
+                })
+                .catch(error => console.log(error))
+            } else {
+                if (fs.existsSync(path.join(__dirname, `../../public/images/avatars/${user.avatar}`))) {
+                    fs.unlinkSync(path.join(__dirname, `../../public/images/avatars/${user.avatar}`))
+                } else {
+                    console.log('-- no se encontro el archivo')
+                }
+                db.User.destroy({
+                    where: {
+                        id: req.params.id,
+                    }
+                })
+                .then(() => {
+                    res.clearCookie('centralMusic');
+                    req.session.destroy();
+                    res.redirect('/')
+                })
+                .catch(error => console.log(error))
+
+            }
+        })
+        .catch(error => console.log(error))
 
     },
 

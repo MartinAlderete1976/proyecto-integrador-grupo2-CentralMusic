@@ -3,13 +3,33 @@
 <%-include('../partials/head', {title: 'Mi perfil'})  %> 
 <body class="home-container bodyDetailsProduct">
     <%-include('../partials/header')  %> 
-    <main class="home-container bodyDetailsProduct">
-        <h1>Hola <%= user.name  %> </h1>
+    <main class="home-container bodyDetailsProduct profile">
+        <h1 class="welcome_user">Hola <%= user.name  %> </h1>
         <div class="profile-container">
             <img src="../../images/avatars/<%= user.avatar  %> " alt="">
         </div>
-        <div>
-            <p><%= user.email  %> </p>
+        <div class="user_info-container">
+            <h3>Datos personales</h3>
+            <div>
+                <p><b>Usuario:</b> <%= user.user  %> </p>
+            </div>
+            <div>
+                <p><b>Nombre:</b> <%= user.name  %></p>
+            </div>
+            <div>
+                <p><b>Apellido:</b> <%= user.last_name %></p>
+            </div>
+            <div>
+                <p><b>Email:</b> <%= user.email  %></p>
+            </div>
+        </div>
+        <div class="btns-container">
+            <a class="btn-container" href="/users/profile/edit">
+                <input class="btn-style" type="button" value="EDITAR DATOS">
+            </a>
+            <form action="/users/profile/delete/<%= user.id %>?_method=DELETE" method="POST">
+                <button class="btn-style" type="submit">Eliminar Perfil</button>
+            </form>
         </div>
     </main>
     <%-include('../partials/footer')  %> 
